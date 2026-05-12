@@ -1,0 +1,8 @@
+COMMAND:
+python src\tools\run_scene_object_envelope_native_ti_walltime.py --run-name scene_object_envelope_strong_native_2026-05-08 --scenes puffer-ball,rod-twist --proposal-top-k 32 --optimized-frontier-k 128 --optimized-scan-limit-per-group 4096 --optimized-random-gate-object-count 0 --force-build --stpf-checkpoint src\outputs\stpf_training\scene_object_envelope_strong_native_2026-05-08\model_state.pt
+
+STDOUT:
+src\benchmark\scene_object_envelope_strong_native_2026-05-08
+
+
+STDERR:

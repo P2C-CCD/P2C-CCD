@@ -1,0 +1,264 @@
+{
+  "case": "particle_sphere_bowl_explosion_run_id",
+  "description": "2,400 variable-radius rubber-coated steel beads explode from a compact 3D lobed emitter, fall under gravity, resolve sphere-sphere volume contacts, dissipate energy through stochastic contact parameters, and collide with a dense glazed ceramic parabolic bowl.",
+  "config": {
+    "particle_count": 2400,
+    "render_fps": 24,
+    "render_frames": 240,
+    "sim_substeps_per_frame": 5,
+    "particle_material": "rubber-coated steel beads",
+    "particle_density_kg_m3": 6500.0,
+    "sphere_radius": 0.045,
+    "sphere_radius_jitter": 0.35,
+    "bowl_radius": 4.2,
+    "bowl_depth": 1.55,
+    "bowl_material": "glazed ceramic",
+    "bowl_roughness": 0.38,
+    "bowl_albedo_rgb": [
+      246,
+      238,
+      224
+    ],
+    "gravity": 9.81,
+    "restitution": 0.42,
+    "restitution_jitter": 0.05,
+    "friction_mu": 0.3,
+    "friction_jitter": 0.05,
+    "air_drag": 0.0004,
+    "drag_jitter": 0.0003,
+    "bowl_rolling_damping": 0.994,
+    "tangent_friction_scale": 0.1,
+    "rim_tangent_damping": 0.985,
+    "settle_center_pull": 0.0,
+    "particle_pair_restitution": 0.2,
+    "particle_pair_friction": 0.38,
+    "particle_collision_iterations": 2,
+    "particle_collision_cell_scale": 2.2,
+    "particle_collision_start_time": 0.0,
+    "particle_collision_stride": 2,
+    "initial_volume_relax_iterations": 5,
+    "burst_lobes": 11,
+    "burst_core_radius": 0.98,
+    "turbulence_strength": 4.2,
+    "turbulence_decay_seconds": 0.12,
+    "delayed_impulse_window": 0.14,
+    "seed": 424242,
+    "train_epochs": 8,
+    "train_batch_size": 32768
+  },
+  "bowl_mesh_faces": 15360,
+  "particle_material": {
+    "name": "rubber-coated steel beads",
+    "density_kg_m3": 6500.0,
+    "radius_range": [
+      0.029257986694574356,
+      0.06074605882167816
+    ]
+  },
+  "bowl_material": {
+    "name": "glazed ceramic",
+    "mean_restitution": 0.42,
+    "mean_friction_mu": 0.3,
+    "roughness": 0.38,
+    "albedo_rgb": [
+      246,
+      238,
+      224
+    ],
+    "rolling_damping": 0.994,
+    "tangent_friction_scale": 0.1
+  },
+  "particle_count": 2400,
+  "radius_range": [
+    0.029257986694574356,
+    0.06074605882167816
+  ],
+  "lobe_count": 11,
+  "frame_count": 240,
+  "fps": 24,
+  "first_contact_time_seconds": 0.3916666805744171,
+  "total_particle_bowl_contact_samples": 549982,
+  "total_particle_pair_contact_samples": 8409311,
+  "max_particle_pair_penetration": 0.10723888874053955,
+  "training": {
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.6215374838222157,
+        "val_loss": 0.5087096095085144,
+        "val_recall_at_0p5": 0.8257567286491394
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.3743921526152678,
+        "val_loss": 0.23180924355983734,
+        "val_recall_at_0p5": 0.9792558550834656
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.18969027372923764,
+        "val_loss": 0.16538552939891815,
+        "val_recall_at_0p5": 0.9946019053459167
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.16250300434502687,
+        "val_loss": 0.16018545627593994,
+        "val_recall_at_0p5": 1.0
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.15899563943496858,
+        "val_loss": 0.15726909041404724,
+        "val_recall_at_0p5": 1.0
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.15700314628957499,
+        "val_loss": 0.1564159244298935,
+        "val_recall_at_0p5": 1.0
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.1563465444427548,
+        "val_loss": 0.15597766637802124,
+        "val_recall_at_0p5": 1.0
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.15600330552669486,
+        "val_loss": 0.15572425723075867,
+        "val_recall_at_0p5": 1.0
+      }
+    ],
+    "train_ms": 31488.185100024566,
+    "device": "cpu",
+    "model_path": "src\\outputs\\stpf_training\\particle_sphere_bowl_explosion_run_id\\model_state.pt",
+    "onnx_path": "src\\outputs\\stpf_training\\particle_sphere_bowl_explosion_run_id\\model.onnx",
+    "onnx_status": "exported"
+  },
+  "benchmark": {
+    "NoProposal": {
+      "exact_calls": 576000.0,
+      "exact_work": 4860044.450701833,
+      "fn": 0.0
+    },
+    "RTSTPFExact": {
+      "exact_calls": 38624.0,
+      "exact_work": 42762.42539560795,
+      "no_proposal_calls": 576000.0,
+      "no_proposal_work": 4860044.450701833,
+      "exact_call_reduction": 0.9329444444444445,
+      "exact_work_reduction": 0.9912012275135811,
+      "tp": 224.0,
+      "tn": 16.0,
+      "fp": 0.0,
+      "fn": 0.0,
+      "positive_groups": 224.0,
+      "negative_groups": 16.0,
+      "mean_first_hit_rank": 1.0,
+      "p90_first_hit_rank": 1.0
+    },
+    "RandomSTPF": {
+      "exact_calls": 43406.85,
+      "exact_work": 55235.82809517979,
+      "no_proposal_calls": 576000.0,
+      "no_proposal_work": 4860044.450701833,
+      "exact_call_reduction": 0.9246408854166667,
+      "exact_work_reduction": 0.9886347072222346,
+      "tp": 224.0,
+      "tn": 16.0,
+      "fp": 0.0,
+      "fn": 0.0,
+      "positive_groups": 224.0,
+      "negative_groups": 16.0,
+      "mean_first_hit_rank": 22.35200892857143,
+      "p90_first_hit_rank": 11.760000000000005
+    },
+    "inference_and_scheduling_ms": 620.2178000239655,
+    "total_runner_ms": 147028.06450007483
+  },
+  "physics_audit": {
+    "scope": "particle-only diagnostics; gravity, fixed bowl constraints, drag, friction, and contact losses are external to the particle subsystem",
+    "closed_system_note": "strict total momentum conservation would require including Earth/bowl support impulses; this benchmark therefore reports particle-subsystem energy and momentum diagnostics",
+    "mass_kg": {
+      "total": 6708.200461506844,
+      "min": 0.681922972202301,
+      "max": 6.103181838989258
+    },
+    "energy_j": {
+      "kinetic_initial": 54747.51951426902,
+      "potential_initial": 315875.74342891347,
+      "mechanical_initial": 370623.2629431825,
+      "kinetic_first_sampled_frame": 38013.84940352581,
+      "mechanical_first_sampled_frame": 353844.76142406743,
+      "mechanical_pre_contact": 326174.49531149806,
+      "mechanical_final": 12539.767333981314,
+      "mechanical_peak": 353844.76142406743,
+      "relative_change_initial_to_pre_contact": -0.11992978335657938,
+      "relative_change_initial_to_final": -0.9661657305739503,
+      "relative_change_first_sampled_to_pre_contact": -0.07819888586511464
+    },
+    "momentum_kg_m_per_s": {
+      "initial": [
+        4.616123916889592e-06,
+        6.054936232402497e-06,
+        3.4949672098605333e-06
+      ],
+      "first_sampled_frame": [
+        1.706124706402079e-06,
+        -8.502036415336534e-06,
+        -548.3953892112402
+      ],
+      "pre_contact": [
+        129.44345317523894,
+        -96.01192259081738,
+        -35115.382821649546
+      ],
+      "final": [
+        -0.654410246728632,
+        1.9166462362422942,
+        -1764.7634241477667
+      ],
+      "initial_norm": 8.377687544456463e-06,
+      "first_sampled_frame_norm": 548.3953892112402,
+      "pre_contact_norm": 35115.7526561492,
+      "final_norm": 1764.7645862820673,
+      "horizontal_initial_norm": 7.613859257599962e-06,
+      "horizontal_first_sampled_frame_norm": 8.671533008730582e-06,
+      "horizontal_pre_contact_norm": 161.16419220631917,
+      "horizontal_final_norm": 2.025286539214928
+    },
+    "frames": {
+      "first_contact_frame": 14,
+      "pre_contact_frame": 13,
+      "post_turbulence_frame": 3,
+      "first_contact_time_seconds": 0.5833333134651184
+    },
+    "dissipation_controls": {
+      "mean_restitution": 0.42,
+      "mean_friction_mu": 0.3,
+      "particle_pair_restitution": 0.2,
+      "particle_pair_friction": 0.38,
+      "particle_collision_iterations": 2,
+      "air_drag": 0.0004,
+      "rolling_damping": 0.994,
+      "tangent_friction_scale": 0.1,
+      "rim_tangent_damping": 0.985,
+      "settle_center_pull": 0.0
+    }
+  },
+  "outputs": {
+    "mp4": "src\\MyDemo\\particle_sphere_bowl_explosion_run_id\\particle_sphere_bowl_explosion.mp4",
+    "contact_sheet": "src\\MyDemo\\particle_sphere_bowl_explosion_run_id\\contact_sheet.png",
+    "preview_toi": "src\\MyDemo\\particle_sphere_bowl_explosion_run_id\\preview_toi.png",
+    "interactive_html": "src\\MyDemo\\particle_sphere_bowl_explosion_run_id\\particle_sphere_bowl_explosion_interactive.html",
+    "frames_dir": "src\\MyDemo\\particle_sphere_bowl_explosion_run_id\\frames",
+    "render_ms": "8404.175"
+  },
+  "correctness": {
+    "final_decision_source": "analytic sphere-bowl exact certificate or exhaustive fallback",
+    "neural_network_role": "proposal/scheduling only",
+    "fn": 0
+  }
+}

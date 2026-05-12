@@ -1,0 +1,73 @@
+{
+  "runner": "tight_inclusion_dense_group_three_method_benchmark",
+  "dataset_root": "src/benchmark/native_ti_four_source_mixed_dense_group_run_id/ti_csv_dataset",
+  "learned_schedule": "src/benchmark/native_ti_four_source_mixed_dense_group_run_id/native_ti_four_source_mixed_dense_group_run_id_learned_schedule.csv",
+  "random_schedule": "src/benchmark/native_ti_four_source_mixed_dense_group_run_id/native_ti_four_source_mixed_dense_group_run_id_random_schedule.csv",
+  "unique_query_blocks": 131072,
+  "preload_ms": 4181.3585,
+  "parameters": {
+    "ms": 0,
+    "tolerance": 1e-06,
+    "t_max": 1,
+    "max_itr": 1000000
+  },
+  "methods": [
+    {
+      "method": "NoProposal+TI",
+      "group_count": 1024,
+      "candidate_count": 131072,
+      "positive_group_count": 510,
+      "exact_calls": 131072,
+      "skipped_exact_calls": 0,
+      "exact_call_reduction": 0,
+      "tp": 510,
+      "tn": 514,
+      "fp": 0,
+      "fn": 0,
+      "recall": 1,
+      "precision": 1,
+      "first_positive_rank_mean": 62.9901960784,
+      "exact_ms": 54.9648000001,
+      "wall_ms": 101.9236,
+      "wall_ms_with_shared_preload": 4283.2821
+    },
+    {
+      "method": "Random+TI",
+      "group_count": 1024,
+      "candidate_count": 131072,
+      "positive_group_count": 510,
+      "exact_calls": 98840,
+      "skipped_exact_calls": 32232,
+      "exact_call_reduction": 0.245910644531,
+      "tp": 510,
+      "tn": 514,
+      "fp": 0,
+      "fn": 0,
+      "recall": 1,
+      "precision": 1,
+      "first_positive_rank_mean": 64.8,
+      "exact_ms": 45.718,
+      "wall_ms": 91.0289,
+      "wall_ms_with_shared_preload": 4272.3874
+    },
+    {
+      "method": "RTSTPFExact+TI",
+      "group_count": 1024,
+      "candidate_count": 131072,
+      "positive_group_count": 510,
+      "exact_calls": 66302,
+      "skipped_exact_calls": 64770,
+      "exact_call_reduction": 0.494155883789,
+      "tp": 510,
+      "tn": 514,
+      "fp": 0,
+      "fn": 0,
+      "recall": 1,
+      "precision": 1,
+      "first_positive_rank_mean": 1,
+      "exact_ms": 37.6651,
+      "wall_ms": 77.1412,
+      "wall_ms_with_shared_preload": 4258.4997
+    }
+  ]
+}

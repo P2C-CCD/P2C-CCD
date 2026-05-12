@@ -1,0 +1,551 @@
+{
+  "batch_size": 8192,
+  "calibration": {
+    "calibrated_threshold": 0.4731125012040138,
+    "calibration_probe": {
+      "epoch": 6,
+      "estimated_exact_work_reduction": 0.6223769105419645,
+      "family_top2_recall": 0.25,
+      "interval_top1_recall": 0.9324951171875,
+      "loss": 19.574432373046875,
+      "mean_predicted_cost": 2.7150141713791527,
+      "mean_target_cost": 6.270006290316815,
+      "positive_count": 553,
+      "positive_ratio": 0.0675048828125,
+      "row_count": 8192,
+      "split": "calibration"
+    },
+    "fn_risk_top_k": [
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.4731125012040138
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.4731292948126793
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.47323621809482574
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.47335805743932724
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.473381944000721
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.4733966588973999
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.4734080135822296
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.47345370054244995
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.47346191108226776
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.4735364094376564
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.47356001287698746
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.473581962287426
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.4736037030816078
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.47363457828760147
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.4736439436674118
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.47364672273397446
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.47364939749240875
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.4736786112189293
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.47368670254945755
+      },
+      {
+        "case": "dragon_frictional_floor_drop",
+        "csv_path": "validation/dragon_frictional_floor_drop.csv",
+        "kind": "object-ground",
+        "query_index": fixed_seed,
+        "score": 0.4737110435962677
+      }
+    ],
+    "min_positive_score": 0.4731125012040138,
+    "per_case": {
+      "armadillo_frictional_floor_drop": {
+        "exact_call_rate": 1.0,
+        "exact_calls": 1024,
+        "fn": 0,
+        "positive_count": 64,
+        "recall": 1.0,
+        "rows": 1024,
+        "tp": 64
+      },
+      "bunny_frictional_floor_drop": {
+        "exact_call_rate": 1.0,
+        "exact_calls": 1024,
+        "fn": 0,
+        "positive_count": 64,
+        "recall": 1.0,
+        "rows": 1024,
+        "tp": 64
+      },
+      "cornell_box_multimodel_scene_drop": {
+        "exact_call_rate": 1.0,
+        "exact_calls": 1024,
+        "fn": 0,
+        "positive_count": 130,
+        "recall": 1.0,
+        "rows": 1024,
+        "tp": 130
+      },
+      "dragon_frictional_floor_drop": {
+        "exact_call_rate": 0.8818359375,
+        "exact_calls": 903,
+        "fn": 0,
+        "positive_count": 64,
+        "recall": 1.0,
+        "rows": 1024,
+        "tp": 64
+      },
+      "fandisk_frictional_floor_drop": {
+        "exact_call_rate": 1.0,
+        "exact_calls": 1024,
+        "fn": 0,
+        "positive_count": 64,
+        "recall": 1.0,
+        "rows": 1024,
+        "tp": 64
+      },
+      "spot_frictional_floor_drop": {
+        "exact_call_rate": 1.0,
+        "exact_calls": 1024,
+        "fn": 0,
+        "positive_count": 64,
+        "recall": 1.0,
+        "rows": 1024,
+        "tp": 64
+      },
+      "suzanne_frictional_floor_drop": {
+        "exact_call_rate": 1.0,
+        "exact_calls": 1024,
+        "fn": 0,
+        "positive_count": 39,
+        "recall": 1.0,
+        "rows": 1024,
+        "tp": 39
+      },
+      "teapot_frictional_floor_drop": {
+        "exact_call_rate": 1.0,
+        "exact_calls": 1024,
+        "fn": 0,
+        "positive_count": 64,
+        "recall": 1.0,
+        "rows": 1024,
+        "tp": 64
+      }
+    },
+    "per_kind": {
+      "object-ground": {
+        "exact_call_rate": 0.9831194196428571,
+        "exact_calls": 7047,
+        "fn": 0,
+        "positive_count": 423,
+        "recall": 1.0,
+        "rows": 7168,
+        "tp": 423
+      },
+      "scene-container": {
+        "exact_call_rate": 1.0,
+        "exact_calls": 1024,
+        "fn": 0,
+        "positive_count": 130,
+        "recall": 1.0,
+        "rows": 1024,
+        "tp": 130
+      }
+    },
+    "threshold_curve": [
+      {
+        "baseline_cost": 51363.891530275345,
+        "exact_call_reduction": 0.0,
+        "exact_calls": 8192.0,
+        "exact_work_reduction": 0.0,
+        "fn": 0.0,
+        "fp": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "selected_cost": 51363.891530275345,
+        "threshold": 0.0,
+        "tn": 7639.0,
+        "tp": 553.0
+      },
+      {
+        "baseline_cost": 51363.891530275345,
+        "exact_call_reduction": 0.0,
+        "exact_calls": 8192.0,
+        "exact_work_reduction": 0.0,
+        "fn": 0.0,
+        "fp": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "selected_cost": 51363.891530275345,
+        "threshold": 0.25,
+        "tn": 7639.0,
+        "tp": 553.0
+      },
+      {
+        "baseline_cost": 51363.891530275345,
+        "exact_call_reduction": 0.0147705078125,
+        "exact_calls": 8071.0,
+        "exact_work_reduction": 0.016829186239856075,
+        "fn": 0.0,
+        "fp": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "selected_cost": 50499.47903370857,
+        "threshold": 0.4731125012040138,
+        "tn": 7639.0,
+        "tp": 553.0
+      },
+      {
+        "baseline_cost": 51363.891530275345,
+        "exact_call_reduction": 1.0,
+        "exact_calls": 0.0,
+        "exact_work_reduction": 1.0,
+        "fn": 553.0,
+        "fp": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "selected_cost": 0.0,
+        "threshold": 0.5,
+        "tn": 7639.0,
+        "tp": 0.0
+      },
+      {
+        "baseline_cost": 51363.891530275345,
+        "exact_call_reduction": 1.0,
+        "exact_calls": 0.0,
+        "exact_work_reduction": 1.0,
+        "fn": 553.0,
+        "fp": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "selected_cost": 0.0,
+        "threshold": 0.75,
+        "tn": 7639.0,
+        "tp": 0.0
+      },
+      {
+        "baseline_cost": 51363.891530275345,
+        "exact_call_reduction": 1.0,
+        "exact_calls": 0.0,
+        "exact_work_reduction": 1.0,
+        "fn": 553.0,
+        "fp": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "selected_cost": 0.0,
+        "threshold": 0.9,
+        "tn": 7639.0,
+        "tp": 0.0
+      }
+    ]
+  },
+  "device": "cuda",
+  "epochs": 6,
+  "final_train": {
+    "epoch": 6,
+    "estimated_exact_work_reduction": 0.6205157702590542,
+    "family_top2_recall": 0.25,
+    "interval_top1_recall": 0.8756103515625,
+    "loss": 19.520395278930664,
+    "mean_predicted_cost": 2.725966013080324,
+    "mean_target_cost": 6.264468813082203,
+    "positive_count": 2038,
+    "positive_ratio": 0.1243896484375,
+    "row_count": 16384,
+    "split": "train"
+  },
+  "final_validation": {
+    "epoch": 6,
+    "estimated_exact_work_reduction": 0.6223769105419645,
+    "family_top2_recall": 0.25,
+    "interval_top1_recall": 0.9324951171875,
+    "loss": 19.574432373046875,
+    "mean_predicted_cost": 2.7150141713791527,
+    "mean_target_cost": 6.270006290316815,
+    "positive_count": 553,
+    "positive_ratio": 0.0675048828125,
+    "row_count": 8192,
+    "split": "validation"
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "estimated_exact_work_reduction": 0.8995942700359675,
+      "family_top2_recall": 0.25,
+      "interval_top1_recall": 0.0,
+      "loss": 38.89348030090332,
+      "mean_predicted_cost": 0.7379767534039274,
+      "mean_target_cost": 6.264468813082203,
+      "positive_count": 2038,
+      "positive_ratio": 0.1243896484375,
+      "row_count": 16384,
+      "split": "train"
+    },
+    {
+      "epoch": 1,
+      "estimated_exact_work_reduction": 0.899682793195895,
+      "family_top2_recall": 0.25,
+      "interval_top1_recall": 0.0,
+      "loss": 38.98529815673828,
+      "mean_predicted_cost": 0.737978456869314,
+      "mean_target_cost": 6.270006290316815,
+      "positive_count": 553,
+      "positive_ratio": 0.0675048828125,
+      "row_count": 8192,
+      "split": "validation"
+    },
+    {
+      "epoch": 2,
+      "estimated_exact_work_reduction": 0.8906699512101346,
+      "family_top2_recall": 0.2967529296875,
+      "interval_top1_recall": 0.0,
+      "loss": 38.128767013549805,
+      "mean_predicted_cost": 0.8031063245034602,
+      "mean_target_cost": 6.264468813082203,
+      "positive_count": 2038,
+      "positive_ratio": 0.1243896484375,
+      "row_count": 16384,
+      "split": "train"
+    },
+    {
+      "epoch": 2,
+      "estimated_exact_work_reduction": 0.8907791515525396,
+      "family_top2_recall": 0.2982177734375,
+      "interval_top1_recall": 0.0,
+      "loss": 38.21919631958008,
+      "mean_predicted_cost": 0.8030111570406007,
+      "mean_target_cost": 6.270006290316815,
+      "positive_count": 553,
+      "positive_ratio": 0.0675048828125,
+      "row_count": 8192,
+      "split": "validation"
+    },
+    {
+      "epoch": 3,
+      "estimated_exact_work_reduction": 0.8734696510980915,
+      "family_top2_recall": 0.25,
+      "interval_top1_recall": 0.8756103515625,
+      "loss": 36.688011169433594,
+      "mean_predicted_cost": 0.9282800370710902,
+      "mean_target_cost": 6.264468813082203,
+      "positive_count": 2038,
+      "positive_ratio": 0.1243896484375,
+      "row_count": 16384,
+      "split": "train"
+    },
+    {
+      "epoch": 3,
+      "estimated_exact_work_reduction": 0.8736426717641325,
+      "family_top2_recall": 0.25,
+      "interval_top1_recall": 0.9324951171875,
+      "loss": 36.77706527709961,
+      "mean_predicted_cost": 0.9278248500195332,
+      "mean_target_cost": 6.270006290316815,
+      "positive_count": 553,
+      "positive_ratio": 0.0675048828125,
+      "row_count": 8192,
+      "split": "validation"
+    },
+    {
+      "epoch": 4,
+      "estimated_exact_work_reduction": 0.8382477072442751,
+      "family_top2_recall": 0.25,
+      "interval_top1_recall": 0.8756103515625,
+      "loss": 33.85428047180176,
+      "mean_predicted_cost": 1.182796198881988,
+      "mean_target_cost": 6.264468813082203,
+      "positive_count": 2038,
+      "positive_ratio": 0.1243896484375,
+      "row_count": 16384,
+      "split": "train"
+    },
+    {
+      "epoch": 4,
+      "estimated_exact_work_reduction": 0.8386006324211518,
+      "family_top2_recall": 0.25,
+      "interval_top1_recall": 0.9324951171875,
+      "loss": 33.941646575927734,
+      "mean_predicted_cost": 1.1812530630704714,
+      "mean_target_cost": 6.270006290316815,
+      "positive_count": 553,
+      "positive_ratio": 0.0675048828125,
+      "row_count": 8192,
+      "split": "validation"
+    },
+    {
+      "epoch": 5,
+      "estimated_exact_work_reduction": 0.7653777951825085,
+      "family_top2_recall": 0.25,
+      "interval_top1_recall": 0.8756103515625,
+      "loss": 28.460237503051758,
+      "mean_predicted_cost": 1.7041680805050419,
+      "mean_target_cost": 6.264468813082203,
+      "positive_count": 2038,
+      "positive_ratio": 0.1243896484375,
+      "row_count": 16384,
+      "split": "train"
+    },
+    {
+      "epoch": 5,
+      "estimated_exact_work_reduction": 0.7661976787090975,
+      "family_top2_recall": 0.25,
+      "interval_top1_recall": 0.9324951171875,
+      "loss": 28.542743682861328,
+      "mean_predicted_cost": 1.6997158856829628,
+      "mean_target_cost": 6.270006290316815,
+      "positive_count": 553,
+      "positive_ratio": 0.0675048828125,
+      "row_count": 8192,
+      "split": "validation"
+    },
+    {
+      "epoch": 6,
+      "estimated_exact_work_reduction": 0.6205157702590542,
+      "family_top2_recall": 0.25,
+      "interval_top1_recall": 0.8756103515625,
+      "loss": 19.520395278930664,
+      "mean_predicted_cost": 2.725966013080324,
+      "mean_target_cost": 6.264468813082203,
+      "positive_count": 2038,
+      "positive_ratio": 0.1243896484375,
+      "row_count": 16384,
+      "split": "train"
+    },
+    {
+      "epoch": 6,
+      "estimated_exact_work_reduction": 0.6223769105419645,
+      "family_top2_recall": 0.25,
+      "interval_top1_recall": 0.9324951171875,
+      "loss": 19.574432373046875,
+      "mean_predicted_cost": 2.7150141713791527,
+      "mean_target_cost": 6.270006290316815,
+      "positive_count": 553,
+      "positive_ratio": 0.0675048828125,
+      "row_count": 8192,
+      "split": "validation"
+    }
+  ],
+  "history_csv": "src/outputs/stpf_training/standard_graphics_models_run_id/standard_graphics_models_run_id/history.csv",
+  "history_jsonl": "src/outputs/stpf_training/standard_graphics_models_run_id/standard_graphics_models_run_id/history.jsonl",
+  "loss": "multitask + cost-aware",
+  "model_preset": "medium_mlp",
+  "model_state_path": "src/outputs/stpf_training/standard_graphics_models_run_id/standard_graphics_models_run_id/model_state.pt",
+  "onnx_error": null,
+  "onnx_path": "src\\outputs\\stpf_training\\standard_graphics_models_run_id\\standard_graphics_models_run_id\\model.onnx",
+  "optimizer": "AdamW",
+  "report_name": "standard_graphics_models_run_id_stpf_training",
+  "run_name": "standard_graphics_models_run_id",
+  "shards_dir": "src/datasets/training/standard_graphics_models_run_id/shards",
+  "train_eval_max_rows": null,
+  "train_row_count": 16384,
+  "train_shards": [
+    "src/datasets/training/standard_graphics_models_run_id/shards/train.npz"
+  ],
+  "train_split": "train",
+  "validation_eval_max_rows": null,
+  "validation_row_count": 8192,
+  "validation_shards": [
+    "src/datasets/training/standard_graphics_models_run_id/shards/validation.npz"
+  ],
+  "validation_split": "validation"
+}

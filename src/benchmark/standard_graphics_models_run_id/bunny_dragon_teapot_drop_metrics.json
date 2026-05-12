@@ -1,0 +1,545 @@
+{
+  "title": "Bunny Dragon Teapot Drop",
+  "description": "Stanford Bunny, Stanford Dragon, and Utah Teapot fall under semi-implicit rigid-body gravity with restitution and Coulomb friction against a dense triangle floor.",
+  "frame_count": 72,
+  "fps": 24,
+  "duration_seconds": 2.55,
+  "toi_seconds": 0.5791666666666666,
+  "objects": [
+    {
+      "name": "Stanford Bunny",
+      "category": "classic_dynamic_mesh",
+      "mesh_path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/stanford-bunny.obj",
+      "mass": 1.2,
+      "velocity_pre": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "velocity_post": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_model": "aligned_semi_implicit_euler_ground_drop",
+      "trajectory_samples": 613,
+      "deformable_vertex_trajectory": false,
+      "first_ground_contact_time": 0.5791666666666666,
+      "ground_contact_count": 3,
+      "preview_faces": 24000,
+      "original_faces": 69451,
+      "preview_decimation_method": "deterministic_face_stride_to_24000",
+      "display_shell_method": "source_mesh_visual_surface",
+      "display_faces": 12000
+    },
+    {
+      "name": "Stanford Dragon",
+      "category": "classic_dynamic_mesh",
+      "mesh_path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/xyzrgb_dragon.obj",
+      "mass": 2.4,
+      "velocity_pre": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "velocity_post": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_model": "aligned_semi_implicit_euler_ground_drop",
+      "trajectory_samples": 613,
+      "deformable_vertex_trajectory": false,
+      "first_ground_contact_time": 0.6833333333333333,
+      "ground_contact_count": 3,
+      "preview_faces": 24000,
+      "original_faces": 249882,
+      "preview_decimation_method": "deterministic_face_stride_to_24000",
+      "display_shell_method": "source_mesh_visual_surface",
+      "display_faces": 12000
+    },
+    {
+      "name": "Utah Teapot",
+      "category": "classic_dynamic_mesh",
+      "mesh_path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/teapot.obj",
+      "mass": 1.3,
+      "velocity_pre": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "velocity_post": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_model": "aligned_semi_implicit_euler_ground_drop",
+      "trajectory_samples": 613,
+      "deformable_vertex_trajectory": false,
+      "first_ground_contact_time": 0.7916666666666666,
+      "ground_contact_count": 3,
+      "preview_faces": 6320,
+      "original_faces": 6320,
+      "preview_decimation_method": "full_surface",
+      "display_shell_method": "source_mesh_visual_surface",
+      "display_faces": 6320
+    },
+    {
+      "name": "Dense bunny-dragon-teapot collision floor",
+      "category": "ground",
+      "mesh_path": "src/MyDemo/standard_graphics_models_run_id/_generated_assets/bunny_dragon_teapot_dense_floor.obj",
+      "mass": 1000000000.0,
+      "velocity_pre": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "velocity_post": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_model": "fixed_visible_dense_frictional_ground",
+      "trajectory_samples": 0,
+      "deformable_vertex_trajectory": false,
+      "first_ground_contact_time": null,
+      "ground_contact_count": null,
+      "preview_faces": 71690,
+      "original_faces": 71690,
+      "preview_decimation_method": "generated_dense_ground_contact_grid",
+      "display_shell_method": "visible_dense_contact_grid",
+      "display_faces": 17920
+    }
+  ],
+  "physics_audit": {
+    "collision_model": "sampled rigid-body gravity drop with unilateral ground contact, restitution, and Coulomb friction",
+    "gravity": 9.81,
+    "gravity_vector": [
+      0.0,
+      0.0,
+      -9.81
+    ],
+    "support_plane_normal": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "support_plane_offset": 0.0,
+    "incline_angle_degrees": null,
+    "left_side_raised": null,
+    "restitution": 0.3,
+    "friction_mu": 0.56,
+    "duration_seconds": 2.55,
+    "trajectory_sample_count": 72,
+    "moving_body_count": 3,
+    "total_ground_impact_events": 9,
+    "total_ground_contact_window_samples": 1083,
+    "first_ground_contact_time": 0.5791666666666666,
+    "last_ground_contact_time": 0.7916666666666666,
+    "total_momentum_initial_moving_only": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "total_momentum_final_moving_only": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "kinetic_energy_initial": 0.0,
+    "kinetic_energy_final": 0.0,
+    "kinetic_energy_max": 77.85880394461422,
+    "mechanical_energy_initial": 125.82993463976064,
+    "mechanical_energy_final": 13.17836188226064,
+    "external_impulse_note": "Momentum and mechanical energy are not conserved because the ground applies normal impulses and friction dissipates energy."
+  },
+  "geometry_audit": {
+    "time": 1.05,
+    "pairs": [
+      {
+        "a": "Stanford Bunny",
+        "b": "Stanford Dragon",
+        "aabb_a_min": [
+          -1.8631265185171397,
+          -0.5939260846382303,
+          0.0
+        ],
+        "aabb_a_max": [
+          -1.0460056438313925,
+          0.025616323209453506,
+          0.8104201054598936
+        ],
+        "aabb_b_min": [
+          -0.5042865941299783,
+          -0.043704501406539586,
+          0.07044124999999957
+        ],
+        "aabb_b_max": [
+          0.5401875534520367,
+          0.4891387307061354,
+          0.5419160917160271
+        ],
+        "signed_gap_x": 0.5417190497014142,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.5419160917160271,
+        "overlap_y": 0.06932082461599309,
+        "overlap_z": 0.4714748417160275,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Bunny",
+        "b": "Utah Teapot",
+        "aabb_a_min": [
+          -1.8631265185171397,
+          -0.5939260846382303,
+          0.0
+        ],
+        "aabb_a_max": [
+          -1.0460056438313925,
+          0.025616323209453506,
+          0.8104201054598936
+        ],
+        "aabb_b_min": [
+          0.9900000425387578,
+          -0.50596735666468,
+          0.2692640624999988
+        ],
+        "aabb_b_max": [
+          1.909999957461242,
+          0.06599404521439009,
+          0.7196837081325757
+        ],
+        "signed_gap_x": 2.0360056863701503,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.5411560429598948,
+        "overlap_y": 0.5315836798741335,
+        "overlap_z": 0.45041964563257686,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Bunny",
+        "b": "Dense bunny-dragon-teapot collision floor",
+        "aabb_a_min": [
+          -1.8631265185171397,
+          -0.5939260846382303,
+          0.0
+        ],
+        "aabb_a_max": [
+          -1.0460056438313925,
+          0.025616323209453506,
+          0.8104201054598936
+        ],
+        "aabb_b_min": [
+          -2.9,
+          -1.9,
+          -0.08
+        ],
+        "aabb_b_max": [
+          2.9,
+          1.9,
+          0.0
+        ],
+        "signed_gap_x": -1.8539943561686074,
+        "separation_axis": "x",
+        "signed_gap_axis": -1.8539943561686074,
+        "overlap_y": 0.6195424078476838,
+        "overlap_z": 0.0,
+        "penetrating_x": true,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Dragon",
+        "b": "Utah Teapot",
+        "aabb_a_min": [
+          -0.5042865941299783,
+          -0.043704501406539586,
+          0.07044124999999957
+        ],
+        "aabb_a_max": [
+          0.5401875534520367,
+          0.4891387307061354,
+          0.5419160917160271
+        ],
+        "aabb_b_min": [
+          0.9900000425387578,
+          -0.50596735666468,
+          0.2692640624999988
+        ],
+        "aabb_b_max": [
+          1.909999957461242,
+          0.06599404521439009,
+          0.7196837081325757
+        ],
+        "signed_gap_x": 0.4498124890867211,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.27265202921602827,
+        "overlap_y": 0.10969854662092968,
+        "overlap_z": 0.27265202921602827,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Dragon",
+        "b": "Dense bunny-dragon-teapot collision floor",
+        "aabb_a_min": [
+          -0.5042865941299783,
+          -0.043704501406539586,
+          0.07044124999999957
+        ],
+        "aabb_a_max": [
+          0.5401875534520367,
+          0.4891387307061354,
+          0.5419160917160271
+        ],
+        "aabb_b_min": [
+          -2.9,
+          -1.9,
+          -0.08
+        ],
+        "aabb_b_max": [
+          2.9,
+          1.9,
+          0.0
+        ],
+        "signed_gap_x": -3.404286594129978,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.07044124999999957,
+        "overlap_y": 0.532843232112675,
+        "overlap_z": -0.07044124999999957,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Utah Teapot",
+        "b": "Dense bunny-dragon-teapot collision floor",
+        "aabb_a_min": [
+          0.9900000425387578,
+          -0.50596735666468,
+          0.2692640624999988
+        ],
+        "aabb_a_max": [
+          1.909999957461242,
+          0.06599404521439009,
+          0.7196837081325757
+        ],
+        "aabb_b_min": [
+          -2.9,
+          -1.9,
+          -0.08
+        ],
+        "aabb_b_max": [
+          2.9,
+          1.9,
+          0.0
+        ],
+        "signed_gap_x": -1.909999957461242,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.2692640624999988,
+        "overlap_y": 0.5719614018790701,
+        "overlap_z": -0.2692640624999988,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      }
+    ],
+    "scope_note": "The shared renderer emits raw AABB pair diagnostics for every visual object. For this standard-model suite, the active conservative CCD claim is dynamic mesh versus dense floor. Static reference geometry and object-object AABB overlaps are not active contact claims for this case unless explicitly enabled.",
+    "raw_pair_count": 6,
+    "active_object_ground_pair_count": 3,
+    "raw_active_object_ground_aabb_penetrating_axis_count": 1,
+    "raw_active_object_ground_aabb_penetrating_x_count": 3,
+    "active_object_ground_penetrating_axis_count": 0,
+    "active_penetration_source": "geometry_frame_audit per-body signed ground gaps; raw AABB counts are retained separately because CONTACT_T diagnostics can overlap the support plane at exact contact.",
+    "active_object_ground_pairs": [
+      {
+        "a": "Stanford Bunny",
+        "b": "Dense bunny-dragon-teapot collision floor",
+        "aabb_a_min": [
+          -1.8631265185171397,
+          -0.5939260846382303,
+          0.0
+        ],
+        "aabb_a_max": [
+          -1.0460056438313925,
+          0.025616323209453506,
+          0.8104201054598936
+        ],
+        "aabb_b_min": [
+          -2.9,
+          -1.9,
+          -0.08
+        ],
+        "aabb_b_max": [
+          2.9,
+          1.9,
+          0.0
+        ],
+        "signed_gap_x": -1.8539943561686074,
+        "separation_axis": "x",
+        "signed_gap_axis": -1.8539943561686074,
+        "overlap_y": 0.6195424078476838,
+        "overlap_z": 0.0,
+        "penetrating_x": true,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Dragon",
+        "b": "Dense bunny-dragon-teapot collision floor",
+        "aabb_a_min": [
+          -0.5042865941299783,
+          -0.043704501406539586,
+          0.07044124999999957
+        ],
+        "aabb_a_max": [
+          0.5401875534520367,
+          0.4891387307061354,
+          0.5419160917160271
+        ],
+        "aabb_b_min": [
+          -2.9,
+          -1.9,
+          -0.08
+        ],
+        "aabb_b_max": [
+          2.9,
+          1.9,
+          0.0
+        ],
+        "signed_gap_x": -3.404286594129978,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.07044124999999957,
+        "overlap_y": 0.532843232112675,
+        "overlap_z": -0.07044124999999957,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Utah Teapot",
+        "b": "Dense bunny-dragon-teapot collision floor",
+        "aabb_a_min": [
+          0.9900000425387578,
+          -0.50596735666468,
+          0.2692640624999988
+        ],
+        "aabb_a_max": [
+          1.909999957461242,
+          0.06599404521439009,
+          0.7196837081325757
+        ],
+        "aabb_b_min": [
+          -2.9,
+          -1.9,
+          -0.08
+        ],
+        "aabb_b_max": [
+          2.9,
+          1.9,
+          0.0
+        ],
+        "signed_gap_x": -1.909999957461242,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.2692640624999988,
+        "overlap_y": 0.5719614018790701,
+        "overlap_z": -0.2692640624999988,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      }
+    ]
+  },
+  "geometry_frame_audit": {
+    "sample_count": 72,
+    "moving_body_count": 3,
+    "ground_z": 0.0,
+    "min_signed_ground_gap": 0.0,
+    "min_gap_time": 1.05,
+    "ground_contact_window_samples": 128,
+    "penetrating_any_sample": false,
+    "per_body_ground_gaps": [
+      {
+        "name": "Stanford Bunny",
+        "min_signed_ground_gap": 0.0,
+        "min_gap_time": 1.05,
+        "ground_contact_window_samples": 47,
+        "penetrating_any_sample": false
+      },
+      {
+        "name": "Stanford Dragon",
+        "min_signed_ground_gap": 0.0,
+        "min_gap_time": 1.2570422535211268,
+        "ground_contact_window_samples": 43,
+        "penetrating_any_sample": false
+      },
+      {
+        "name": "Utah Teapot",
+        "min_signed_ground_gap": 0.0,
+        "min_gap_time": 1.4725352112676056,
+        "ground_contact_window_samples": 38,
+        "penetrating_any_sample": false
+      }
+    ]
+  },
+  "benchmark_metrics": {
+    "dataset": "standard_graphics_models_run_id",
+    "scenario": "focused Bunny/Dragon/Utah-Teapot rigid meshes falling onto one dense frictional triangle floor",
+    "object_count": 3,
+    "ground_top_triangles": 71680,
+    "ground_top_subdivisions_x": 224,
+    "ground_top_subdivisions_y": 160,
+    "visible_grid_subdivisions_x": 112,
+    "visible_grid_subdivisions_y": 80,
+    "visible_grid_triangles": 17920,
+    "object_preview_faces_total": 54320,
+    "sim_dt": 0.004166666666666667,
+    "gravity": 9.81,
+    "friction_mu": 0.56,
+    "restitution": 0.3,
+    "impact_event_speed_threshold": 0.25,
+    "base_contact_time": 0.58,
+    "yaw_locked_upright": true,
+    "ground_contact_events": 9,
+    "ground_contact_window_samples": 1083,
+    "first_ground_contact_time": 0.5791666666666666,
+    "last_first_ground_contact_time": 0.7916666666666666,
+    "dense_no_proposal_object_ground_pair_budget": 3893657600,
+    "rtstpf_exact_call_budget": 103968,
+    "proposal_reduction_factor_vs_dense_pairs": 37450.53862726993,
+    "fn": 0,
+    "covered_models": [
+      "Stanford Bunny",
+      "Stanford Dragon",
+      "Utah Teapot"
+    ],
+    "model_source_root": "Code/datasets/standard_graphics_models",
+    "dynamic_object_count": 3,
+    "per_model_source_descriptions": {
+      "Stanford Bunny": {
+        "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/stanford-bunny.obj",
+        "description": "Canonical sanity-check scan with curved local surface detail.",
+        "original_faces": 69451,
+        "preview_faces": 24000,
+        "display_faces": 12000
+      },
+      "Stanford Dragon": {
+        "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/xyzrgb_dragon.obj",
+        "description": "High-frequency scanned model with many local triangle features.",
+        "original_faces": 249882,
+        "preview_faces": 24000,
+        "display_faces": 12000
+      },
+      "Utah Teapot": {
+        "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/teapot.obj",
+        "description": "Classic curved-surface graphics model used here as a curved rigid collider.",
+        "original_faces": 6320,
+        "preview_faces": 6320,
+        "display_faces": 6320
+      }
+    },
+    "advantage": "This focused sanity case isolates one smooth scan model, one high-frequency scan model, and one curved classic graphics model on a visibly dense contact grid. Dense exact CCD scales with all object-floor triangle pairs, while proposal-guided exact fallback concentrates on the three short support-contact windows."
+  },
+  "outputs": {
+    "global_mp4": "global.mp4",
+    "contact_sheet": "contact_sheet.png",
+    "interactive_html": null,
+    "global_frames": "real_mesh_global_frames/global_frame_*.png"
+  }
+}

@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>P2C-CCD Project Page</title>
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-main">P2C-CCD</span>
+        <span class="brand-sub">Project</span>
+      </div>
+      <nav class="toc" aria-label="Table of contents">
+        <a href="#overview">Overview</a>
+        <a href="#cases">Cases</a>
+        <a href="#method">Method</a>
+        <a href="#interactive">Interactive View</a>
+        <a href="#acknowledgement">Acknowledgement</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <section id="overview" class="section hero reveal">
+      <div class="hero-grid">
+        <h1 class="hero-title">P2C-CCD: A Proposal-to-Certificate Framework for Certified Continuous Collision Detection</h1>
+
+        <div class="hero-copy">
+          <p class="authors">Authors: <strong>Under Review</strong></p>
+          <p class="abstract">
+            Continuous collision detection (CCD) is essential for robust physical simulation, animation, and robotic modeling in contact-rich environments. The key challenge is to discard impossible primitive-time pairs while maintaining conservative certificates that prevent missed collisions. Recent advances in hardware ray tracing and learned collision proxies offer acceleration methods, but neither traversal nor prediction alone provides the geometric guarantees required for CCD. We present P2C-CCD, a proposal-to-certificate framework that separates CCD into conservative candidate generation, learned scheduling with a spatiotemporal proposal field, and exact local certification with conservative fallback. The learned component is not a collision oracle; it ranks dense candidate groups to expose decisive exact certificates earlier and reduce redundant certification work. Every final decision is produced by exact certification or exhaustive fallback, so P2C-CCD preserves the no-missed-collision guarantee independently of model accuracy. We evaluate P2C-CCD on dense CAD and large mesh workloads from public datasets, including ABC, Fusion 360 Gallery Assembly, Thingi10K, ShapeNetCore, Tight-Inclusion CCD, and a custom high-density contact dataset. Our quantitative benchmarks cover about 69 million traceable CCD evaluation units, while supplementary dense-scene audits expose more than 390 billion potential pair units before proposal filtering. In dense and complex scenarios, P2C-CCD reduces exact certificate evaluations by up to two orders of magnitude and reports zero false negatives across all evaluated benchmarks, with the largest gains when exact CCD certification dominates runtime.
+          </p>
+        </div>
+
+        <div class="hero-side">
+          <figure class="hero-figure">
+            <img src="assets/images/paper/first_fig.jpg" alt="Representative P2C-CCD teaser figure from the paper." loading="eager" />
+            <figcaption>
+              The paper teaser covers the four contact-rich regimes emphasized in the manuscript: falling dense mesh objects, many-particle interaction, rigid high-speed impact, and deformable self-contact.
+            </figcaption>
+          </figure>
+
+          <div class="hero-metrics">
+            <article class="metric-card">
+              <span class="metric-value">Certified final decisions</span>
+              <span class="metric-label">Exact CCD or conservative fallback remains responsible for every final decision.</span>
+            </article>
+            <article class="metric-card">
+              <span class="metric-value">Public CAD and mesh sources</span>
+              <span class="metric-label">The project combines ABC, Fusion 360, Thingi10K, ShapeNetCore, TI, and dense supplementary scenes.</span>
+            </article>
+            <article class="metric-card">
+              <span class="metric-value">Dense contact scenarios</span>
+              <span class="metric-label">The webpage focuses on real mesh contact, particle-rich scenes, rigid impact, and deformable self-contact.</span>
+            </article>
+            <article class="metric-card">
+              <span class="metric-value">Interactive supplementary views</span>
+              <span class="metric-label">Web-friendly orbit viewers provide lightweight 3D inspection without shipping the heaviest raw exports.</span>
+            </article>
+          </div>
+
+          <div class="hero-tags" aria-label="Paper coverage">
+            <span>dense mesh drops</span>
+            <span>particle-rich scenes</span>
+            <span>rigid impact</span>
+            <span>deformable self-contact</span>
+            <span>scene-level audits</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" class="section reveal">
+      <div class="section-head">
+        <h2>Representative Cases from the Paper</h2>
+      </div>
+
+      <div class="motion-grid">
+        <article class="media-card reveal">
+          <div class="media-box">
+            <video autoplay muted loop playsinline preload="metadata" src="assets/videos/showcase/particle_bowl_drop.mp4"></video>
+          </div>
+          <div class="media-copy">
+            <h3>Many Particles Falling into a Bowl</h3>
+            <p>A large set of particles drops into a bowl and accumulates under dense interaction, giving the project a clear particle-rich scene with visible crowding and settling.</p>
+          </div>
+        </article>
+
+        <article class="media-card reveal">
+          <div class="media-box">
+            <video autoplay muted loop playsinline preload="metadata" src="assets/videos/showcase/standard_graphics_multi_drop.mp4"></video>
+          </div>
+          <div class="media-copy">
+            <h3>Standard Graphics Multi-Model Drop</h3>
+            <p>A graphics-style multi-model falling scene built from the paper's standard model family, showing repeated support contact across several classic shapes in one view.</p>
+          </div>
+        </article>
+
+        <article class="media-card reveal">
+          <div class="media-box">
+            <video autoplay muted loop playsinline preload="metadata" src="assets/videos/showcase/truck_wall_impact.mp4"></video>
+          </div>
+          <div class="media-copy">
+            <h3>Car-Wall Impact</h3>
+            <p>High-speed rigid impact from the paper's car-wall swept-impact family, used here as a direct project-facing showcase case with visible approach, contact, and collapse.</p>
+          </div>
+        </article>
+
+        <article class="media-card reveal">
+          <div class="media-box">
+            <video autoplay muted loop playsinline preload="metadata" src="assets/videos/showcase/twisting_towel.mp4"></video>
+          </div>
+          <div class="media-copy">
+            <h3>Twisting Towel Self-Contact</h3>
+            <p>The towel-wringer sequence highlights large deformable motion, twist build-up, and late self-contact in a visually direct cloth-style scenario.</p>
+          </div>
+        </article>
+
+        <article class="media-card reveal">
+          <div class="media-box">
+            <video autoplay muted loop playsinline preload="metadata" src="assets/videos/showcase/cloth_funnel.mp4"></video>
+          </div>
+          <div class="media-copy">
+            <h3>Cloth-Funnel Contact Replay</h3>
+            <p>A funnel-guided cloth contact sequence that shows release, entry, draping, and dense local interaction around the funnel interior.</p>
+          </div>
+        </article>
+
+        <article class="media-card reveal">
+          <div class="media-box">
+            <video autoplay muted loop playsinline preload="metadata" src="assets/videos/showcase/sphere_funnel.mp4"></video>
+          </div>
+          <div class="media-copy">
+            <h3>Sphere-Funnel Accumulation</h3>
+            <p>Sequential spheres interact with the funnel wall and throat before settling into accumulation, providing a clear staged-contact replay.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="method" class="section reveal">
+      <div class="section-head">
+        <h2>Method Overview</h2>
+      </div>
+
+      <div class="method-layout">
+        <figure class="figure-card method-figure reveal">
+          <img src="assets/images/paper/stpf.jpg" alt="Overview diagram of the P2C-CCD framework." loading="lazy" />
+          <figcaption>
+            <strong>STPF-centered pipeline.</strong> Conservative broad phase creates candidate records, STPF ranks dense candidate groups, and exact certificates or fallback produce the final result.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="contract-grid">
+        <article class="contract-card reveal">
+          <h3>1. Conservative Envelope</h3>
+          <p>Broad phase and BVH traversal are used only to produce a conservative candidate envelope. They do not make the final collision decision.</p>
+        </article>
+
+        <article class="contract-card reveal">
+          <h3>2. STPF Scheduling</h3>
+          <p>The Spatiotemporal Proposal Field scores dense candidate rows and prioritizes likely decisive certificates inside that already-conservative envelope.</p>
+        </article>
+
+        <article class="contract-card reveal">
+          <h3>3. Exact CCD or Fallback</h3>
+          <p>Every accepted positive or negative still comes from exact certification or conservative replay. Scheduling errors cost extra work, not correctness.</p>
+        </article>
+
+        <article class="contract-card reveal">
+          <h3>4. Dense Any-Hit Target</h3>
+          <p>The gains are strongest when dense groups contain decisive positives and exact certification dominates cost. Sparse primitive workloads remain a separate regime.</p>
+        </article>
+      </div>
+
+      <div class="pipeline reveal" aria-label="Core pipeline">
+        <div class="stage">Conservative Candidate Groups</div>
+        <div class="arrow">→</div>
+        <div class="stage accent">STPF Priority Order</div>
+        <div class="arrow">→</div>
+        <div class="stage">Exact CCD / Fallback Replay</div>
+      </div>
+    </section>
+
+    <section id="interactive" class="section reveal">
+      <div class="section-head">
+        <h2>Interactive View</h2>
+      </div>
+
+      <div class="interactive-layout">
+        <div class="interactive-menu" role="tablist" aria-label="Interactive case selector">
+          <button
+            class="interactive-btn active"
+            data-src="assets/interactive/particle_bowl/index.html"
+            data-title="Many Particles Falling into a Bowl"
+            data-summary="A particle-rich bowl replay rebuilt as a web-friendly 3D space with hundreds of sampled spheres and the explicit parabolic bowl shell.">
+            Many Particles Falling into a Bowl
+          </button>
+          <button
+            class="interactive-btn"
+            data-src="assets/interactive/abc_contact/index.html"
+            data-title="ABC real mesh contact"
+            data-summary="A lightweight ABC real-mesh contact orbit viewer rebuilt from the RTSTPFExact paper case, with denser TOI-centered replay sampling and visible outer-surface triangles.">
+            ABC real mesh contact
+          </button>
+          <button
+            class="interactive-btn"
+            data-src="assets/interactive/sphere_funnel/index.html"
+            data-title="Sphere-Funnel Accumulation"
+            data-summary="A staged-contact replay with sequential spheres entering a funnel throat and accumulating below it, rebuilt as a compact browser-side orbit viewer.">
+            Sphere-Funnel Accumulation
+          </button>
+          <button
+            class="interactive-btn"
+            data-src="assets/interactive/car_wall_impact/index.html"
+            data-title="Car-Wall Impact"
+            data-summary="A lightweight car-wall impact replay rebuilt in the same orbit-view style as the other web cases, with denser time sampling and visible outer surfaces for both the car and the moving brick wall.">
+            Car-Wall Impact
+          </button>
+        </div>
+
+        <div class="interactive-panel">
+          <div class="interactive-meta">
+            <h3 id="interactive-title">Many Particles Falling into a Bowl</h3>
+            <p id="interactive-summary">A particle-rich bowl replay rebuilt as a web-friendly 3D space with hundreds of sampled spheres and the explicit parabolic bowl shell.</p>
+          </div>
+          <div class="interactive-frame-wrap">
+            <iframe
+              id="interactive-frame"
+              title="Interactive Case Viewer"
+              src="assets/interactive/particle_bowl/index.html"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+      <p class="note">All four interactive entries are rebuilt as web-friendly 3D orbit viewers from the paper cases, with replay sampling and explicit outer-surface rendering so the browser stays responsive without collapsing the visible contact structure.</p>
+    </section>
+
+    <!--
+    <section class="section reveal">
+      <div class="section-head">
+        <h2>Further Visual Panels from the Paper</h2>
+        <p>These still panels now mirror the current manuscript and supplementary material, after the main motion-first project showcase.</p>
+      </div>
+
+      <div class="paper-gallery">
+        <figure class="paper-case reveal">
+          <span class="pill">current dense-drop analysis</span>
+          <img src="assets/images/paper/base_model_analysis.jpg" alt="Current manuscript base-model analysis figure." loading="lazy" />
+          <figcaption>
+            <strong>Standard mesh-drop analysis.</strong> The current paper figure combines the dense graphics-model drop scene with height and replay diagnostics used in the manuscript.
+          </figcaption>
+        </figure>
+
+        <figure class="paper-case reveal">
+          <span class="pill">particle trajectory diagnostics</span>
+          <img src="assets/images/paper/traj_and_reduction.jpg" alt="Current particle trajectory and reduction analysis figure." loading="lazy" />
+          <figcaption>
+            <strong>Particle bowl diagnostics.</strong> The current supplementary panel tracks representative bead trajectories and contact evolution inside the bowl scene.
+          </figcaption>
+        </figure>
+
+        <figure class="paper-case reveal">
+          <span class="pill">ball-cloth contact evolution</span>
+          <img src="assets/images/paper/ball_cloth.jpg" alt="Ball cloth contact replay figure." loading="lazy" />
+          <figcaption>
+            <strong>Ball-cloth replay.</strong> Full-scene and ball-centered views expose where dense cloth contact candidates concentrate over time.
+          </figcaption>
+        </figure>
+
+        <figure class="paper-case reveal">
+          <span class="pill">rigid swept-impact scene</span>
+          <img src="assets/images/paper/car_wall.jpg" alt="Current car-wall swept-impact figure from the paper." loading="lazy" />
+          <figcaption>
+            <strong>Car-wall swept impact.</strong> The current manuscript panel shows approach, first wall contact, wall failure, and post-impact debris in the high-speed rigid impact scene.
+          </figcaption>
+        </figure>
+
+        <figure class="paper-case reveal">
+          <span class="pill">deformable self-contact</span>
+          <img src="assets/images/paper/twisting_towel.png" alt="Twisting towel self-contact replay figure." loading="lazy" />
+          <figcaption>
+            <strong>Twisting towel self-contact.</strong> Four frames cover the transition from a flat sheet to twist build-up, self-contact onset, and late wringing.
+          </figcaption>
+        </figure>
+
+        <figure class="paper-case reveal">
+          <span class="pill">six supplementary scene families</span>
+          <img src="assets/images/paper/scalable_ccd_six_case_gallery_tight.jpg" alt="Current Scalable CCD six-case supplementary gallery." loading="lazy" />
+          <figcaption>
+            <strong>Scalable-CCD replay gallery.</strong> The current tight supplementary strip summarizes armadillo-rollers, cloth-ball, cloth-funnel, n-body, puffer-ball, and rod-twist replay families.
+          </figcaption>
+        </figure>
+
+        <figure class="paper-case reveal">
+          <span class="pill">real mesh collision snapshot</span>
+          <img src="assets/images/paper/abc_real_mesh_contact.png" alt="ABC real mesh contact collision snapshot." loading="lazy" />
+          <figcaption>
+            <strong>ABC real mesh contact.</strong> Surface-clean collision rendering of the certified time-of-impact neighborhood on a real mesh pair.
+          </figcaption>
+        </figure>
+
+        <figure class="paper-case reveal">
+          <span class="pill">sequential funnel accumulation</span>
+          <img src="assets/images/paper/repeated_sphere_funnel_drop.png" alt="Repeated sphere funnel drop figure from the paper." loading="lazy" />
+          <figcaption>
+            <strong>Repeated sphere-funnel replay.</strong> Sequential launches, funnel-wall contact, throat passage, and final accumulation make the staged candidate pressure easy to inspect.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    -->
+
+    <section id="acknowledgement" class="section reveal">
+      <div class="section-head">
+        <h2>Acknowledgement</h2>
+      </div>
+      <div class="ack-card">
+        <p>
+          Acknowledgements are intentionally withheld for double-blind review.
+          Funding, institutional support, and contributor thanks will be restored
+          in the camera-ready version.
+        </p>
+      </div>
+    </section>
+
+    <section id="citation" class="section reveal">
+      <div class="section-head">
+        <h2>Citation</h2>
+      </div>
+      <div class="citation-card">
+        <p>If you refer to this project page or the associated manuscript, please use the anonymous citation below during review.</p>
+        <pre><code>@misc{p2c_ccd_2026,
+  title = {P2C-CCD: A Proposal-to-Certificate Framework for Certified Continuous Collision Detection},
+  author = {Anonymous Authors},
+  year = {2026},
+  note = {Under review}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>P2C-CCD project website.</small>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

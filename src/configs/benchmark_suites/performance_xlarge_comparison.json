@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "suite_name": "performance_xlarge_comparison",
+  "suite_type": "performance",
+  "seed": 41,
+  "output_root": "src/outputs/benchmark_suites",
+  "notes": "Extra-large benchmark for the paper pipeline. Internal generated workload is scaled to 176 queries and external Scalable CCD workload is scaled to 2048 queries.",
+  "cases": [
+    {
+      "name": "internal_xlarge_pure_exact_cpu",
+      "method": "PureExactCPU",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 32,
+        "robot_link_count": 16,
+        "include_robot_links": true
+      }
+    },
+    {
+      "name": "internal_xlarge_bvh_exact",
+      "method": "BVHExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 32,
+        "robot_link_count": 16,
+        "include_robot_links": true
+      },
+      "config": {
+        "backend_name": "cpu_aabb_sort_sweep"
+      }
+    },
+    {
+      "name": "internal_xlarge_sort_broad_phase_exact",
+      "method": "SortBroadPhaseExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 32,
+        "robot_link_count": 16,
+        "include_robot_links": true
+      },
+      "config": {
+        "backend_name": "cpu_sort_sweep",
+        "axis": 0
+      }
+    },
+    {
+      "name": "internal_xlarge_rt_exact_cpu_reference",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 32,
+        "robot_link_count": 16,
+        "include_robot_links": true
+      },
+      "config": {
+        "backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "internal_xlarge_no_proposal_cpu_reference",
+      "method": "NoProposal",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 32,
+        "robot_link_count": 16,
+        "include_robot_links": true
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "internal_xlarge_rt_stpf_exact_cpu_reference",
+      "method": "RTSTPFExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 32,
+        "robot_link_count": 16,
+        "include_robot_links": true
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt",
+        "use_dummy_policy": true,
+        "proposal_batch_size": 4096
+      }
+    },
+    {
+      "name": "internal_xlarge_rt_exact_optix",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 32,
+        "robot_link_count": 16,
+        "include_robot_links": true
+      },
+      "config": {
+        "backend_name": "optix_rt"
+      }
+    },
+    {
+      "name": "internal_xlarge_no_proposal_optix",
+      "method": "NoProposal",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 32,
+        "robot_link_count": 16,
+        "include_robot_links": true
+      },
+      "config": {
+        "rt_backend_name": "optix_rt"
+      }
+    },
+    {
+      "name": "internal_xlarge_rt_stpf_exact_optix",
+      "method": "RTSTPFExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 32,
+        "robot_link_count": 16,
+        "include_robot_links": true
+      },
+      "config": {
+        "rt_backend_name": "optix_rt",
+        "use_dummy_policy": true,
+        "proposal_batch_size": 4096
+      }
+    },
+    {
+      "name": "external_scalable_2048_pure_exact_cpu",
+      "method": "PureExactCPU",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 2048
+      }
+    },
+    {
+      "name": "external_scalable_2048_bvh_exact",
+      "method": "BVHExact",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 2048
+      },
+      "config": {
+        "backend_name": "cpu_aabb_sort_sweep"
+      }
+    },
+    {
+      "name": "external_scalable_2048_sort_broad_phase_exact",
+      "method": "SortBroadPhaseExact",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 2048
+      },
+      "config": {
+        "backend_name": "cpu_sort_sweep",
+        "axis": 0
+      }
+    },
+    {
+      "name": "external_scalable_2048_rt_exact_cpu_reference",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 2048
+      },
+      "config": {
+        "backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "external_scalable_2048_no_proposal_cpu_reference",
+      "method": "NoProposal",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 2048
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "external_scalable_2048_rt_stpf_exact_cpu_reference",
+      "method": "RTSTPFExact",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 2048
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt",
+        "use_dummy_policy": true,
+        "proposal_batch_size": 4096
+      }
+    }
+  ]
+}

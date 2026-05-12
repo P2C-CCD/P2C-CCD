@@ -1,0 +1,13 @@
+split,split_label,method,method_label,groups,candidates,positive_groups,negative_groups,exact_calls,call_reduction,tp,tn,fp,fn,first_positive_rank_mean,exact_ms,wall_ms
+group_heldout,group-heldout,AllExact+TI,all-exact,512,65536,269,243,65536,0.0,269,240,3,0,66.1003717472,1418.1305,1445.4217
+group_heldout,group-heldout,Random+TI,random,512,65536,269,243,48062,0.266632080078,269,240,3,0,64.468401487,1376.5578,1402.5826
+group_heldout,group-heldout,FrozenLearned+TI,frozen STPF,512,65536,269,243,31445,0.52018737793,269,240,3,0,2.69516728625,716.7779,739.8757
+group_heldout,group-heldout,SingleHeuristicProximity+TI,fixed proximity,512,65536,269,243,60157,0.0820770263672,269,240,3,0,109.431226766,1457.3726,1487.1969
+group_heldout,group-heldout,HeuristicMotionHigh+TI,predeclared motion-high,512,65536,269,243,34047,0.480484008789,269,240,3,0,12.3680297398,738.0792,760.0763
+group_heldout,group-heldout,BestFixedHeuristicOracle+TI,best fixed heuristic oracle,512,65536,269,243,34047,0.480484008789,269,240,3,0,12.3680297398,738.0792,760.0763
+source_heldout_shapenetcore,source-heldout shapenetcore,AllExact+TI,all-exact,256,32768,113,143,32768,0.0,113,138,5,0,72.8672566372,1935.2245,1948.6337
+source_heldout_shapenetcore,source-heldout shapenetcore,Random+TI,random,256,32768,113,143,25142,0.232727050781,113,138,5,0,66.1769911504,1515.6161,1528.7152
+source_heldout_shapenetcore,source-heldout shapenetcore,FrozenLearned+TI,frozen STPF,256,32768,113,143,18118,0.447082519531,113,138,5,0,4.01769911504,1069.9396,1081.1327
+source_heldout_shapenetcore,source-heldout shapenetcore,SingleHeuristicProximity+TI,fixed proximity,256,32768,113,143,31406,0.0415649414062,113,138,5,0,121.610619469,1911.8489,1925.1867
+source_heldout_shapenetcore,source-heldout shapenetcore,HeuristicMotionHigh+TI,predeclared motion-high,256,32768,113,143,18110,0.447326660156,113,138,5,0,3.94690265487,1071.0012,1081.5159
+source_heldout_shapenetcore,source-heldout shapenetcore,BestFixedHeuristicOracle+TI,best fixed heuristic oracle,256,32768,113,143,18110,0.447326660156,113,138,5,0,3.94690265487,1071.0012,1081.5159

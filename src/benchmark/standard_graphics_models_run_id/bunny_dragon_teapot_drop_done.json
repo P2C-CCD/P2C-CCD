@@ -1,0 +1,14 @@
+{
+  "run_tag": "standard_graphics_models_run_id",
+  "case": "bunny_dragon_teapot_drop",
+  "case_dir": "src\\MyDemo\\standard_graphics_models_run_id\\bunny_dragon_teapot_drop",
+  "mp4": "src\\MyDemo\\standard_graphics_models_run_id\\bunny_dragon_teapot_drop\\global.mp4",
+  "metrics_json": "src\\MyDemo\\standard_graphics_models_run_id\\bunny_dragon_teapot_drop\\metrics.json",
+  "case_report": "src\\MyDemo\\standard_graphics_models_run_id\\bunny_dragon_teapot_drop\\case_report.md",
+  "benchmark_metrics_json": "src\\benchmark\\standard_graphics_models_run_id\\bunny_dragon_teapot_drop_metrics.json",
+  "covered_models": [
+    "Stanford Bunny",
+    "Stanford Dragon",
+    "Utah Teapot"
+  ]
+}

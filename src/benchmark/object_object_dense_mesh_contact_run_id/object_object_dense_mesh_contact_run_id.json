@@ -1,0 +1,168 @@
+{
+  "case": "object_object_dense_mesh_contact_run_id",
+  "assets": {
+    "exact_a": "src/MyDemo/object_object_dense_mesh_contact_run_id/assets/shapenet_chair_exact_a_320.obj",
+    "exact_b": "src/MyDemo/object_object_dense_mesh_contact_run_id/assets/shapenet_chair_exact_b_320.obj",
+    "display_a": "src/MyDemo/object_object_dense_mesh_contact_run_id/assets/shapenet_chair_display_a_5000.obj",
+    "display_b": "src/MyDemo/object_object_dense_mesh_contact_run_id/assets/shapenet_chair_display_b_5000.obj",
+    "source": "src/datasets/shapenet_core_v2/selected_ood_dense_run_id/03001627/e9371c17042131d93506b420c6bcd44/models/model_normalized.obj"
+  },
+  "exact_query": {
+    "point_triangle_primitives": 614400,
+    "edge_edge_primitives": 921600,
+    "build_ms": 190.0762000004761,
+    "prune_by_swept_aabb": false,
+    "motion": {
+      "object_a_t0": [
+        -1.2,
+        0.0,
+        0.0
+      ],
+      "object_a_t1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "object_b_t0": [
+        1.2,
+        0.0,
+        0.0
+      ],
+      "object_b_t1": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "training": {
+    "train_rows": 208000,
+    "validation_rows": 52000,
+    "positive_ratio": 0.00845,
+    "epochs": 8,
+    "device": "cuda",
+    "train_ms": 479.75869999208953,
+    "history": [
+      {
+        "epoch": 1.0,
+        "loss": 1.3471977481475244,
+        "val_rank_auc_proxy": 0.8604964159703313
+      },
+      {
+        "epoch": 2.0,
+        "loss": 1.2211144062188954,
+        "val_rank_auc_proxy": 0.8883162373985091
+      },
+      {
+        "epoch": 3.0,
+        "loss": 0.9979765185943017,
+        "val_rank_auc_proxy": 0.8983913112785299
+      },
+      {
+        "epoch": 4.0,
+        "loss": 0.8411898016929626,
+        "val_rank_auc_proxy": 0.9060514016788895
+      },
+      {
+        "epoch": 5.0,
+        "loss": 0.7736911108860602,
+        "val_rank_auc_proxy": 0.9183962252902976
+      },
+      {
+        "epoch": 6.0,
+        "loss": 0.7225851737535917,
+        "val_rank_auc_proxy": 0.9319876835662569
+      },
+      {
+        "epoch": 7.0,
+        "loss": 0.6683953358576848,
+        "val_rank_auc_proxy": 0.9464381715682981
+      },
+      {
+        "epoch": 8.0,
+        "loss": 0.6105761997974836,
+        "val_rank_auc_proxy": 0.9584346231496926
+      }
+    ],
+    "checkpoint": "src/outputs/stpf_training/object_object_dense_mesh_contact_run_id/model_state.pt",
+    "candidate_pool_rows": 260000
+  },
+  "benchmark": {
+    "group_count": 1024,
+    "group_size": 128,
+    "candidate_count": 131072,
+    "methods": [
+      {
+        "method": "NoProposal+mesh-exact",
+        "groups": 1024,
+        "candidates": 131072,
+        "positive_groups": 1024,
+        "exact_calls": 131072,
+        "skipped_exact_calls": 0,
+        "tp": 1024,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "first_positive_rank_mean": 66.5849609375,
+        "proposal_ms": 0.0,
+        "exact_ms": 248.3609056653222,
+        "wall_ms": 336.7500000022119
+      },
+      {
+        "method": "Random+mesh-exact",
+        "groups": 1024,
+        "candidates": 131072,
+        "positive_groups": 1024,
+        "exact_calls": 67132,
+        "skipped_exact_calls": 63940,
+        "tp": 1024,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "first_positive_rank_mean": 65.55859375,
+        "proposal_ms": 0.0,
+        "exact_ms": 128.50240182888228,
+        "wall_ms": 176.90760000550654
+      },
+      {
+        "method": "RTSTPFExact+mesh-exact",
+        "groups": 1024,
+        "candidates": 131072,
+        "positive_groups": 1024,
+        "exact_calls": 19061,
+        "skipped_exact_calls": 112011,
+        "tp": 1024,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "first_positive_rank_mean": 18.6142578125,
+        "proposal_ms": 12.050799996359274,
+        "exact_ms": 42.528296980890445,
+        "wall_ms": 92.54119999241084
+      }
+    ]
+  },
+  "visualization": {
+    "global_mp4": "src/MyDemo/object_object_dense_mesh_contact_run_id/global.mp4",
+    "legacy_mp4v": "src/MyDemo/object_object_dense_mesh_contact_run_id/global_legacy_mp4v.mp4",
+    "contact_sheet": "src/MyDemo/object_object_dense_mesh_contact_run_id/contact_sheet.png",
+    "fps": "30",
+    "frame_count": "108",
+    "display_mesh": "src/MyDemo/object_object_dense_mesh_contact_run_id/assets/shapenet_chair_display_coherent_12000.obj",
+    "display_faces": "11939",
+    "object_yaw_degrees": "45.0",
+    "visualization": "virtual-space coherent source triangle mesh contact witnesses with 45-degree chair yaw and conservative central rigid-body impulse response",
+    "physics_model": "equal-mass central rigid-body normal impulse with restitution; linear and angular momentum are conserved",
+    "restitution": "0.420000",
+    "normal_impulse": "0.966007",
+    "momentum_residual": "0.000000e+00",
+    "angular_momentum_residual": "0.000000e+00",
+    "kinetic_energy_post_over_pre": "0.176400"
+  }
+}

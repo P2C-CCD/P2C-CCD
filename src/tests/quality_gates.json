@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "gates": [
+    {
+      "todo_id": 107,
+      "name": "tests_readme",
+      "status": "done",
+      "purpose": "Document the test groups and reproducible commands.",
+      "docs": [
+        "tests/README.md"
+      ],
+      "python_tests": [],
+      "cpp_tests": [],
+      "benchmark_suites": [],
+      "requires_cuda_runtime": false,
+      "requires_optix_runtime": false
+    },
+    {
+      "todo_id": 108,
+      "name": "contract_validation",
+      "status": "done",
+      "purpose": "Keep Python and C++ runtime contracts schema-valid.",
+      "docs": [],
+      "python_tests": [
+        "tests/python/test_contracts.py"
+      ],
+      "cpp_tests": [
+        "p2cccd_contract_tests"
+      ],
+      "benchmark_suites": [],
+      "requires_cuda_runtime": false,
+      "requires_optix_runtime": false
+    },
+    {
+      "todo_id": 109,
+      "name": "proxy_coverage",
+      "status": "done",
+      "purpose": "Validate conservative proxy and motion-bound coverage.",
+      "docs": [],
+      "python_tests": [],
+      "cpp_tests": [
+        "p2cccd_motion_proxy_tests",
+        "proxy_bound_unit_test"
+      ],
+      "benchmark_suites": [],
+      "requires_cuda_runtime": false,
+      "requires_optix_runtime": false
+    },
+    {
+      "todo_id": 110,
+      "name": "candidate_recall",
+      "status": "done",
+      "purpose": "Guard RT candidate recall and slab-refinement recall.",
+      "docs": [],
+      "python_tests": [
+        "tests/python/test_rt_exact_baseline.py"
+      ],
+      "cpp_tests": [
+        "candidate_recall_test",
+        "slab_refinement_recall_test"
+      ],
+      "benchmark_suites": [],
+      "requires_cuda_runtime": false,
+      "requires_optix_runtime": false
+    },
+    {
+      "todo_id": 111,
+      "name": "proposal_monotonicity",
+      "status": "done",
+      "purpose": "Ensure proposal scheduling cannot drop uncertified candidates.",
+      "docs": [],
+      "python_tests": [
+        "tests/python/test_proposal_inference.py",
+        "tests/python/test_rt_stpf_exact_baseline.py"
+      ],
+      "cpp_tests": [
+        "proposal_monotonicity_test",
+        "queue_conservation_test",
+        "proposal_ood_fallback_test"
+      ],
+      "benchmark_suites": [],
+      "requires_cuda_runtime": false,
+      "requires_optix_runtime": false
+    },
+    {
+      "todo_id": 112,
+      "name": "cpu_exact_certificates",
+      "status": "done",
+      "purpose": "Validate CPU exact collision, separation, undecided, and refinement branches.",
+      "docs": [],
+      "python_tests": [
+        "tests/python/test_python_wrappers.py"
+      ],
+      "cpp_tests": [
+        "certificate_engine_test"
+      ],
+      "benchmark_suites": [],
+      "requires_cuda_runtime": false,
+      "requires_optix_runtime": false
+    },
+    {
+      "todo_id": 113,
+      "name": "cpu_cuda_exact_consistency",
+      "status": "done",
+      "purpose": "Cross-check optional CUDA exact kernels against CPU behavior when available, with CPU-only stub coverage otherwise.",
+      "docs": [],
+      "python_tests": [],
+      "cpp_tests": [
+        "certificate_cuda_test"
+      ],
+      "benchmark_suites": [],
+      "requires_cuda_runtime": false,
+      "requires_optix_runtime": false
+    },
+    {
+      "todo_id": 114,
+      "name": "final_fn_zero",
+      "status": "done",
+      "purpose": "Run the correctness benchmark through an end-to-end final FN = 0 gate.",
+      "docs": [],
+      "python_tests": [
+        "tests/python/test_correctness_and_performance_gates.py::test_correctness_suite_final_fn_zero_gate"
+      ],
+      "cpp_tests": [],
+      "benchmark_suites": [
+        "configs/benchmark_suites/correctness.json"
+      ],
+      "requires_cuda_runtime": false,
+      "requires_optix_runtime": false
+    },
+    {
+      "todo_id": 115,
+      "name": "performance_timing_export",
+      "status": "done",
+      "purpose": "Smoke-test BenchmarkRowV2 timing breakdown export for CSV and JSONL outputs.",
+      "docs": [],
+      "python_tests": [
+        "tests/python/test_correctness_and_performance_gates.py::test_performance_smoke_exports_timing_breakdown"
+      ],
+      "cpp_tests": [],
+      "benchmark_suites": [
+        "configs/benchmark_suites/performance.json"
+      ],
+      "requires_cuda_runtime": false,
+      "requires_optix_runtime": false
+    },
+    {
+      "todo_id": 116,
+      "name": "ci_minimal_cpu",
+      "status": "done",
+      "purpose": "Provide a CI-friendly minimal CPU subset that avoids OptiX and CUDA runtime paths.",
+      "docs": [
+        "tests/README.md"
+      ],
+      "python_tests": [
+        "tests/python/test_correctness_and_performance_gates.py::test_ci_minimal_cpu_suite_runs_without_accelerator_paths"
+      ],
+      "cpp_tests": [
+        "p2cccd_contract_tests",
+        "certificate_engine_test"
+      ],
+      "benchmark_suites": [
+        "configs/benchmark_suites/ci_minimal_cpu.json"
+      ],
+      "requires_cuda_runtime": false,
+      "requires_optix_runtime": false
+    }
+  ]
+}

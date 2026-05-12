@@ -1,0 +1,233 @@
+{
+  "run_name": "scalable_ccd_scene_supplementary_training_run_id",
+  "converted_shard_dir": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id",
+  "split_shard_dir": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_scene_supplementary_training_run_id",
+  "training_report": "src/benchmark/scalable_ccd_scene_supplementary_training_run_id/scalable_ccd_scene_supplementary_training_run_id_training.md",
+  "model_state_path": "src/outputs/stpf_training/scalable_ccd_scene_supplementary_training_run_id/model_state.pt",
+  "manifest": {
+    "schema_version": 1,
+    "run_name": "scalable_ccd_scene_supplementary_training_run_id",
+    "source_conversion": "scalable_ccd_sample_scene_candidate_groups_run_id",
+    "converted_dir": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id",
+    "split_policy": {
+      "train_scenes": [
+        "armadillo-rollers",
+        "cloth-ball",
+        "n-body-simulation",
+        "puffer-ball"
+      ],
+      "validation_scenes": [
+        "cloth-funnel"
+      ],
+      "heldout_scenes": [
+        "rod-twist"
+      ]
+    },
+    "chunks": [
+      {
+        "split": "train",
+        "path": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_scene_supplementary_training_run_id/train.npz",
+        "row_count": 266326,
+        "positive_count": 264999
+      },
+      {
+        "split": "validation",
+        "path": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_scene_supplementary_training_run_id/validation.npz",
+        "row_count": 355,
+        "positive_count": 134
+      },
+      {
+        "split": "heldout_test",
+        "path": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_scene_supplementary_training_run_id/heldout_test.npz",
+        "row_count": 5171,
+        "positive_count": 4944
+      },
+      {
+        "split": "all_scene",
+        "path": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_scene_supplementary_training_run_id/all_scene.npz",
+        "row_count": 271852,
+        "positive_count": 270077
+      }
+    ],
+    "groups": [
+      {
+        "scene": "armadillo-rollers",
+        "kind": "ee",
+        "timestep": 326,
+        "row_count": 19313,
+        "positive_count": 19308,
+        "split": "train",
+        "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/000_armadillo-rollers_326ee.npz"
+      },
+      {
+        "scene": "armadillo-rollers",
+        "kind": "vf",
+        "timestep": 326,
+        "row_count": 4652,
+        "positive_count": 4650,
+        "split": "train",
+        "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/001_armadillo-rollers_326vf.npz"
+      },
+      {
+        "scene": "cloth-ball",
+        "kind": "ee",
+        "timestep": 92,
+        "row_count": 94825,
+        "positive_count": 94822,
+        "split": "train",
+        "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/002_cloth-ball_92ee.npz"
+      },
+      {
+        "scene": "cloth-ball",
+        "kind": "vf",
+        "timestep": 92,
+        "row_count": 19034,
+        "positive_count": 19032,
+        "split": "train",
+        "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/003_cloth-ball_92vf.npz"
+      },
+      {
+        "scene": "cloth-funnel",
+        "kind": "ee",
+        "timestep": 227,
+        "row_count": 263,
+        "positive_count": 107,
+        "split": "validation",
+        "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/004_cloth-funnel_227ee.npz"
+      },
+      {
+        "scene": "cloth-funnel",
+        "kind": "vf",
+        "timestep": 227,
+        "row_count": 92,
+        "positive_count": 27,
+        "split": "validation",
+        "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/005_cloth-funnel_227vf.npz"
+      },
+      {
+        "scene": "n-body-simulation",
+        "kind": "ee",
+        "timestep": 18,
+        "row_count": 41036,
+        "positive_count": 41031,
+        "split": "train",
+        "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/006_n-body-simulation_18ee.npz"
+      },
+      {
+        "scene": "n-body-simulation",
+        "kind": "vf",
+        "timestep": 18,
+        "row_count": 9460,
+        "positive_count": 9459,
+        "split": "train",
+        "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/007_n-body-simulation_18vf.npz"
+      },
+      {
+        "scene": "puffer-ball",
+        "kind": "ee",
+        "timestep": 20,
+        "row_count": 61844,
+        "positive_count": 60894,
+        "split": "train",
+        "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/008_puffer-ball_20ee.npz"
+      },
+      {
+        "scene": "puffer-ball",
+        "kind": "vf",
+        "timestep": 20,
+        "row_count": 16162,
+        "positive_count": 15803,
+        "split": "train",
+        "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/009_puffer-ball_20vf.npz"
+      },
+      {
+        "scene": "rod-twist",
+        "kind": "ee",
+        "timestep": 3036,
+        "row_count": 4370,
+        "positive_count": 4179,
+        "split": "heldout_test",
+        "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/010_rod-twist_3036ee.npz"
+      },
+      {
+        "scene": "rod-twist",
+        "kind": "vf",
+        "timestep": 3036,
+        "row_count": 801,
+        "positive_count": 765,
+        "split": "heldout_test",
+        "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/011_rod-twist_3036vf.npz"
+      }
+    ]
+  },
+  "visualization_dir": "src/MyDemo/scalable_ccd_scene_supplementary_training_run_id",
+  "elapsed_seconds": 3847.788468300001,
+  "benchmark_report": "src/benchmark/scalable_ccd_scene_supplementary_training_run_id/scalable_ccd_scene_supplementary_training_run_id.md",
+  "benchmark_json": "src/benchmark/scalable_ccd_scene_supplementary_training_run_id/scalable_ccd_scene_supplementary_training_run_id.json",
+  "benchmark_csv": "src/benchmark/scalable_ccd_scene_supplementary_training_run_id/scalable_ccd_scene_supplementary_training_run_id.csv",
+  "mp4_paths": [
+    "src/MyDemo/scalable_ccd_scene_supplementary_training_run_id/armadillo_rollers.mp4",
+    "src/MyDemo/scalable_ccd_scene_supplementary_training_run_id/cloth_ball.mp4",
+    "src/MyDemo/scalable_ccd_scene_supplementary_training_run_id/cloth_funnel.mp4",
+    "src/MyDemo/scalable_ccd_scene_supplementary_training_run_id/n_body_simulation.mp4",
+    "src/MyDemo/scalable_ccd_scene_supplementary_training_run_id/puffer_ball.mp4",
+    "src/MyDemo/scalable_ccd_scene_supplementary_training_run_id/rod_twist.mp4"
+  ],
+  "contact_sheet": "src/MyDemo/scalable_ccd_scene_supplementary_training_run_id/contact_sheet.png",
+  "sequence_metadata": {
+    "armadillo-rollers": {
+      "mode": "full_dataset_real_frames",
+      "contact_mode": "per-rendered-frame nearest-point positive CCD contacts from matching full-dataset queries",
+      "zoom_multiplier": 1.0,
+      "source_frame_count": 240,
+      "rendered_frame_count": 240,
+      "first_frame": "src/baseline/datasets/continuous-collision-detection/armadillo-rollers/frames/161.ply",
+      "last_frame": "src/baseline/datasets/continuous-collision-detection/armadillo-rollers/frames/400.ply"
+    },
+    "cloth-ball": {
+      "mode": "full_dataset_real_frames",
+      "contact_mode": "per-rendered-frame nearest-point positive CCD contacts from matching full-dataset queries",
+      "zoom_multiplier": 1.0,
+      "source_frame_count": 94,
+      "rendered_frame_count": 240,
+      "first_frame": "src/baseline/datasets/continuous-collision-detection/cloth-ball/frames/cloth_ball0.ply",
+      "last_frame": "src/baseline/datasets/continuous-collision-detection/cloth-ball/frames/cloth_ball93.ply"
+    },
+    "cloth-funnel": {
+      "mode": "full_dataset_real_frames",
+      "contact_mode": "per-rendered-frame nearest-point positive CCD contacts from matching full-dataset queries",
+      "zoom_multiplier": 1.0,
+      "source_frame_count": 240,
+      "rendered_frame_count": 240,
+      "first_frame": "src/baseline/datasets/continuous-collision-detection/cloth-funnel/frames/227.ply",
+      "last_frame": "src/baseline/datasets/continuous-collision-detection/cloth-funnel/frames/466.ply"
+    },
+    "n-body-simulation": {
+      "mode": "full_dataset_real_frames",
+      "contact_mode": "per-rendered-frame nearest-point positive CCD contacts from matching full-dataset queries",
+      "zoom_multiplier": 1.0,
+      "source_frame_count": 76,
+      "rendered_frame_count": 240,
+      "first_frame": "src/baseline/datasets/continuous-collision-detection/n-body-simulation/frames/balls16_0.ply",
+      "last_frame": "src/baseline/datasets/continuous-collision-detection/n-body-simulation/frames/balls16_75.ply"
+    },
+    "puffer-ball": {
+      "mode": "full_dataset_real_frames",
+      "contact_mode": "per-rendered-frame nearest-point positive CCD contacts from matching full-dataset queries",
+      "zoom_multiplier": 5.5,
+      "source_frame_count": 131,
+      "rendered_frame_count": 240,
+      "first_frame": "src/baseline/datasets/continuous-collision-detection/puffer-ball/frames/0.ply",
+      "last_frame": "src/baseline/datasets/continuous-collision-detection/puffer-ball/frames/130.ply"
+    },
+    "rod-twist": {
+      "mode": "full_dataset_real_frames",
+      "contact_mode": "per-rendered-frame nearest-point positive CCD contacts from matching full-dataset queries",
+      "zoom_multiplier": 1.0,
+      "source_frame_count": 240,
+      "rendered_frame_count": 240,
+      "first_frame": "src/baseline/datasets/continuous-collision-detection/rod-twist/frames/3036.ply",
+      "last_frame": "src/baseline/datasets/continuous-collision-detection/rod-twist/frames/3275.ply"
+    }
+  }
+}

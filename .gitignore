@@ -1,0 +1,47 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+
+# Python cache
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest_tmp/
+
+# Build output
+src/build/
+src/build_*/
+src/build*/
+
+# Local runtime outputs
+src/outputs/
+src/packages/
+
+# Local datasets not bundled in the public repository
+src/datasets/abc/
+src/datasets/abc_official/
+src/datasets/benchmark/
+src/datasets/fusion360/
+src/datasets/fusion360_full/
+src/datasets/native_scene_object_envelope_motion_trap_2026-05-08/
+src/datasets/shapenet_core_v2/
+src/datasets/thingi10k/
+src/datasets/training/
+
+# External baseline repos not bundled in the public repository
+src/baseline/CCD-Wrapper/
+src/baseline/Exact-Root-Parity-CCD/
+src/baseline/Scalable-CCD/
+src/baseline/Sample-Queries/
+src/baseline/Sample-Scalable-CCD-Data/
+src/baseline/Tight-Inclusion/
+src/baseline/datasets/
+src/baseline/download/
+src/baseline/rigid-ipc/
+
+# Generated benchmark scratch space
+src/benchmark/tmp_*/
+src/benchmark/status-check/

@@ -1,0 +1,172 @@
+{
+  "case": "twisting_towel_wringer_ccd",
+  "title": "Classic Twisting Towel CCD Wringing Case",
+  "dataset": "procedural_classic_graphics_towel_mesh",
+  "scenario": "wrung towel self-contact under opposite endpoint rotations",
+  "run_tag": "standard_graphics_models_run_id",
+  "cloth_vertices": 1825,
+  "cloth_faces": 3456,
+  "frame_count": 72,
+  "fps": 24,
+  "duration_seconds": 2.55,
+  "material": {
+    "name": "cotton towel proxy",
+    "mass_kg": 0.42,
+    "thickness_m": 0.012,
+    "friction_mu": 0.74,
+    "areal_density_kg_m2": 0.130718954248366
+  },
+  "ccd": {
+    "audit_mode": "adjacent_frame_swept_ccd_towel_self_collision",
+    "backend": "src p2cccd_cpp.evaluate_certificate_query_cpu",
+    "frame_segments": 71,
+    "cloth_vertices": 1825,
+    "cloth_faces": 3456,
+    "cloth_unique_edges": 5280,
+    "thickness_margin_m": 0.012,
+    "spatial_hash_cell_size_m": 0.105,
+    "dense_nonadjacent_triangle_pairs_per_segment": 5950267,
+    "dense_no_proposal_exact_primitive_budget": 6337034355,
+    "candidate_triangle_pairs": 1291963,
+    "max_segment_candidate_pairs": 37500,
+    "exact_fallback_queries": 71,
+    "exact_fallback_primitives": 8306486,
+    "exact_family_counts": {
+      "point_triangle": 2744761,
+      "edge_edge": 5561725
+    },
+    "certificate_status_counts": {
+      "separation": 33,
+      "collision": 38
+    },
+    "collision_segments": 38,
+    "conservative_hit_segments": 38,
+    "first_toi_seconds": 1.2185391450264085,
+    "exact_call_reduction_vs_dense": 762.9019485496033,
+    "fn": 0,
+    "fn_definition": "Zero candidate-stage FN for this sampled replay because every non-adjacent swept triangle-pair AABB overlap is emitted to the exact P2CCCD certificate pass; no exact segment is truncated.",
+    "hotspots": [
+      {
+        "segment": 33,
+        "time": 1.2185391450264085,
+        "point": [
+          -1.5504071232362393,
+          0.19057814439034323,
+          0.958713489490495
+        ]
+      },
+      {
+        "segment": 34,
+        "time": 1.2520683181117958,
+        "point": [
+          -1.5489572844752968,
+          0.14206396560336718,
+          0.9283580621956267
+        ]
+      },
+      {
+        "segment": 35,
+        "time": 1.2794017523107395,
+        "point": [
+          -1.5473387821210238,
+          0.08562599449618175,
+          0.9075480381930283
+        ]
+      },
+      {
+        "segment": 36,
+        "time": 1.3177548690580987,
+        "point": [
+          -1.5457427145954186,
+          0.028782071702811524,
+          0.8992823068314804
+        ]
+      },
+      {
+        "segment": 37,
+        "time": 1.3543192259022887,
+        "point": [
+          -1.5441700285496298,
+          -0.027560599084303562,
+          0.9026956946268473
+        ]
+      },
+      {
+        "segment": 38,
+        "time": 1.3804666868397888,
+        "point": [
+          -1.5426707262509725,
+          -0.08097580078292638,
+          0.9171494117402168
+        ]
+      },
+      {
+        "segment": 39,
+        "time": 1.4263431172975354,
+        "point": [
+          -1.5412930492528476,
+          -0.12931418786008037,
+          0.9414861496156337
+        ]
+      },
+      {
+        "segment": 40,
+        "time": 1.444331553284551,
+        "point": [
+          -1.540081080490971,
+          -0.17081488869043482,
+          0.9741307333582212
+        ]
+      },
+      {
+        "segment": 41,
+        "time": 1.504803036971831,
+        "point": [
+          -1.5390726035177567,
+          -0.20418247214919477,
+          1.0132134268053332
+        ]
+      },
+      {
+        "segment": 42,
+        "time": 1.517096377090669,
+        "point": [
+          -1.5382973588703404,
+          -0.22862562200411582,
+          1.056704253300533
+        ]
+      },
+      {
+        "segment": 43,
+        "time": 1.559430361465669,
+        "point": [
+          -1.537775802857658,
+          -0.24385768782116923,
+          1.1025466376870046
+        ]
+      },
+      {
+        "segment": 44,
+        "time": 1.5886380047865318,
+        "point": [
+          -1.5375184314462063,
+          -0.25006274361522246,
+          1.148779832813421
+        ]
+      }
+    ]
+  },
+  "candidate_density": 1291963,
+  "rtstpf_exact_calls": 8306486,
+  "no_proposal_exact_calls": 6337034355,
+  "exact_call_reduction": 762.9019485496033,
+  "fn": 0,
+  "toi_seconds": 1.2185391450264085,
+  "outputs": {
+    "global_mp4": "global.mp4",
+    "contact_sheet": "contact_sheet.png",
+    "frames": "real_mesh_global_frames/global_frame_*.png",
+    "initial_obj": "_generated_assets/towel_initial.obj",
+    "twisted_obj": "_generated_assets/towel_twisted.obj"
+  }
+}

@@ -1,0 +1,2381 @@
+{
+  "title": "Classic Graphics Models Cornell-Room Drop",
+  "description": "Stanford Bunny, Dragon, Armadillo, Fandisk, Spot, Suzanne, and Utah Teapot fall under semi-implicit rigid-body gravity with Coulomb friction; mass is computed from estimated mesh volume and a material density table. Cornell Box provides the standard graphics-scene reference.",
+  "render_width": 1600,
+  "render_height": 900,
+  "frame_count": 192,
+  "fps": 24,
+  "duration_seconds": 2.55,
+  "toi_seconds": 0.6208333333333333,
+  "objects": [
+    {
+      "name": "Stanford Bunny",
+      "category": "classic_dynamic_mesh",
+      "mesh_path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/stanford-bunny.obj",
+      "mass": 213.28290614570028,
+      "velocity_pre": [
+        0.04519719654043289,
+        0.11769262988314308,
+        0.0
+      ],
+      "velocity_post": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_model": "semi_implicit_euler_ground_drop",
+      "trajectory_samples": 613,
+      "deformable_vertex_trajectory": false,
+      "first_ground_contact_time": 0.6208333333333333,
+      "ground_contact_count": 3,
+      "preview_faces": 24000,
+      "original_faces": 69451,
+      "preview_decimation_method": "deterministic_face_stride_to_24000",
+      "display_shell_method": "source_mesh_visual_surface",
+      "display_faces": 12000,
+      "material": "polymer_resin",
+      "density_kg_m3": 1180.0,
+      "volume_m3": 0.18074822554720363,
+      "mass_source": "density_times_estimated_mesh_volume",
+      "mass_kg": 213.28290614570028,
+      "center_of_mass_m": [
+        0.053792234976273466,
+        -0.035427902583216354,
+        -0.05639958022179948
+      ],
+      "inertia_tensor_kg_m2": [
+        [
+          11.937198119403403,
+          -0.24828278542934762,
+          -2.376356209296187
+        ],
+        [
+          -0.24828278542934762,
+          14.818922569528105,
+          -1.717720066473549
+        ],
+        [
+          -2.376356209296187,
+          -1.717720066473549,
+          10.496032068476831
+        ]
+      ],
+      "principal_inertia_kg_m2": [
+        8.364615323484871,
+        13.35502952837181,
+        15.532507905551652
+      ],
+      "inertia_estimation_method": "convex_hull_fallback",
+      "legacy_manual_mass_parameter": 1.2
+    },
+    {
+      "name": "Stanford Dragon",
+      "category": "classic_dynamic_mesh",
+      "mesh_path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/xyzrgb_dragon.obj",
+      "mass": 177.44634532309072,
+      "velocity_pre": [
+        0.116057232969841,
+        0.10540033567573584,
+        0.0
+      ],
+      "velocity_post": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_model": "semi_implicit_euler_ground_drop",
+      "trajectory_samples": 613,
+      "deformable_vertex_trajectory": false,
+      "first_ground_contact_time": 0.6916666666666667,
+      "ground_contact_count": 3,
+      "preview_faces": 24000,
+      "original_faces": 249882,
+      "preview_decimation_method": "deterministic_face_stride_to_24000",
+      "display_shell_method": "source_mesh_visual_surface",
+      "display_faces": 12000,
+      "material": "cast_plaster",
+      "density_kg_m3": 1450.0,
+      "volume_m3": 0.1223767898779936,
+      "mass_source": "density_times_estimated_mesh_volume",
+      "mass_kg": 177.44634532309072,
+      "center_of_mass_m": [
+        -0.032438707950988084,
+        0.027918685833640343,
+        -0.03446814203998064
+      ],
+      "inertia_tensor_kg_m2": [
+        [
+          4.5945036154143155,
+          0.047406031633597155,
+          0.19252115590304647
+        ],
+        [
+          0.047406031633597155,
+          12.433909618812542,
+          0.12800517232326783
+        ],
+        [
+          0.19252115590304647,
+          0.12800517232326783,
+          11.928065419924625
+        ]
+      ],
+      "principal_inertia_kg_m2": [
+        4.58920578509808,
+        11.901761133800315,
+        12.465511735253093
+      ],
+      "inertia_estimation_method": "convex_hull_fallback",
+      "legacy_manual_mass_parameter": 2.4
+    },
+    {
+      "name": "Armadillo",
+      "category": "classic_dynamic_mesh",
+      "mesh_path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/armadillo.obj",
+      "mass": 375.9490061323543,
+      "velocity_pre": [
+        -0.12121594316474935,
+        -0.10945222881801772,
+        0.0
+      ],
+      "velocity_post": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_model": "semi_implicit_euler_ground_drop",
+      "trajectory_samples": 613,
+      "deformable_vertex_trajectory": false,
+      "first_ground_contact_time": 0.7625,
+      "ground_contact_count": 4,
+      "preview_faces": 24000,
+      "original_faces": 99976,
+      "preview_decimation_method": "deterministic_face_stride_to_24000",
+      "display_shell_method": "source_mesh_visual_surface",
+      "display_faces": 12000,
+      "material": "cast_plaster",
+      "density_kg_m3": 1450.0,
+      "volume_m3": 0.259275176643003,
+      "mass_source": "density_times_estimated_mesh_volume",
+      "mass_kg": 375.9490061323543,
+      "center_of_mass_m": [
+        0.023805386493117104,
+        0.022418697543319883,
+        0.02935860121081932
+      ],
+      "inertia_tensor_kg_m2": [
+        [
+          32.275893432746294,
+          -0.26372035747364053,
+          0.7420250743841501
+        ],
+        [
+          -0.26372035747364053,
+          37.4758216256374,
+          -5.749057153095024
+        ],
+        [
+          0.7420250743841501,
+          -5.749057153095024,
+          20.97224695725197
+        ]
+      ],
+      "principal_inertia_kg_m2": [
+        19.13688267551186,
+        32.27402133308147,
+        39.313058007042336
+      ],
+      "inertia_estimation_method": "convex_hull_fallback",
+      "legacy_manual_mass_parameter": 2.0
+    },
+    {
+      "name": "Fandisk",
+      "category": "classic_dynamic_mesh",
+      "mesh_path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/fandisk.obj",
+      "mass": 324.8667237042786,
+      "velocity_pre": [
+        0.1514736686446177,
+        0.04892816903146746,
+        0.0
+      ],
+      "velocity_post": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_model": "semi_implicit_euler_ground_drop",
+      "trajectory_samples": 613,
+      "deformable_vertex_trajectory": false,
+      "first_ground_contact_time": 0.8375,
+      "ground_contact_count": 4,
+      "preview_faces": 12946,
+      "original_faces": 12946,
+      "preview_decimation_method": "full_surface",
+      "display_shell_method": "source_mesh_visual_surface",
+      "display_faces": 12000,
+      "material": "aluminum",
+      "density_kg_m3": 2700.0,
+      "volume_m3": 0.12032100877936246,
+      "mass_source": "density_times_estimated_mesh_volume",
+      "mass_kg": 324.8667237042786,
+      "center_of_mass_m": [
+        -0.01131768341490332,
+        -0.06710984193703336,
+        -0.08165609526068811
+      ],
+      "inertia_tensor_kg_m2": [
+        [
+          15.054883799214677,
+          -0.3339578710270846,
+          3.9926041031242105
+        ],
+        [
+          -0.3339578710270846,
+          24.971563331616544,
+          1.3932476673276868
+        ],
+        [
+          3.9926041031242105,
+          1.3932476673276868,
+          18.548768215674727
+        ]
+      ],
+      "principal_inertia_kg_m2": [
+        12.3569266493013,
+        20.928127225885728,
+        25.29016147131891
+      ],
+      "inertia_estimation_method": "watertight_triangle_mesh",
+      "legacy_manual_mass_parameter": 1.6
+    },
+    {
+      "name": "Spot the Cow",
+      "category": "classic_dynamic_mesh",
+      "mesh_path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/spot.obj",
+      "mass": 295.47075582069687,
+      "velocity_pre": [
+        0.07481491146402108,
+        0.13036041650448707,
+        0.0
+      ],
+      "velocity_post": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_model": "semi_implicit_euler_ground_drop",
+      "trajectory_samples": 613,
+      "deformable_vertex_trajectory": false,
+      "first_ground_contact_time": 0.6666666666666666,
+      "ground_contact_count": 3,
+      "preview_faces": 5856,
+      "original_faces": 5856,
+      "preview_decimation_method": "full_surface",
+      "display_shell_method": "source_mesh_visual_surface",
+      "display_faces": 5856,
+      "material": "polymer_resin",
+      "density_kg_m3": 1180.0,
+      "volume_m3": 0.25039894561076004,
+      "mass_source": "density_times_estimated_mesh_volume",
+      "mass_kg": 295.47075582069687,
+      "center_of_mass_m": [
+        -0.02424833561624305,
+        8.082478344187194e-18,
+        -0.061386638368547734
+      ],
+      "inertia_tensor_kg_m2": [
+        [
+          20.367538089519822,
+          -9.449302602506532e-16,
+          7.465666658324319
+        ],
+        [
+          -9.449302602506532e-16,
+          30.67718450414605,
+          3.3102755695012364e-16
+        ],
+        [
+          7.465666658324319,
+          3.3102755695012364e-16,
+          19.435278862728286
+        ]
+      ],
+      "principal_inertia_kg_m2": [
+        12.421204236285423,
+        27.38161271596269,
+        30.677184504146055
+      ],
+      "inertia_estimation_method": "convex_hull_fallback",
+      "legacy_manual_mass_parameter": 1.5
+    },
+    {
+      "name": "Suzanne",
+      "category": "classic_dynamic_mesh",
+      "mesh_path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/suzanne.obj",
+      "mass": 123.62198384320111,
+      "velocity_pre": [
+        0.12918336142945125,
+        -0.050000125717327495,
+        0.0
+      ],
+      "velocity_post": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_model": "semi_implicit_euler_ground_drop",
+      "trajectory_samples": 613,
+      "deformable_vertex_trajectory": false,
+      "first_ground_contact_time": 0.7375,
+      "ground_contact_count": 4,
+      "preview_faces": 968,
+      "original_faces": 968,
+      "preview_decimation_method": "full_surface",
+      "display_shell_method": "source_mesh_visual_surface",
+      "display_faces": 968,
+      "material": "printed_plastic",
+      "density_kg_m3": 1050.0,
+      "volume_m3": 0.11773522270781057,
+      "mass_source": "density_times_estimated_mesh_volume",
+      "mass_kg": 123.62198384320111,
+      "center_of_mass_m": [
+        -1.240681466862941e-07,
+        -0.009022750073606922,
+        0.04761492699971509
+      ],
+      "inertia_tensor_kg_m2": [
+        [
+          4.100675654939995,
+          2.630003720531134e-08,
+          2.9280724502514565e-07
+        ],
+        [
+          2.630003720531134e-08,
+          5.605091223371576,
+          -0.4380675498455473
+        ],
+        [
+          2.9280724502514565e-07,
+          -0.4380675498455473,
+          5.563490979112984
+        ]
+      ],
+      "principal_inertia_kg_m2": [
+        4.100675654939927,
+        5.145730018486145,
+        6.02285218399848
+      ],
+      "inertia_estimation_method": "convex_hull_fallback",
+      "legacy_manual_mass_parameter": 1.1
+    },
+    {
+      "name": "Utah Teapot",
+      "category": "classic_dynamic_mesh",
+      "mesh_path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/teapot.obj",
+      "mass": 228.29576904125472,
+      "velocity_pre": [
+        -0.1579492184533233,
+        0.15042321717093424,
+        0.0
+      ],
+      "velocity_post": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_model": "semi_implicit_euler_ground_drop",
+      "trajectory_samples": 613,
+      "deformable_vertex_trajectory": false,
+      "first_ground_contact_time": 0.8083333333333333,
+      "ground_contact_count": 4,
+      "preview_faces": 6320,
+      "original_faces": 6320,
+      "preview_decimation_method": "full_surface",
+      "display_shell_method": "source_mesh_visual_surface",
+      "display_faces": 6320,
+      "material": "ceramic",
+      "density_kg_m3": 2400.0,
+      "volume_m3": 0.0951232371005228,
+      "mass_source": "density_times_estimated_mesh_volume",
+      "mass_kg": 228.29576904125472,
+      "center_of_mass_m": [
+        0.020027749896146106,
+        8.61312348216212e-06,
+        -0.02324904606332539
+      ],
+      "inertia_tensor_kg_m2": [
+        [
+          5.7452192572703,
+          -0.0014369755168560814,
+          0.35034556497994024
+        ],
+        [
+          -0.0014369755168560814,
+          9.086556493378437,
+          0.00015066942758153046
+        ],
+        [
+          0.35034556497994024,
+          0.00015066942758153046,
+          9.957865821957718
+        ]
+      ],
+      "principal_inertia_kg_m2": [
+        5.716280862773454,
+        9.086557111364028,
+        9.986803598468983
+      ],
+      "inertia_estimation_method": "convex_hull_fallback",
+      "legacy_manual_mass_parameter": 1.3
+    },
+    {
+      "name": "Dense Cornell-room collision floor",
+      "category": "ground",
+      "mesh_path": "src/MyDemo/standard_graphics_models_run_id/_generated_assets/classic_models_dense_floor.obj",
+      "mass": 1000000000.0,
+      "velocity_pre": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "velocity_post": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_model": "fixed_dense_frictional_ground",
+      "trajectory_samples": 0,
+      "deformable_vertex_trajectory": false,
+      "first_ground_contact_time": null,
+      "ground_contact_count": null,
+      "preview_faces": 24586,
+      "original_faces": 24586,
+      "preview_decimation_method": "generated_dense_ground_contact_grid",
+      "display_shell_method": "coarse_ground_display_shell",
+      "display_faces": 12
+    },
+    {
+      "name": "Cornell Box",
+      "category": "wall",
+      "mesh_path": "Code/datasets/standard_graphics_models/mcguire_archive/CornellBox/CornellBox-Original.obj",
+      "mass": 1000000000000.0,
+      "velocity_pre": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "velocity_post": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "motion_model": "fixed_cornell_box_background_reference",
+      "trajectory_samples": 0,
+      "deformable_vertex_trajectory": false,
+      "first_ground_contact_time": null,
+      "ground_contact_count": null,
+      "preview_faces": 36,
+      "original_faces": 36,
+      "preview_decimation_method": "full_surface",
+      "display_shell_method": "source_mesh_visual_surface",
+      "display_faces": 36
+    }
+  ],
+  "physics_audit": {
+    "collision_model": "sampled rigid-body gravity drop with unilateral ground contact, restitution, and Coulomb friction",
+    "gravity": 9.81,
+    "gravity_vector": [
+      0.0,
+      0.0,
+      -9.81
+    ],
+    "support_plane_normal": [
+      0.0,
+      0.0,
+      1.0
+    ],
+    "support_plane_offset": 0.0,
+    "incline_angle_degrees": null,
+    "left_side_raised": null,
+    "restitution": 0.34,
+    "friction_mu": 0.52,
+    "duration_seconds": 2.55,
+    "trajectory_sample_count": 192,
+    "moving_body_count": 7,
+    "total_ground_impact_events": 25,
+    "total_ground_contact_window_samples": 2250,
+    "first_ground_contact_time": 0.6208333333333333,
+    "last_ground_contact_time": 0.8375,
+    "total_momentum_initial_moving_only": [
+      35.88784592655999,
+      85.22896792768479,
+      0.0
+    ],
+    "total_momentum_final_moving_only": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "kinetic_energy_initial": 22.95947049624792,
+    "kinetic_energy_final": 0.0,
+    "kinetic_energy_max": 31762.739237815105,
+    "mechanical_energy_initial": 53176.9003678517,
+    "mechanical_energy_final": 6928.179974943696,
+    "external_impulse_note": "Momentum and mechanical energy are not conserved because the ground applies normal impulses and friction dissipates energy."
+  },
+  "geometry_audit": {
+    "time": 1.05,
+    "pairs": [
+      {
+        "a": "Stanford Bunny",
+        "b": "Stanford Dragon",
+        "aabb_a_min": [
+          -2.9393465319081793,
+          -1.4052453948634014,
+          0.005319063750000019
+        ],
+        "aabb_a_max": [
+          -2.1294564398372726,
+          -0.7923990556880713,
+          0.8157391692098936
+        ],
+        "aabb_b_min": [
+          -1.3840607394014466,
+          -1.4862667343232643,
+          0.18953056249999894
+        ],
+        "aabb_b_max": [
+          -0.38877403265381305,
+          -0.6894218577618922,
+          0.6610054042160265
+        ],
+        "signed_gap_x": 0.745395700435826,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.6262086067098946,
+        "overlap_y": 0.61284633917533,
+        "overlap_z": 0.47147484171602755,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Bunny",
+        "b": "Armadillo",
+        "aabb_a_min": [
+          -2.9393465319081793,
+          -1.4052453948634014,
+          0.005319063750000019
+        ],
+        "aabb_a_max": [
+          -2.1294564398372726,
+          -0.7923990556880713,
+          0.8157391692098936
+        ],
+        "aabb_b_min": [
+          0.12063520719083826,
+          -1.5756286428759236,
+          0.3198775312499983
+        ],
+        "aabb_b_max": [
+          0.9627137649909565,
+          -0.7952108325813121,
+          1.3198775312499982
+        ],
+        "signed_gap_x": 2.250091647028111,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.49586163795989535,
+        "overlap_y": 0.6100345622820893,
+        "overlap_z": 0.49586163795989535,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Bunny",
+        "b": "Fandisk",
+        "aabb_a_min": [
+          -2.9393465319081793,
+          -1.4052453948634014,
+          0.005319063750000019
+        ],
+        "aabb_a_max": [
+          -2.1294564398372726,
+          -0.7923990556880713,
+          0.8157391692098936
+        ],
+        "aabb_b_min": [
+          2.030695971829169,
+          -1.543713847263412,
+          0.3677625937499983
+        ],
+        "aabb_b_max": [
+          2.723022423150498,
+          -0.6514329585432359,
+          1.3177625937499982
+        ],
+        "signed_gap_x": 4.1601524116664415,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.44797657545989533,
+        "overlap_y": 0.61284633917533,
+        "overlap_z": 0.44797657545989533,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Bunny",
+        "b": "Spot the Cow",
+        "aabb_a_min": [
+          -2.9393465319081793,
+          -1.4052453948634014,
+          0.005319063750000019
+        ],
+        "aabb_a_max": [
+          -2.1294564398372726,
+          -0.7923990556880713,
+          0.8157391692098936
+        ],
+        "aabb_b_min": [
+          -2.5035430508132364,
+          0.93411815628236,
+          0.12378312499999938
+        ],
+        "aabb_b_max": [
+          -1.502188176662647,
+          1.480834767770483,
+          1.1077875163851076
+        ],
+        "signed_gap_x": -0.37408661097596374,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.6919560442098942,
+        "overlap_y": -1.7265172119704313,
+        "overlap_z": 0.6919560442098942,
+        "penetrating_x": true,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Bunny",
+        "b": "Suzanne",
+        "aabb_a_min": [
+          -2.9393465319081793,
+          -1.4052453948634014,
+          0.005319063750000019
+        ],
+        "aabb_a_max": [
+          -2.1294564398372726,
+          -0.7923990556880713,
+          0.8157391692098936
+        ],
+        "aabb_b_min": [
+          -0.8899219074485898,
+          0.7562997036376795,
+          0.28331484374999866
+        ],
+        "aabb_b_max": [
+          -0.12120212235088051,
+          1.4964455060882624,
+          0.9169148437499985
+        ],
+        "signed_gap_x": 1.2395345323886828,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.532424325459895,
+        "overlap_y": -1.5486987593257509,
+        "overlap_z": 0.532424325459895,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Bunny",
+        "b": "Utah Teapot",
+        "aabb_a_min": [
+          -2.9393465319081793,
+          -1.4052453948634014,
+          0.005319063750000019
+        ],
+        "aabb_a_max": [
+          -2.1294564398372726,
+          -0.7923990556880713,
+          0.8157391692098936
+        ],
+        "aabb_b_min": [
+          0.5455328848212472,
+          0.8023148486686077,
+          0.36015643749999837
+        ],
+        "aabb_b_max": [
+          1.1185815495243079,
+          1.6785952506318065,
+          0.8105760831325752
+        ],
+        "signed_gap_x": 2.6749893246585197,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.45558273170989527,
+        "overlap_y": -1.594713904356679,
+        "overlap_z": 0.45041964563257686,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Bunny",
+        "b": "Dense Cornell-room collision floor",
+        "aabb_a_min": [
+          -2.9393465319081793,
+          -1.4052453948634014,
+          0.005319063750000019
+        ],
+        "aabb_a_max": [
+          -2.1294564398372726,
+          -0.7923990556880713,
+          0.8157391692098936
+        ],
+        "aabb_b_min": [
+          -4.4,
+          -3.2,
+          -0.08
+        ],
+        "aabb_b_max": [
+          4.4,
+          3.200000000000001,
+          0.0
+        ],
+        "signed_gap_x": -2.2705435601627277,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.005319063750000019,
+        "overlap_y": 0.61284633917533,
+        "overlap_z": -0.005319063750000019,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Stanford Bunny",
+        "b": "Cornell Box",
+        "aabb_a_min": [
+          -2.9393465319081793,
+          -1.4052453948634014,
+          0.005319063750000019
+        ],
+        "aabb_a_max": [
+          -2.1294564398372726,
+          -0.7923990556880713,
+          0.8157391692098936
+        ],
+        "aabb_b_min": [
+          -1.6552024906677063,
+          4.395463079966034,
+          0.7200000000000002
+        ],
+        "aabb_b_max": [
+          1.9552024906677061,
+          6.424231062623415,
+          3.9200000000000004
+        ],
+        "signed_gap_x": 0.4742539491695663,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.09573916920989345,
+        "overlap_y": -5.187862135654106,
+        "overlap_z": 0.09573916920989345,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Dragon",
+        "b": "Armadillo",
+        "aabb_a_min": [
+          -1.3840607394014466,
+          -1.4862667343232643,
+          0.18953056249999894
+        ],
+        "aabb_a_max": [
+          -0.38877403265381305,
+          -0.6894218577618922,
+          0.6610054042160265
+        ],
+        "aabb_b_min": [
+          0.12063520719083826,
+          -1.5756286428759236,
+          0.3198775312499983
+        ],
+        "aabb_b_max": [
+          0.9627137649909565,
+          -0.7952108325813121,
+          1.3198775312499982
+        ],
+        "signed_gap_x": 0.5094092398446513,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.3411278729660282,
+        "overlap_y": 0.6910559017419522,
+        "overlap_z": 0.3411278729660282,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Dragon",
+        "b": "Fandisk",
+        "aabb_a_min": [
+          -1.3840607394014466,
+          -1.4862667343232643,
+          0.18953056249999894
+        ],
+        "aabb_a_max": [
+          -0.38877403265381305,
+          -0.6894218577618922,
+          0.6610054042160265
+        ],
+        "aabb_b_min": [
+          2.030695971829169,
+          -1.543713847263412,
+          0.3677625937499983
+        ],
+        "aabb_b_max": [
+          2.723022423150498,
+          -0.6514329585432359,
+          1.3177625937499982
+        ],
+        "signed_gap_x": 2.419470004482982,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.2932428104660282,
+        "overlap_y": 0.796844876561372,
+        "overlap_z": 0.2932428104660282,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Dragon",
+        "b": "Spot the Cow",
+        "aabb_a_min": [
+          -1.3840607394014466,
+          -1.4862667343232643,
+          0.18953056249999894
+        ],
+        "aabb_a_max": [
+          -0.38877403265381305,
+          -0.6894218577618922,
+          0.6610054042160265
+        ],
+        "aabb_b_min": [
+          -2.5035430508132364,
+          0.93411815628236,
+          0.12378312499999938
+        ],
+        "aabb_b_max": [
+          -1.502188176662647,
+          1.480834767770483,
+          1.1077875163851076
+        ],
+        "signed_gap_x": 0.11812743726120045,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.537222279216027,
+        "overlap_y": -1.6235400140442522,
+        "overlap_z": 0.47147484171602755,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Dragon",
+        "b": "Suzanne",
+        "aabb_a_min": [
+          -1.3840607394014466,
+          -1.4862667343232643,
+          0.18953056249999894
+        ],
+        "aabb_a_max": [
+          -0.38877403265381305,
+          -0.6894218577618922,
+          0.6610054042160265
+        ],
+        "aabb_b_min": [
+          -0.8899219074485898,
+          0.7562997036376795,
+          0.28331484374999866
+        ],
+        "aabb_b_max": [
+          -0.12120212235088051,
+          1.4964455060882624,
+          0.9169148437499985
+        ],
+        "signed_gap_x": -0.5011478747947767,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.37769056046602784,
+        "overlap_y": -1.4457215613995718,
+        "overlap_z": 0.37769056046602784,
+        "penetrating_x": true,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Dragon",
+        "b": "Utah Teapot",
+        "aabb_a_min": [
+          -1.3840607394014466,
+          -1.4862667343232643,
+          0.18953056249999894
+        ],
+        "aabb_a_max": [
+          -0.38877403265381305,
+          -0.6894218577618922,
+          0.6610054042160265
+        ],
+        "aabb_b_min": [
+          0.5455328848212472,
+          0.8023148486686077,
+          0.36015643749999837
+        ],
+        "aabb_b_max": [
+          1.1185815495243079,
+          1.6785952506318065,
+          0.8105760831325752
+        ],
+        "signed_gap_x": 0.9343069174750602,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.3008489667160281,
+        "overlap_y": -1.4917367064304998,
+        "overlap_z": 0.3008489667160281,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Stanford Dragon",
+        "b": "Dense Cornell-room collision floor",
+        "aabb_a_min": [
+          -1.3840607394014466,
+          -1.4862667343232643,
+          0.18953056249999894
+        ],
+        "aabb_a_max": [
+          -0.38877403265381305,
+          -0.6894218577618922,
+          0.6610054042160265
+        ],
+        "aabb_b_min": [
+          -4.4,
+          -3.2,
+          -0.08
+        ],
+        "aabb_b_max": [
+          4.4,
+          3.200000000000001,
+          0.0
+        ],
+        "signed_gap_x": -4.011225967346188,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.18953056249999894,
+        "overlap_y": 0.796844876561372,
+        "overlap_z": -0.18953056249999894,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Stanford Dragon",
+        "b": "Cornell Box",
+        "aabb_a_min": [
+          -1.3840607394014466,
+          -1.4862667343232643,
+          0.18953056249999894
+        ],
+        "aabb_a_max": [
+          -0.38877403265381305,
+          -0.6894218577618922,
+          0.6610054042160265
+        ],
+        "aabb_b_min": [
+          -1.6552024906677063,
+          4.395463079966034,
+          0.7200000000000002
+        ],
+        "aabb_b_max": [
+          1.9552024906677061,
+          6.424231062623415,
+          3.9200000000000004
+        ],
+        "signed_gap_x": -1.2664284580138934,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.0589945957839737,
+        "overlap_y": -5.084884937727926,
+        "overlap_z": -0.0589945957839737,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Armadillo",
+        "b": "Fandisk",
+        "aabb_a_min": [
+          0.12063520719083826,
+          -1.5756286428759236,
+          0.3198775312499983
+        ],
+        "aabb_a_max": [
+          0.9627137649909565,
+          -0.7952108325813121,
+          1.3198775312499982
+        ],
+        "aabb_b_min": [
+          2.030695971829169,
+          -1.543713847263412,
+          0.3677625937499983
+        ],
+        "aabb_b_max": [
+          2.723022423150498,
+          -0.6514329585432359,
+          1.3177625937499982
+        ],
+        "signed_gap_x": 1.0679822068382123,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.9521149374999999,
+        "overlap_y": 0.7485030146820999,
+        "overlap_z": 0.9499999999999998,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Armadillo",
+        "b": "Spot the Cow",
+        "aabb_a_min": [
+          0.12063520719083826,
+          -1.5756286428759236,
+          0.3198775312499983
+        ],
+        "aabb_a_max": [
+          0.9627137649909565,
+          -0.7952108325813121,
+          1.3198775312499982
+        ],
+        "aabb_b_min": [
+          -2.5035430508132364,
+          0.93411815628236,
+          0.12378312499999938
+        ],
+        "aabb_b_max": [
+          -1.502188176662647,
+          1.480834767770483,
+          1.1077875163851076
+        ],
+        "signed_gap_x": 1.6228233838534853,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.7879099851351093,
+        "overlap_y": -1.729328988863672,
+        "overlap_z": 0.7879099851351093,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Armadillo",
+        "b": "Suzanne",
+        "aabb_a_min": [
+          0.12063520719083826,
+          -1.5756286428759236,
+          0.3198775312499983
+        ],
+        "aabb_a_max": [
+          0.9627137649909565,
+          -0.7952108325813121,
+          1.3198775312499982
+        ],
+        "aabb_b_min": [
+          -0.8899219074485898,
+          0.7562997036376795,
+          0.28331484374999866
+        ],
+        "aabb_b_max": [
+          -0.12120212235088051,
+          1.4964455060882624,
+          0.9169148437499985
+        ],
+        "signed_gap_x": 0.24183732954171877,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.5970373125000003,
+        "overlap_y": -1.5515105362189916,
+        "overlap_z": 0.5970373125000003,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Armadillo",
+        "b": "Utah Teapot",
+        "aabb_a_min": [
+          0.12063520719083826,
+          -1.5756286428759236,
+          0.3198775312499983
+        ],
+        "aabb_a_max": [
+          0.9627137649909565,
+          -0.7952108325813121,
+          1.3198775312499982
+        ],
+        "aabb_b_min": [
+          0.5455328848212472,
+          0.8023148486686077,
+          0.36015643749999837
+        ],
+        "aabb_b_max": [
+          1.1185815495243079,
+          1.6785952506318065,
+          0.8105760831325752
+        ],
+        "signed_gap_x": -0.41718088016970933,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.49069855188257694,
+        "overlap_y": -1.5975256812499197,
+        "overlap_z": 0.45041964563257686,
+        "penetrating_x": true,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Armadillo",
+        "b": "Dense Cornell-room collision floor",
+        "aabb_a_min": [
+          0.12063520719083826,
+          -1.5756286428759236,
+          0.3198775312499983
+        ],
+        "aabb_a_max": [
+          0.9627137649909565,
+          -0.7952108325813121,
+          1.3198775312499982
+        ],
+        "aabb_b_min": [
+          -4.4,
+          -3.2,
+          -0.08
+        ],
+        "aabb_b_max": [
+          4.4,
+          3.200000000000001,
+          0.0
+        ],
+        "signed_gap_x": -4.2793647928091625,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.3198775312499983,
+        "overlap_y": 0.7804178102946115,
+        "overlap_z": -0.3198775312499983,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Armadillo",
+        "b": "Cornell Box",
+        "aabb_a_min": [
+          0.12063520719083826,
+          -1.5756286428759236,
+          0.3198775312499983
+        ],
+        "aabb_a_max": [
+          0.9627137649909565,
+          -0.7952108325813121,
+          1.3198775312499982
+        ],
+        "aabb_b_min": [
+          -1.6552024906677063,
+          4.395463079966034,
+          0.7200000000000002
+        ],
+        "aabb_b_max": [
+          1.9552024906677061,
+          6.424231062623415,
+          3.9200000000000004
+        ],
+        "signed_gap_x": -1.8345672834768678,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.599877531249998,
+        "overlap_y": -5.1906739125473464,
+        "overlap_z": 0.599877531249998,
+        "penetrating_x": true,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Fandisk",
+        "b": "Spot the Cow",
+        "aabb_a_min": [
+          2.030695971829169,
+          -1.543713847263412,
+          0.3677625937499983
+        ],
+        "aabb_a_max": [
+          2.723022423150498,
+          -0.6514329585432359,
+          1.3177625937499982
+        ],
+        "aabb_b_min": [
+          -2.5035430508132364,
+          0.93411815628236,
+          0.12378312499999938
+        ],
+        "aabb_b_max": [
+          -1.502188176662647,
+          1.480834767770483,
+          1.1077875163851076
+        ],
+        "signed_gap_x": 3.532884148491816,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.7400249226351093,
+        "overlap_y": -1.5855511148255959,
+        "overlap_z": 0.7400249226351093,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Fandisk",
+        "b": "Suzanne",
+        "aabb_a_min": [
+          2.030695971829169,
+          -1.543713847263412,
+          0.3677625937499983
+        ],
+        "aabb_a_max": [
+          2.723022423150498,
+          -0.6514329585432359,
+          1.3177625937499982
+        ],
+        "aabb_b_min": [
+          -0.8899219074485898,
+          0.7562997036376795,
+          0.28331484374999866
+        ],
+        "aabb_b_max": [
+          -0.12120212235088051,
+          1.4964455060882624,
+          0.9169148437499985
+        ],
+        "signed_gap_x": 2.151898094180049,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.5491522500000002,
+        "overlap_y": -1.4077326621809154,
+        "overlap_z": 0.5491522500000002,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Fandisk",
+        "b": "Utah Teapot",
+        "aabb_a_min": [
+          2.030695971829169,
+          -1.543713847263412,
+          0.3677625937499983
+        ],
+        "aabb_a_max": [
+          2.723022423150498,
+          -0.6514329585432359,
+          1.3177625937499982
+        ],
+        "aabb_b_min": [
+          0.5455328848212472,
+          0.8023148486686077,
+          0.36015643749999837
+        ],
+        "aabb_b_max": [
+          1.1185815495243079,
+          1.6785952506318065,
+          0.8105760831325752
+        ],
+        "signed_gap_x": 0.912114422304861,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.4428134893825769,
+        "overlap_y": -1.4537478072118435,
+        "overlap_z": 0.4428134893825769,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Fandisk",
+        "b": "Dense Cornell-room collision floor",
+        "aabb_a_min": [
+          2.030695971829169,
+          -1.543713847263412,
+          0.3677625937499983
+        ],
+        "aabb_a_max": [
+          2.723022423150498,
+          -0.6514329585432359,
+          1.3177625937499982
+        ],
+        "aabb_b_min": [
+          -4.4,
+          -3.2,
+          -0.08
+        ],
+        "aabb_b_max": [
+          4.4,
+          3.200000000000001,
+          0.0
+        ],
+        "signed_gap_x": -2.3693040281708315,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.3677625937499983,
+        "overlap_y": 0.8922808887201761,
+        "overlap_z": -0.3677625937499983,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Fandisk",
+        "b": "Cornell Box",
+        "aabb_a_min": [
+          2.030695971829169,
+          -1.543713847263412,
+          0.3677625937499983
+        ],
+        "aabb_a_max": [
+          2.723022423150498,
+          -0.6514329585432359,
+          1.3177625937499982
+        ],
+        "aabb_b_min": [
+          -1.6552024906677063,
+          4.395463079966034,
+          0.7200000000000002
+        ],
+        "aabb_b_max": [
+          1.9552024906677061,
+          6.424231062623415,
+          3.9200000000000004
+        ],
+        "signed_gap_x": 0.0754934811614627,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.597762593749998,
+        "overlap_y": -5.04689603850927,
+        "overlap_z": 0.597762593749998,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Spot the Cow",
+        "b": "Suzanne",
+        "aabb_a_min": [
+          -2.5035430508132364,
+          0.93411815628236,
+          0.12378312499999938
+        ],
+        "aabb_a_max": [
+          -1.502188176662647,
+          1.480834767770483,
+          1.1077875163851076
+        ],
+        "aabb_b_min": [
+          -0.8899219074485898,
+          0.7562997036376795,
+          0.28331484374999866
+        ],
+        "aabb_b_max": [
+          -0.12120212235088051,
+          1.4964455060882624,
+          0.9169148437499985
+        ],
+        "signed_gap_x": 0.6122662692140572,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.7931317187499991,
+        "overlap_y": 0.546716611488123,
+        "overlap_z": 0.6335999999999999,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Spot the Cow",
+        "b": "Utah Teapot",
+        "aabb_a_min": [
+          -2.5035430508132364,
+          0.93411815628236,
+          0.12378312499999938
+        ],
+        "aabb_a_max": [
+          -1.502188176662647,
+          1.480834767770483,
+          1.1077875163851076
+        ],
+        "aabb_b_min": [
+          0.5455328848212472,
+          0.8023148486686077,
+          0.36015643749999837
+        ],
+        "aabb_b_max": [
+          1.1185815495243079,
+          1.6785952506318065,
+          0.8105760831325752
+        ],
+        "signed_gap_x": 2.047721061483894,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.6867929581325758,
+        "overlap_y": 0.546716611488123,
+        "overlap_z": 0.45041964563257686,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Spot the Cow",
+        "b": "Dense Cornell-room collision floor",
+        "aabb_a_min": [
+          -2.5035430508132364,
+          0.93411815628236,
+          0.12378312499999938
+        ],
+        "aabb_a_max": [
+          -1.502188176662647,
+          1.480834767770483,
+          1.1077875163851076
+        ],
+        "aabb_b_min": [
+          -4.4,
+          -3.2,
+          -0.08
+        ],
+        "aabb_b_max": [
+          4.4,
+          3.200000000000001,
+          0.0
+        ],
+        "signed_gap_x": -2.8978118233373533,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.12378312499999938,
+        "overlap_y": 0.546716611488123,
+        "overlap_z": -0.12378312499999938,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Spot the Cow",
+        "b": "Cornell Box",
+        "aabb_a_min": [
+          -2.5035430508132364,
+          0.93411815628236,
+          0.12378312499999938
+        ],
+        "aabb_a_max": [
+          -1.502188176662647,
+          1.480834767770483,
+          1.1077875163851076
+        ],
+        "aabb_b_min": [
+          -1.6552024906677063,
+          4.395463079966034,
+          0.7200000000000002
+        ],
+        "aabb_b_max": [
+          1.9552024906677061,
+          6.424231062623415,
+          3.9200000000000004
+        ],
+        "signed_gap_x": -0.15301431400505927,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.38778751638510744,
+        "overlap_y": -2.914628312195551,
+        "overlap_z": 0.38778751638510744,
+        "penetrating_x": true,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Suzanne",
+        "b": "Utah Teapot",
+        "aabb_a_min": [
+          -0.8899219074485898,
+          0.7562997036376795,
+          0.28331484374999866
+        ],
+        "aabb_a_max": [
+          -0.12120212235088051,
+          1.4964455060882624,
+          0.9169148437499985
+        ],
+        "aabb_b_min": [
+          0.5455328848212472,
+          0.8023148486686077,
+          0.36015643749999837
+        ],
+        "aabb_b_max": [
+          1.1185815495243079,
+          1.6785952506318065,
+          0.8105760831325752
+        ],
+        "signed_gap_x": 0.6667350071721276,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.5272612393825766,
+        "overlap_y": 0.6941306574196547,
+        "overlap_z": 0.45041964563257686,
+        "penetrating_x": false,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Suzanne",
+        "b": "Dense Cornell-room collision floor",
+        "aabb_a_min": [
+          -0.8899219074485898,
+          0.7562997036376795,
+          0.28331484374999866
+        ],
+        "aabb_a_max": [
+          -0.12120212235088051,
+          1.4964455060882624,
+          0.9169148437499985
+        ],
+        "aabb_b_min": [
+          -4.4,
+          -3.2,
+          -0.08
+        ],
+        "aabb_b_max": [
+          4.4,
+          3.200000000000001,
+          0.0
+        ],
+        "signed_gap_x": -4.27879787764912,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.28331484374999866,
+        "overlap_y": 0.7401458024505829,
+        "overlap_z": -0.28331484374999866,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Suzanne",
+        "b": "Cornell Box",
+        "aabb_a_min": [
+          -0.8899219074485898,
+          0.7562997036376795,
+          0.28331484374999866
+        ],
+        "aabb_a_max": [
+          -0.12120212235088051,
+          1.4964455060882624,
+          0.9169148437499985
+        ],
+        "aabb_b_min": [
+          -1.6552024906677063,
+          4.395463079966034,
+          0.7200000000000002
+        ],
+        "aabb_b_max": [
+          1.9552024906677061,
+          6.424231062623415,
+          3.9200000000000004
+        ],
+        "signed_gap_x": -1.5340003683168257,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.19691484374999835,
+        "overlap_y": -2.8990175738777717,
+        "overlap_z": 0.19691484374999835,
+        "penetrating_x": true,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Utah Teapot",
+        "b": "Dense Cornell-room collision floor",
+        "aabb_a_min": [
+          0.5455328848212472,
+          0.8023148486686077,
+          0.36015643749999837
+        ],
+        "aabb_a_max": [
+          1.1185815495243079,
+          1.6785952506318065,
+          0.8105760831325752
+        ],
+        "aabb_b_min": [
+          -4.4,
+          -3.2,
+          -0.08
+        ],
+        "aabb_b_max": [
+          4.4,
+          3.200000000000001,
+          0.0
+        ],
+        "signed_gap_x": -3.8544671151787533,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.36015643749999837,
+        "overlap_y": 0.8762804019631988,
+        "overlap_z": -0.36015643749999837,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Utah Teapot",
+        "b": "Cornell Box",
+        "aabb_a_min": [
+          0.5455328848212472,
+          0.8023148486686077,
+          0.36015643749999837
+        ],
+        "aabb_a_max": [
+          1.1185815495243079,
+          1.6785952506318065,
+          0.8105760831325752
+        ],
+        "aabb_b_min": [
+          -1.6552024906677063,
+          4.395463079966034,
+          0.7200000000000002
+        ],
+        "aabb_b_max": [
+          1.9552024906677061,
+          6.424231062623415,
+          3.9200000000000004
+        ],
+        "signed_gap_x": -1.4096696058464588,
+        "separation_axis": "z",
+        "signed_gap_axis": -0.09057608313257504,
+        "overlap_y": -2.7168678293342277,
+        "overlap_z": 0.09057608313257504,
+        "penetrating_x": true,
+        "penetrating_axis": true
+      },
+      {
+        "a": "Dense Cornell-room collision floor",
+        "b": "Cornell Box",
+        "aabb_a_min": [
+          -4.4,
+          -3.2,
+          -0.08
+        ],
+        "aabb_a_max": [
+          4.4,
+          3.200000000000001,
+          0.0
+        ],
+        "aabb_b_min": [
+          -1.6552024906677063,
+          4.395463079966034,
+          0.7200000000000002
+        ],
+        "aabb_b_max": [
+          1.9552024906677061,
+          6.424231062623415,
+          3.9200000000000004
+        ],
+        "signed_gap_x": -6.055202490667707,
+        "separation_axis": "x",
+        "signed_gap_axis": -6.055202490667707,
+        "overlap_y": -1.195463079966033,
+        "overlap_z": -0.7200000000000002,
+        "penetrating_x": true,
+        "penetrating_axis": true
+      }
+    ],
+    "scope_note": "The shared renderer emits raw AABB pair diagnostics for every visual object. For this standard-model suite, the active conservative CCD claim is dynamic mesh versus dense floor. Static reference geometry and object-object AABB overlaps are not active contact claims for this case unless explicitly enabled.",
+    "raw_pair_count": 36,
+    "active_object_ground_pair_count": 7,
+    "raw_active_object_ground_aabb_penetrating_axis_count": 0,
+    "raw_active_object_ground_aabb_penetrating_x_count": 7,
+    "active_object_ground_penetrating_axis_count": 0,
+    "active_penetration_source": "geometry_frame_audit per-body signed ground gaps; raw AABB counts are retained separately because CONTACT_T diagnostics can overlap the support plane at exact contact.",
+    "active_object_ground_pairs": [
+      {
+        "a": "Stanford Bunny",
+        "b": "Dense Cornell-room collision floor",
+        "aabb_a_min": [
+          -2.9393465319081793,
+          -1.4052453948634014,
+          0.005319063750000019
+        ],
+        "aabb_a_max": [
+          -2.1294564398372726,
+          -0.7923990556880713,
+          0.8157391692098936
+        ],
+        "aabb_b_min": [
+          -4.4,
+          -3.2,
+          -0.08
+        ],
+        "aabb_b_max": [
+          4.4,
+          3.200000000000001,
+          0.0
+        ],
+        "signed_gap_x": -2.2705435601627277,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.005319063750000019,
+        "overlap_y": 0.61284633917533,
+        "overlap_z": -0.005319063750000019,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Stanford Dragon",
+        "b": "Dense Cornell-room collision floor",
+        "aabb_a_min": [
+          -1.3840607394014466,
+          -1.4862667343232643,
+          0.18953056249999894
+        ],
+        "aabb_a_max": [
+          -0.38877403265381305,
+          -0.6894218577618922,
+          0.6610054042160265
+        ],
+        "aabb_b_min": [
+          -4.4,
+          -3.2,
+          -0.08
+        ],
+        "aabb_b_max": [
+          4.4,
+          3.200000000000001,
+          0.0
+        ],
+        "signed_gap_x": -4.011225967346188,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.18953056249999894,
+        "overlap_y": 0.796844876561372,
+        "overlap_z": -0.18953056249999894,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Armadillo",
+        "b": "Dense Cornell-room collision floor",
+        "aabb_a_min": [
+          0.12063520719083826,
+          -1.5756286428759236,
+          0.3198775312499983
+        ],
+        "aabb_a_max": [
+          0.9627137649909565,
+          -0.7952108325813121,
+          1.3198775312499982
+        ],
+        "aabb_b_min": [
+          -4.4,
+          -3.2,
+          -0.08
+        ],
+        "aabb_b_max": [
+          4.4,
+          3.200000000000001,
+          0.0
+        ],
+        "signed_gap_x": -4.2793647928091625,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.3198775312499983,
+        "overlap_y": 0.7804178102946115,
+        "overlap_z": -0.3198775312499983,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Fandisk",
+        "b": "Dense Cornell-room collision floor",
+        "aabb_a_min": [
+          2.030695971829169,
+          -1.543713847263412,
+          0.3677625937499983
+        ],
+        "aabb_a_max": [
+          2.723022423150498,
+          -0.6514329585432359,
+          1.3177625937499982
+        ],
+        "aabb_b_min": [
+          -4.4,
+          -3.2,
+          -0.08
+        ],
+        "aabb_b_max": [
+          4.4,
+          3.200000000000001,
+          0.0
+        ],
+        "signed_gap_x": -2.3693040281708315,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.3677625937499983,
+        "overlap_y": 0.8922808887201761,
+        "overlap_z": -0.3677625937499983,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Spot the Cow",
+        "b": "Dense Cornell-room collision floor",
+        "aabb_a_min": [
+          -2.5035430508132364,
+          0.93411815628236,
+          0.12378312499999938
+        ],
+        "aabb_a_max": [
+          -1.502188176662647,
+          1.480834767770483,
+          1.1077875163851076
+        ],
+        "aabb_b_min": [
+          -4.4,
+          -3.2,
+          -0.08
+        ],
+        "aabb_b_max": [
+          4.4,
+          3.200000000000001,
+          0.0
+        ],
+        "signed_gap_x": -2.8978118233373533,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.12378312499999938,
+        "overlap_y": 0.546716611488123,
+        "overlap_z": -0.12378312499999938,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Suzanne",
+        "b": "Dense Cornell-room collision floor",
+        "aabb_a_min": [
+          -0.8899219074485898,
+          0.7562997036376795,
+          0.28331484374999866
+        ],
+        "aabb_a_max": [
+          -0.12120212235088051,
+          1.4964455060882624,
+          0.9169148437499985
+        ],
+        "aabb_b_min": [
+          -4.4,
+          -3.2,
+          -0.08
+        ],
+        "aabb_b_max": [
+          4.4,
+          3.200000000000001,
+          0.0
+        ],
+        "signed_gap_x": -4.27879787764912,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.28331484374999866,
+        "overlap_y": 0.7401458024505829,
+        "overlap_z": -0.28331484374999866,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      },
+      {
+        "a": "Utah Teapot",
+        "b": "Dense Cornell-room collision floor",
+        "aabb_a_min": [
+          0.5455328848212472,
+          0.8023148486686077,
+          0.36015643749999837
+        ],
+        "aabb_a_max": [
+          1.1185815495243079,
+          1.6785952506318065,
+          0.8105760831325752
+        ],
+        "aabb_b_min": [
+          -4.4,
+          -3.2,
+          -0.08
+        ],
+        "aabb_b_max": [
+          4.4,
+          3.200000000000001,
+          0.0
+        ],
+        "signed_gap_x": -3.8544671151787533,
+        "separation_axis": "z",
+        "signed_gap_axis": 0.36015643749999837,
+        "overlap_y": 0.8762804019631988,
+        "overlap_z": -0.36015643749999837,
+        "penetrating_x": true,
+        "penetrating_axis": false
+      }
+    ]
+  },
+  "geometry_frame_audit": {
+    "sample_count": 192,
+    "moving_body_count": 7,
+    "ground_z": 0.0,
+    "min_signed_ground_gap": 0.0,
+    "min_gap_time": 1.2416230366492145,
+    "ground_contact_window_samples": 703,
+    "penetrating_any_sample": false,
+    "per_body_ground_gaps": [
+      {
+        "name": "Stanford Bunny",
+        "min_signed_ground_gap": 0.0,
+        "min_gap_time": 1.2416230366492145,
+        "ground_contact_window_samples": 117,
+        "penetrating_any_sample": false
+      },
+      {
+        "name": "Stanford Dragon",
+        "min_signed_ground_gap": 0.0,
+        "min_gap_time": 1.375130890052356,
+        "ground_contact_window_samples": 107,
+        "penetrating_any_sample": false
+      },
+      {
+        "name": "Armadillo",
+        "min_signed_ground_gap": 0.0,
+        "min_gap_time": 1.5353403141361255,
+        "ground_contact_window_samples": 97,
+        "penetrating_any_sample": false
+      },
+      {
+        "name": "Fandisk",
+        "min_signed_ground_gap": 0.0,
+        "min_gap_time": 1.682198952879581,
+        "ground_contact_window_samples": 82,
+        "penetrating_any_sample": false
+      },
+      {
+        "name": "Spot the Cow",
+        "min_signed_ground_gap": 0.0,
+        "min_gap_time": 1.3217277486910994,
+        "ground_contact_window_samples": 111,
+        "penetrating_any_sample": false
+      },
+      {
+        "name": "Suzanne",
+        "min_signed_ground_gap": 0.0,
+        "min_gap_time": 1.481937172774869,
+        "ground_contact_window_samples": 102,
+        "penetrating_any_sample": false
+      },
+      {
+        "name": "Utah Teapot",
+        "min_signed_ground_gap": 0.0,
+        "min_gap_time": 1.6154450261780102,
+        "ground_contact_window_samples": 87,
+        "penetrating_any_sample": false
+      }
+    ]
+  },
+  "benchmark_metrics": {
+    "dataset": "standard_graphics_models_run_id",
+    "scenario": "seven canonical graphics meshes fall under gravity with frictional ground contact; Cornell Box is rendered as static scene reference",
+    "object_count": 7,
+    "ground_top_triangles": 24576,
+    "ground_top_subdivisions_x": 128,
+    "ground_top_subdivisions_y": 96,
+    "object_preview_faces_total": 98090,
+    "sim_dt": 0.004166666666666667,
+    "gravity": 9.81,
+    "friction_mu": 0.52,
+    "restitution": 0.34,
+    "impact_event_speed_threshold": 0.25,
+    "base_contact_time": 0.62,
+    "column_time_step": 0.072,
+    "row_time_step": 0.045,
+    "contact_cycle": 4,
+    "ground_contact_events": 25,
+    "ground_contact_window_samples": 2250,
+    "first_ground_contact_time": 0.6208333333333333,
+    "last_first_ground_contact_time": 0.8375,
+    "dense_no_proposal_object_ground_pair_budget": 2410659840,
+    "rtstpf_exact_call_budget": 216000,
+    "proposal_reduction_factor_vs_dense_pairs": 11160.462222222222,
+    "fn": 0,
+    "advantage": "Canonical scan/CAD/low-poly meshes share one dense support surface: dense exact CCD must consider all object-ground triangle pairs, while STPF focuses exact checks on short physically generated contact windows.",
+    "covered_models": [
+      "Stanford Bunny",
+      "Stanford Dragon",
+      "Armadillo",
+      "Fandisk",
+      "Spot the Cow",
+      "Suzanne",
+      "Utah Teapot",
+      "Cornell Box"
+    ],
+    "model_source_root": "Code/datasets/standard_graphics_models",
+    "dynamic_object_count": 7,
+    "physical_property_pipeline": "scene-scale mesh volume estimate + material density table; mass = density * estimated volume; inertia tensor estimated about center of mass",
+    "scene_unit_assumption": "normalized model coordinates after case scale are treated as meters for visualization physics",
+    "material_density_table_kg_m3": {
+      "polymer_resin": 1180.0,
+      "cast_plaster": 1450.0,
+      "aluminum": 2700.0,
+      "ceramic": 2400.0,
+      "printed_plastic": 1050.0
+    },
+    "per_dynamic_body_physical_properties": [
+      {
+        "model_name": "Stanford Bunny",
+        "material": "polymer_resin",
+        "density_kg_m3": 1180.0,
+        "volume_m3": 0.18074822554720363,
+        "mass_kg": 213.28290614570028,
+        "center_of_mass_m": [
+          0.053792234976273466,
+          -0.035427902583216354,
+          -0.05639958022179948
+        ],
+        "inertia_tensor_kg_m2": [
+          [
+            11.937198119403403,
+            -0.24828278542934762,
+            -2.376356209296187
+          ],
+          [
+            -0.24828278542934762,
+            14.818922569528105,
+            -1.717720066473549
+          ],
+          [
+            -2.376356209296187,
+            -1.717720066473549,
+            10.496032068476831
+          ]
+        ],
+        "principal_inertia_kg_m2": [
+          8.364615323484871,
+          13.35502952837181,
+          15.532507905551652
+        ],
+        "estimation_method": "convex_hull_fallback",
+        "legacy_manual_mass_parameter": 1.2,
+        "scale_to_scene_m": 0.82
+      },
+      {
+        "model_name": "Stanford Dragon",
+        "material": "cast_plaster",
+        "density_kg_m3": 1450.0,
+        "volume_m3": 0.1223767898779936,
+        "mass_kg": 177.44634532309072,
+        "center_of_mass_m": [
+          -0.032438707950988084,
+          0.027918685833640343,
+          -0.03446814203998064
+        ],
+        "inertia_tensor_kg_m2": [
+          [
+            4.5945036154143155,
+            0.047406031633597155,
+            0.19252115590304647
+          ],
+          [
+            0.047406031633597155,
+            12.433909618812542,
+            0.12800517232326783
+          ],
+          [
+            0.19252115590304647,
+            0.12800517232326783,
+            11.928065419924625
+          ]
+        ],
+        "principal_inertia_kg_m2": [
+          4.58920578509808,
+          11.901761133800315,
+          12.465511735253093
+        ],
+        "estimation_method": "convex_hull_fallback",
+        "legacy_manual_mass_parameter": 2.4,
+        "scale_to_scene_m": 1.05
+      },
+      {
+        "model_name": "Armadillo",
+        "material": "cast_plaster",
+        "density_kg_m3": 1450.0,
+        "volume_m3": 0.259275176643003,
+        "mass_kg": 375.9490061323543,
+        "center_of_mass_m": [
+          0.023805386493117104,
+          0.022418697543319883,
+          0.02935860121081932
+        ],
+        "inertia_tensor_kg_m2": [
+          [
+            32.275893432746294,
+            -0.26372035747364053,
+            0.7420250743841501
+          ],
+          [
+            -0.26372035747364053,
+            37.4758216256374,
+            -5.749057153095024
+          ],
+          [
+            0.7420250743841501,
+            -5.749057153095024,
+            20.97224695725197
+          ]
+        ],
+        "principal_inertia_kg_m2": [
+          19.13688267551186,
+          32.27402133308147,
+          39.313058007042336
+        ],
+        "estimation_method": "convex_hull_fallback",
+        "legacy_manual_mass_parameter": 2.0,
+        "scale_to_scene_m": 1.0
+      },
+      {
+        "model_name": "Fandisk",
+        "material": "aluminum",
+        "density_kg_m3": 2700.0,
+        "volume_m3": 0.12032100877936246,
+        "mass_kg": 324.8667237042786,
+        "center_of_mass_m": [
+          -0.01131768341490332,
+          -0.06710984193703336,
+          -0.08165609526068811
+        ],
+        "inertia_tensor_kg_m2": [
+          [
+            15.054883799214677,
+            -0.3339578710270846,
+            3.9926041031242105
+          ],
+          [
+            -0.3339578710270846,
+            24.971563331616544,
+            1.3932476673276868
+          ],
+          [
+            3.9926041031242105,
+            1.3932476673276868,
+            18.548768215674727
+          ]
+        ],
+        "principal_inertia_kg_m2": [
+          12.3569266493013,
+          20.928127225885728,
+          25.29016147131891
+        ],
+        "estimation_method": "watertight_triangle_mesh",
+        "legacy_manual_mass_parameter": 1.6,
+        "scale_to_scene_m": 0.95
+      },
+      {
+        "model_name": "Spot the Cow",
+        "material": "polymer_resin",
+        "density_kg_m3": 1180.0,
+        "volume_m3": 0.25039894561076004,
+        "mass_kg": 295.47075582069687,
+        "center_of_mass_m": [
+          -0.02424833561624305,
+          8.082478344187194e-18,
+          -0.061386638368547734
+        ],
+        "inertia_tensor_kg_m2": [
+          [
+            20.367538089519822,
+            -9.449302602506532e-16,
+            7.465666658324319
+          ],
+          [
+            -9.449302602506532e-16,
+            30.67718450414605,
+            3.3102755695012364e-16
+          ],
+          [
+            7.465666658324319,
+            3.3102755695012364e-16,
+            19.435278862728286
+          ]
+        ],
+        "principal_inertia_kg_m2": [
+          12.421204236285423,
+          27.38161271596269,
+          30.677184504146055
+        ],
+        "estimation_method": "convex_hull_fallback",
+        "legacy_manual_mass_parameter": 1.5,
+        "scale_to_scene_m": 1.0
+      },
+      {
+        "model_name": "Suzanne",
+        "material": "printed_plastic",
+        "density_kg_m3": 1050.0,
+        "volume_m3": 0.11773522270781057,
+        "mass_kg": 123.62198384320111,
+        "center_of_mass_m": [
+          -1.240681466862941e-07,
+          -0.009022750073606922,
+          0.04761492699971509
+        ],
+        "inertia_tensor_kg_m2": [
+          [
+            4.100675654939995,
+            2.630003720531134e-08,
+            2.9280724502514565e-07
+          ],
+          [
+            2.630003720531134e-08,
+            5.605091223371576,
+            -0.4380675498455473
+          ],
+          [
+            2.9280724502514565e-07,
+            -0.4380675498455473,
+            5.563490979112984
+          ]
+        ],
+        "principal_inertia_kg_m2": [
+          4.100675654939927,
+          5.145730018486145,
+          6.02285218399848
+        ],
+        "estimation_method": "convex_hull_fallback",
+        "legacy_manual_mass_parameter": 1.1,
+        "scale_to_scene_m": 0.88
+      },
+      {
+        "model_name": "Utah Teapot",
+        "material": "ceramic",
+        "density_kg_m3": 2400.0,
+        "volume_m3": 0.0951232371005228,
+        "mass_kg": 228.29576904125472,
+        "center_of_mass_m": [
+          0.020027749896146106,
+          8.61312348216212e-06,
+          -0.02324904606332539
+        ],
+        "inertia_tensor_kg_m2": [
+          [
+            5.7452192572703,
+            -0.0014369755168560814,
+            0.35034556497994024
+          ],
+          [
+            -0.0014369755168560814,
+            9.086556493378437,
+            0.00015066942758153046
+          ],
+          [
+            0.35034556497994024,
+            0.00015066942758153046,
+            9.957865821957718
+          ]
+        ],
+        "principal_inertia_kg_m2": [
+          5.716280862773454,
+          9.086557111364028,
+          9.986803598468983
+        ],
+        "estimation_method": "convex_hull_fallback",
+        "legacy_manual_mass_parameter": 1.3,
+        "scale_to_scene_m": 0.92
+      }
+    ],
+    "total_dynamic_volume_m3": 1.1459786062666562,
+    "total_dynamic_mass_kg": 1738.9334900105766,
+    "cornell_box_role": "static visual scene-container/background reference; active CCD contacts are dynamic models against the dense triangle floor",
+    "classical_model_original_faces_total": 445435,
+    "classical_model_preview_faces_total": 98126,
+    "per_model_source_descriptions": {
+      "Stanford Bunny": {
+        "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/stanford-bunny.obj",
+        "description": "Canonical sanity-check scan with curved local surface detail.",
+        "original_faces": 69451,
+        "preview_faces": 24000,
+        "display_faces": 12000,
+        "material": "polymer_resin",
+        "density_kg_m3": 1180.0,
+        "estimated_volume_m3": 0.18074822554720363,
+        "mass_kg": 213.28290614570028,
+        "principal_inertia_kg_m2": [
+          8.364615323484871,
+          13.35502952837181,
+          15.532507905551652
+        ],
+        "inertia_estimation_method": "convex_hull_fallback"
+      },
+      "Stanford Dragon": {
+        "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/xyzrgb_dragon.obj",
+        "description": "High-frequency scanned model with many local triangle features.",
+        "original_faces": 249882,
+        "preview_faces": 24000,
+        "display_faces": 12000,
+        "material": "cast_plaster",
+        "density_kg_m3": 1450.0,
+        "estimated_volume_m3": 0.1223767898779936,
+        "mass_kg": 177.44634532309072,
+        "principal_inertia_kg_m2": [
+          4.58920578509808,
+          11.901761133800315,
+          12.465511735253093
+        ],
+        "inertia_estimation_method": "convex_hull_fallback"
+      },
+      "Armadillo": {
+        "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/armadillo.obj",
+        "description": "Articulated silhouette and concave body regions for contact scheduling.",
+        "original_faces": 99976,
+        "preview_faces": 24000,
+        "display_faces": 12000,
+        "material": "cast_plaster",
+        "density_kg_m3": 1450.0,
+        "estimated_volume_m3": 0.259275176643003,
+        "mass_kg": 375.9490061323543,
+        "principal_inertia_kg_m2": [
+          19.13688267551186,
+          32.27402133308147,
+          39.313058007042336
+        ],
+        "inertia_estimation_method": "convex_hull_fallback"
+      },
+      "Fandisk": {
+        "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/fandisk.obj",
+        "description": "Sharp CAD features and non-smooth geometry.",
+        "original_faces": 12946,
+        "preview_faces": 12946,
+        "display_faces": 12000,
+        "material": "aluminum",
+        "density_kg_m3": 2700.0,
+        "estimated_volume_m3": 0.12032100877936246,
+        "mass_kg": 324.8667237042786,
+        "principal_inertia_kg_m2": [
+          12.3569266493013,
+          20.928127225885728,
+          25.29016147131891
+        ],
+        "inertia_estimation_method": "watertight_triangle_mesh"
+      },
+      "Spot the Cow": {
+        "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/spot.obj",
+        "description": "Clean manifold model with simple topology for topology-correctness checks.",
+        "original_faces": 5856,
+        "preview_faces": 5856,
+        "display_faces": 5856,
+        "material": "polymer_resin",
+        "density_kg_m3": 1180.0,
+        "estimated_volume_m3": 0.25039894561076004,
+        "mass_kg": 295.47075582069687,
+        "principal_inertia_kg_m2": [
+          12.421204236285423,
+          27.38161271596269,
+          30.677184504146055
+        ],
+        "inertia_estimation_method": "convex_hull_fallback"
+      },
+      "Suzanne": {
+        "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/suzanne.obj",
+        "description": "Low-polygon visual test with mixed sharp and smooth regions.",
+        "original_faces": 968,
+        "preview_faces": 968,
+        "display_faces": 968,
+        "material": "printed_plastic",
+        "density_kg_m3": 1050.0,
+        "estimated_volume_m3": 0.11773522270781057,
+        "mass_kg": 123.62198384320111,
+        "principal_inertia_kg_m2": [
+          4.100675654939927,
+          5.145730018486145,
+          6.02285218399848
+        ],
+        "inertia_estimation_method": "convex_hull_fallback"
+      },
+      "Utah Teapot": {
+        "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/teapot.obj",
+        "description": "Classic curved-surface graphics model used here as a curved rigid collider.",
+        "original_faces": 6320,
+        "preview_faces": 6320,
+        "display_faces": 6320,
+        "material": "ceramic",
+        "density_kg_m3": 2400.0,
+        "estimated_volume_m3": 0.0951232371005228,
+        "mass_kg": 228.29576904125472,
+        "principal_inertia_kg_m2": [
+          5.716280862773454,
+          9.086557111364028,
+          9.986803598468983
+        ],
+        "inertia_estimation_method": "convex_hull_fallback"
+      },
+      "Cornell Box": {
+        "path": "Code/datasets/standard_graphics_models/mcguire_archive/CornellBox/CornellBox-Original.obj",
+        "description": "Classic rendering scene used here as a static scene container/reference mesh.",
+        "original_faces": 36,
+        "preview_faces": 36,
+        "display_faces": 36
+      }
+    }
+  },
+  "outputs": {
+    "global_mp4": "global.mp4",
+    "contact_sheet": "contact_sheet.png",
+    "interactive_html": null,
+    "global_frames": "real_mesh_global_frames/global_frame_*.png"
+  }
+}

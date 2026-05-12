@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "suite_name": "performance_external_4096_comparison",
+  "suite_type": "performance",
+  "seed": 41,
+  "output_root": "src/outputs/benchmark_suites",
+  "notes": "Extreme external-only benchmark for the paper pipeline using 4096 Scalable CCD queries from armadillo-rollers vf step 326.",
+  "cases": [
+    {
+      "name": "external_scalable_4096_pure_exact_cpu",
+      "method": "PureExactCPU",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 4096
+      }
+    },
+    {
+      "name": "external_scalable_4096_bvh_exact",
+      "method": "BVHExact",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 4096
+      },
+      "config": {
+        "backend_name": "cpu_aabb_sort_sweep"
+      }
+    },
+    {
+      "name": "external_scalable_4096_sort_broad_phase_exact",
+      "method": "SortBroadPhaseExact",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 4096
+      },
+      "config": {
+        "backend_name": "cpu_sort_sweep",
+        "axis": 0
+      }
+    },
+    {
+      "name": "external_scalable_4096_rt_exact_cpu_reference",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 4096
+      },
+      "config": {
+        "backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "external_scalable_4096_no_proposal_cpu_reference",
+      "method": "NoProposal",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 4096
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "external_scalable_4096_rt_stpf_exact_cpu_reference",
+      "method": "RTSTPFExact",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 4096
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt",
+        "use_dummy_policy": true,
+        "proposal_batch_size": 4096
+      }
+    }
+  ]
+}

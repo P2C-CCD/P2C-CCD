@@ -1,0 +1,213 @@
+{
+  "schema_version": 1,
+  "suite_name": "performance_large_comparison",
+  "suite_type": "performance",
+  "seed": 41,
+  "output_root": "src/outputs/benchmark_suites",
+  "notes": "Larger combination benchmark for RT + STPF + Exact Certificate and comparison baselines. Includes a mixed internal-generated workload and an external Scalable CCD sample workload.",
+  "cases": [
+    {
+      "name": "internal_large_pure_exact_cpu",
+      "method": "PureExactCPU",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 16,
+        "robot_link_count": 8,
+        "include_robot_links": true
+      }
+    },
+    {
+      "name": "internal_large_bvh_exact",
+      "method": "BVHExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 16,
+        "robot_link_count": 8,
+        "include_robot_links": true
+      },
+      "config": {
+        "backend_name": "cpu_aabb_sort_sweep"
+      }
+    },
+    {
+      "name": "internal_large_sort_broad_phase_exact",
+      "method": "SortBroadPhaseExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 16,
+        "robot_link_count": 8,
+        "include_robot_links": true
+      },
+      "config": {
+        "backend_name": "cpu_sort_sweep",
+        "axis": 0
+      }
+    },
+    {
+      "name": "internal_large_rt_exact_cpu_reference",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 16,
+        "robot_link_count": 8,
+        "include_robot_links": true
+      },
+      "config": {
+        "backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "internal_large_no_proposal_cpu_reference",
+      "method": "NoProposal",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 16,
+        "robot_link_count": 8,
+        "include_robot_links": true
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "internal_large_rt_stpf_exact_cpu_reference",
+      "method": "RTSTPFExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 16,
+        "robot_link_count": 8,
+        "include_robot_links": true
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt",
+        "use_dummy_policy": true,
+        "proposal_batch_size": 2048
+      }
+    },
+    {
+      "name": "internal_large_rt_exact_optix",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 16,
+        "robot_link_count": 8,
+        "include_robot_links": true
+      },
+      "config": {
+        "backend_name": "optix_rt"
+      }
+    },
+    {
+      "name": "internal_large_no_proposal_optix",
+      "method": "NoProposal",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 16,
+        "robot_link_count": 8,
+        "include_robot_links": true
+      },
+      "config": {
+        "rt_backend_name": "optix_rt"
+      }
+    },
+    {
+      "name": "internal_large_rt_stpf_exact_optix",
+      "method": "RTSTPFExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 16,
+        "robot_link_count": 8,
+        "include_robot_links": true
+      },
+      "config": {
+        "rt_backend_name": "optix_rt",
+        "use_dummy_policy": true,
+        "proposal_batch_size": 2048
+      }
+    },
+    {
+      "name": "external_scalable_512_pure_exact_cpu",
+      "method": "PureExactCPU",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 512
+      }
+    },
+    {
+      "name": "external_scalable_512_bvh_exact",
+      "method": "BVHExact",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 512
+      },
+      "config": {
+        "backend_name": "cpu_aabb_sort_sweep"
+      }
+    },
+    {
+      "name": "external_scalable_512_sort_broad_phase_exact",
+      "method": "SortBroadPhaseExact",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 512
+      },
+      "config": {
+        "backend_name": "cpu_sort_sweep",
+        "axis": 0
+      }
+    },
+    {
+      "name": "external_scalable_512_rt_exact_cpu_reference",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 512
+      },
+      "config": {
+        "backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "external_scalable_512_no_proposal_cpu_reference",
+      "method": "NoProposal",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 512
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "external_scalable_512_rt_stpf_exact_cpu_reference",
+      "method": "RTSTPFExact",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "vf",
+        "step": 326,
+        "limit": 512
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt",
+        "use_dummy_policy": true,
+        "proposal_batch_size": 2048
+      }
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "generated": "release artifact bundle",
+  "purpose": "Bundled compact model checkpoints and evaluation shards used by the current paper-critical all-dataset strict five-path replay runner.",
+  "runner": "src/tools/run_all_dataset_strict_five_path_replay.py",
+  "policy": "These compact artifacts are included in the anonymous code-and-data package. Full raw datasets and full-scale regenerated training products remain external. A complete rerun should verify matching hashes or rerun the documented training/data generation pipeline.",
+  "artifact_groups": [
+    {
+      "name": "generalization_paper_benchmark_full_run_id",
+      "generated_by": "p2cccd.bench.generalization_paper_benchmark",
+      "regen_command": "conda activate cudadev; python -c \"from p2cccd.bench.generalization_paper_benchmark import GeneralizationPaperBenchmarkConfig, run_generalization_paper_benchmark; run_generalization_paper_benchmark(GeneralizationPaperBenchmarkConfig(run_name='generalization_paper_benchmark_full_run_id'))\"",
+      "download_or_regen": "Restore exact hashes from an artifact bundle if available; otherwise regenerate from local source datasets.",
+      "expected_cost": "GPU training plus multi-source dense/query replay; hours on a CUDA workstation."
+    },
+    {
+      "name": "fusion360_full_large_training_run_id",
+      "generated_by": "p2cccd.bench.fusion360_full_large_training_benchmark",
+      "regen_command": "conda activate cudadev; python -m p2cccd.bench.fusion360_full_large_training_benchmark",
+      "download_or_regen": "Requires restored Fusion360 Gallery extraction or equivalent local dataset root.",
+      "expected_cost": "GPU training plus dense evaluation; hours depending on dataset storage speed."
+    },
+    {
+      "name": "common_modeling_high_density_scenarios_large_run_id",
+      "generated_by": "p2cccd.bench.common_modeling_high_density_scenarios and p2cccd.bench.tight_inclusion_stpf_training",
+      "regen_command": "conda activate cudadev; python -m p2cccd.bench.common_modeling_high_density_scenarios; python -m p2cccd.bench.tight_inclusion_stpf_training --shards src\\datasets\\training\\common_modeling_high_density\\shards\\common_modeling_high_density_scenarios_large_run_id --run-name common_modeling_high_density_scenarios_large_run_id_medium_mlp_10epoch --report-name common_modeling_high_density_scenarios_large_run_id_medium_mlp_10epoch --epochs 10 --batch-size 65536 --device cuda",
+      "download_or_regen": "Prefer restoring exact hashes; regeneration may require matching the large high-density scenario config.",
+      "expected_cost": "GPU training; minutes to hours."
+    },
+    {
+      "name": "rtstpf_advantage_cases_v4_large_training_run_id",
+      "generated_by": "p2cccd.bench.rtstpf_advantage_cases_v4_large_training",
+      "regen_command": "conda activate cudadev; python -m p2cccd.bench.rtstpf_advantage_cases_v4_large_training",
+      "download_or_regen": "Requires the Fusion360/full and generated advantage-case inputs present locally.",
+      "expected_cost": "GPU training plus ORT/TensorRT probe when configured; hours."
+    },
+    {
+      "name": "shapenet_ood_dense_cases_run_id",
+      "generated_by": "p2cccd.bench.shapenet_ood_dense_cases",
+      "regen_command": "conda activate cudadev; python -m p2cccd.bench.shapenet_ood_dense_cases",
+      "download_or_regen": "Requires restored ShapeNetCore-derived local assets and the upstream advantage-case checkpoint.",
+      "expected_cost": "GPU training/evaluation plus local mesh preprocessing; hours."
+    },
+    {
+      "name": "car_wall_impact_dense_wall_patch_rtstpf_training_benchmark_run_id",
+      "generated_by": "p2cccd.bench.car_wall_impact_training_benchmark",
+      "regen_command": "conda activate cudadev; python -m p2cccd.bench.car_wall_impact_training_benchmark --train-rows 196608 --validation-rows 49152 --heldout-rows 49152 --epochs 10 --batch-size 16384",
+      "download_or_regen": "Can be regenerated from the analytic car-wall case and local generated visualization inputs.",
+      "expected_cost": "GPU training; typically shorter than full multi-dataset runs."
+    },
+    {
+      "name": "common_daily_physics_collision_cases_run_id",
+      "generated_by": "internal daily-physics generator omitted from public release",
+      "regen_command": "restore matching shard by hash or regenerate from an equivalent local daily-physics generator",
+      "download_or_regen": "Restore exact shard hashes when available; otherwise regenerate from a local daily-physics source with the same schema.",
+      "expected_cost": "CPU/GPU smoke-to-full cost depends on the local generator and hardware."
+    }
+  ],
+  "entries": [
+    {
+      "role": "checkpoint",
+      "path": "src/outputs/stpf_training/generalization_paper_benchmark_full_run_id/model_state.pt",
+      "bytes": 849869,
+      "sha256": "dce75e7887c17da104aa3fc1d6c09503f691a86fc38d410997cb7cd4037ef713"
+    },
+    {
+      "role": "checkpoint",
+      "path": "src/outputs/stpf_training/fusion360_full_large_training_run_id/model_state.pt",
+      "bytes": 849933,
+      "sha256": "47234558402eb9bcec70abc4e2758812000542122a06a5fab81bc99775016fa1"
+    },
+    {
+      "role": "checkpoint",
+      "path": "src/outputs/stpf_training/common_modeling_high_density_scenarios_large_run_id_medium_mlp_10epoch/model_state.pt",
+      "bytes": 849869,
+      "sha256": "f12c7f3d96f4a2be014728f0e53f0eb2303f0990aff48a295b377eb677697eb4"
+    },
+    {
+      "role": "checkpoint",
+      "path": "src/outputs/stpf_training/rtstpf_advantage_cases_v4_large_training_run_id/model_state.pt",
+      "bytes": 849933,
+      "sha256": "0a2b20e537d8b243cda776d9891ce800d2a2f8ac44a8f5cbc3c0a0a1ba2887da"
+    },
+    {
+      "role": "checkpoint",
+      "path": "src/outputs/stpf_training/shapenet_ood_dense_cases_run_id/model_state.pt",
+      "bytes": 849933,
+      "sha256": "e0917266340571960442ad2ab7223dda8fd7e59d788f44858c1b13e0ae1126e7"
+    },
+    {
+      "role": "checkpoint",
+      "path": "src/outputs/stpf_training/car_wall_impact_dense_wall_patch_rtstpf_training_benchmark_run_id/model_state.pt",
+      "bytes": 849197,
+      "sha256": "58aa49d0a681fde727d54a05ce7aa571ac810f55ae50a7b042a30c88c8e27615"
+    },
+    {
+      "role": "training_shard",
+      "path": "src/datasets/training/generalization/shards/generalization_paper_benchmark_full_run_id/t0_synthetic_proxy/dense_eval.npz",
+      "bytes": 4831647,
+      "sha256": "a727ea7bdad23d36802e7c3fde987bca9a8598af66479ff6e70a8d0ae0e2d12f"
+    },
+    {
+      "role": "training_shard",
+      "path": "src/datasets/training/generalization/shards/generalization_paper_benchmark_full_run_id/trained_stpf_high_density/dense_eval.npz",
+      "bytes": 5025319,
+      "sha256": "4b3bda7dbd89ecf96e7c6411718241a7dd17285c5fbe6338ece573ea8e964d84"
+    },
+    {
+      "role": "training_shard",
+      "path": "src/datasets/training/generalization/shards/generalization_paper_benchmark_full_run_id/abc_cad/dense_eval.npz",
+      "bytes": 10335111,
+      "sha256": "090a70995e1e83d767e60078995c9e7dbb8ffd2edb52d73cfa99a72c62098e15"
+    },
+    {
+      "role": "training_shard",
+      "path": "src/datasets/training/generalization/shards/generalization_paper_benchmark_full_run_id/thingi10k/dense_eval.npz",
+      "bytes": 6490112,
+      "sha256": "d48a57587ad6ddcbbb3c994d65b73104c96803655482256232a4b5fb65e15c65"
+    },
+    {
+      "role": "training_shard",
+      "path": "src/datasets/training/generalization/shards/generalization_paper_benchmark_full_run_id/fusion_360_gallery_assembly/dense_eval.npz",
+      "bytes": 2600150,
+      "sha256": "f70df250cc65eed0104a72d657651861ef96be9c3029c2f06c2ccb9d2c8eaf7e"
+    },
+    {
+      "role": "training_shard",
+      "path": "src/datasets/training/generalization/shards/generalization_paper_benchmark_full_run_id/high_density_mesh_multi_source/dense_eval.npz",
+      "bytes": 3964357,
+      "sha256": "d220bc4a2b1a7d3a2fd28a1320fee32053f88a76c97f1b62ab3f6faa4564ee1e"
+    },
+    {
+      "role": "training_shard",
+      "path": "src/datasets/training/fusion360_full/shards/fusion360_full_large_training_run_id/dense_eval.npz",
+      "bytes": 10181038,
+      "sha256": "d173c52531806cffd683f23ed75255f16e33cd182d87d74cc6dd2ab7a3307960"
+    },
+    {
+      "role": "training_shard",
+      "path": "src/datasets/training/common_modeling_high_density/shards/common_modeling_high_density_scenarios_large_run_id/dense_eval.npz",
+      "bytes": 6175609,
+      "sha256": "783f694e54a6880c75fcd2476f6b2510e8d7b1122ce4782c5515c8cd46bca539"
+    },
+    {
+      "role": "training_shard",
+      "path": "src/datasets/training/rtstpf_advantage_cases_v4/shards/rtstpf_advantage_cases_v4_large_training_run_id/dense_eval.npz",
+      "bytes": 18553927,
+      "sha256": "b02f3ad6d3e4973f7362e8239f49c77dbfa3f66193895e14cd918d37918a24d5"
+    },
+    {
+      "role": "training_shard",
+      "path": "src/datasets/training/shapenet_ood_dense_cases/shards/shapenet_ood_dense_cases_run_id/dense_eval.npz",
+      "bytes": 14019798,
+      "sha256": "b35c04d81ed57a5bb869c3885eb88013886a60b7dc99af1195301ad1f1d68620"
+    },
+    {
+      "role": "training_shard",
+      "path": "src/datasets/training/car_wall_impact_rtstpf/shards/car_wall_impact_dense_wall_patch_rtstpf_training_benchmark_run_id/heldout.npz",
+      "bytes": 4782088,
+      "sha256": "61d5ecd8bd6fa27fe9beacb66abcce88df2783f073cc8e14ef8c9cc0d4052e30"
+    },
+    {
+      "role": "training_shard",
+      "path": "src/datasets/training/aris_ccf_a_expansion_run_id/common_daily_physics_collision_cases/shards/common_daily_physics_collision_cases_run_id/dense_eval_full.npz",
+      "bytes": 604925,
+      "sha256": "8e02f8686c7127e966a78e3d3375a14a48aecbb482d3a06bcc8f504af9bac421"
+    }
+  ]
+}

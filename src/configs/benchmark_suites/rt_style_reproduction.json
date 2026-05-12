@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "suite_name": "rt_style_reproduction_smoke",
+  "suite_type": "performance",
+  "seed": 59,
+  "output_root": "src/outputs/benchmark_suites",
+  "notes": "RT-DCD and RT-CCD style reproduction smoke suite. RT-DCD is discrete and may miss tunneling; RT-CCD uses conservative swept slab proxies.",
+  "cases": [
+    {
+      "name": "rt_dcd_endpoints",
+      "method": "RTDCDStyle",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 3,
+        "robot_link_count": 1,
+        "include_robot_links": true
+      },
+      "config": {
+        "sample_count": 2,
+        "radius_scale": 1.0
+      }
+    },
+    {
+      "name": "rt_dcd_four_samples",
+      "method": "RTDCDStyle",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 3,
+        "robot_link_count": 1,
+        "include_robot_links": true
+      },
+      "config": {
+        "sample_count": 4,
+        "radius_scale": 1.0
+      }
+    },
+    {
+      "name": "rt_ccd_four_slabs",
+      "method": "RTCCDStyle",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 3,
+        "robot_link_count": 1,
+        "include_robot_links": true
+      },
+      "config": {
+        "slab_count": 4,
+        "radius_scale": 1.0,
+        "proxy_type_a": "SWEPT_AABB",
+        "proxy_type_b": "SWEPT_AABB"
+      }
+    }
+  ]
+}

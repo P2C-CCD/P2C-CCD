@@ -1,0 +1,540 @@
+{
+  "batch_size": 4096,
+  "calibration": {
+    "calibrated_threshold": 1.0164346005767584,
+    "calibration_probe": {
+      "epoch": 8,
+      "estimated_exact_work_reduction": 0.4904466909704993,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.011267605633802818,
+      "loss": 4.998983860015869,
+      "mean_predicted_cost": 1.18516551743091,
+      "mean_target_cost": 1.1857609523853785,
+      "positive_count": 134,
+      "positive_ratio": 0.37746478873239436,
+      "row_count": 355,
+      "split": "calibration"
+    },
+    "fn_risk_top_k": [
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227ee.csv",
+        "kind": "ee",
+        "query_index": 4000216,
+        "score": 1.0164346005767584
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227ee.csv",
+        "kind": "ee",
+        "query_index": 4000022,
+        "score": 1.0167772565037012
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227vf.csv",
+        "kind": "vf",
+        "query_index": 5000025,
+        "score": 1.0173101294785738
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227vf.csv",
+        "kind": "vf",
+        "query_index": 5000074,
+        "score": 1.0180027559399605
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227vf.csv",
+        "kind": "vf",
+        "query_index": 5000070,
+        "score": 1.0180276278406382
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227vf.csv",
+        "kind": "vf",
+        "query_index": 5000083,
+        "score": 1.0180377885699272
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227vf.csv",
+        "kind": "vf",
+        "query_index": 5000043,
+        "score": 1.0182874742895365
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227vf.csv",
+        "kind": "vf",
+        "query_index": 5000042,
+        "score": 1.0183659791946411
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227vf.csv",
+        "kind": "vf",
+        "query_index": 5000050,
+        "score": 1.01844940520823
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227vf.csv",
+        "kind": "vf",
+        "query_index": 5000044,
+        "score": 1.0184508971869946
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227vf.csv",
+        "kind": "vf",
+        "query_index": 5000020,
+        "score": 1.0186199694871902
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227vf.csv",
+        "kind": "vf",
+        "query_index": 5000013,
+        "score": 1.0186869911849499
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227vf.csv",
+        "kind": "vf",
+        "query_index": 5000009,
+        "score": 1.0187024883925915
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227vf.csv",
+        "kind": "vf",
+        "query_index": 5000004,
+        "score": 1.0187593791633844
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227vf.csv",
+        "kind": "vf",
+        "query_index": 5000005,
+        "score": 1.0188069362193346
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227ee.csv",
+        "kind": "ee",
+        "query_index": 4000258,
+        "score": 1.0191582888364792
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227vf.csv",
+        "kind": "vf",
+        "query_index": 5000065,
+        "score": 1.0191758126020432
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227ee.csv",
+        "kind": "ee",
+        "query_index": 4000257,
+        "score": 1.0191897060722113
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227ee.csv",
+        "kind": "ee",
+        "query_index": 4000236,
+        "score": 1.0192201863974333
+      },
+      {
+        "case": "cloth-funnel",
+        "csv_path": "src/baseline/Sample-Scalable-CCD-Data/cloth-funnel/queries/227vf.csv",
+        "kind": "vf",
+        "query_index": 5000078,
+        "score": 1.0192229747772217
+      }
+    ],
+    "min_positive_score": 1.0164346005767584,
+    "per_case": {
+      "cloth-funnel": {
+        "exact_call_rate": 1.0,
+        "exact_calls": 355,
+        "fn": 0,
+        "positive_count": 134,
+        "recall": 1.0,
+        "rows": 355,
+        "tp": 134
+      }
+    },
+    "per_kind": {
+      "ee": {
+        "exact_call_rate": 1.0,
+        "exact_calls": 263,
+        "fn": 0,
+        "positive_count": 107,
+        "recall": 1.0,
+        "rows": 263,
+        "tp": 107
+      },
+      "vf": {
+        "exact_call_rate": 1.0,
+        "exact_calls": 92,
+        "fn": 0,
+        "positive_count": 27,
+        "recall": 1.0,
+        "rows": 92,
+        "tp": 27
+      }
+    },
+    "threshold_curve": [
+      {
+        "baseline_cost": 420.9451380968094,
+        "exact_call_reduction": 0.0,
+        "exact_calls": 355.0,
+        "exact_work_reduction": 0.0,
+        "fn": 0.0,
+        "fp": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "selected_cost": 420.9451380968094,
+        "threshold": 0.0,
+        "tn": 221.0,
+        "tp": 134.0
+      },
+      {
+        "baseline_cost": 420.9451380968094,
+        "exact_call_reduction": 0.0,
+        "exact_calls": 355.0,
+        "exact_work_reduction": 0.0,
+        "fn": 0.0,
+        "fp": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "selected_cost": 420.9451380968094,
+        "threshold": 0.25,
+        "tn": 221.0,
+        "tp": 134.0
+      },
+      {
+        "baseline_cost": 420.9451380968094,
+        "exact_call_reduction": 0.0,
+        "exact_calls": 355.0,
+        "exact_work_reduction": 0.0,
+        "fn": 0.0,
+        "fp": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "selected_cost": 420.9451380968094,
+        "threshold": 0.5,
+        "tn": 221.0,
+        "tp": 134.0
+      },
+      {
+        "baseline_cost": 420.9451380968094,
+        "exact_call_reduction": 0.0,
+        "exact_calls": 355.0,
+        "exact_work_reduction": 0.0,
+        "fn": 0.0,
+        "fp": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "selected_cost": 420.9451380968094,
+        "threshold": 0.75,
+        "tn": 221.0,
+        "tp": 134.0
+      },
+      {
+        "baseline_cost": 420.9451380968094,
+        "exact_call_reduction": 0.0,
+        "exact_calls": 355.0,
+        "exact_work_reduction": 0.0,
+        "fn": 0.0,
+        "fp": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "selected_cost": 420.9451380968094,
+        "threshold": 0.9,
+        "tn": 221.0,
+        "tp": 134.0
+      },
+      {
+        "baseline_cost": 420.9451380968094,
+        "exact_call_reduction": 0.0,
+        "exact_calls": 355.0,
+        "exact_work_reduction": 0.0,
+        "fn": 0.0,
+        "fp": 0.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "selected_cost": 420.9451380968094,
+        "threshold": 1.0164346005767584,
+        "tn": 221.0,
+        "tp": 134.0
+      }
+    ]
+  },
+  "device": "cuda",
+  "epochs": 8,
+  "final_train": {
+    "epoch": 8,
+    "estimated_exact_work_reduction": 0.48537825248558975,
+    "family_top2_recall": 1.0,
+    "interval_top1_recall": 0.995160066985574,
+    "loss": 0.035780249084212096,
+    "mean_predicted_cost": 1.2613307198206642,
+    "mean_target_cost": 1.2460413263893328,
+    "positive_count": 264999,
+    "positive_ratio": 0.9950173847089657,
+    "row_count": 266326,
+    "split": "train"
+  },
+  "final_validation": {
+    "epoch": 8,
+    "estimated_exact_work_reduction": 0.4904466909704993,
+    "family_top2_recall": 1.0,
+    "interval_top1_recall": 0.011267605633802818,
+    "loss": 4.998983860015869,
+    "mean_predicted_cost": 1.18516551743091,
+    "mean_target_cost": 1.1857609523853785,
+    "positive_count": 134,
+    "positive_ratio": 0.37746478873239436,
+    "row_count": 355,
+    "split": "validation"
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "estimated_exact_work_reduction": 0.5044298386686064,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.4291357208834286,
+      "loss": 1.585384769189324,
+      "mean_predicted_cost": 1.2271390065230654,
+      "mean_target_cost": 1.2460413263893328,
+      "positive_count": 264999,
+      "positive_ratio": 0.9950173847089657,
+      "row_count": 266326,
+      "split": "train"
+    },
+    {
+      "epoch": 1,
+      "estimated_exact_work_reduction": 0.513525844270549,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.05070422535211268,
+      "loss": 2.6753039360046387,
+      "mean_predicted_cost": 1.1439915662080469,
+      "mean_target_cost": 1.1857609523853785,
+      "positive_count": 134,
+      "positive_ratio": 0.37746478873239436,
+      "row_count": 355,
+      "split": "validation"
+    },
+    {
+      "epoch": 2,
+      "estimated_exact_work_reduction": 0.49882798407604645,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.9922050419410797,
+      "loss": 0.4113583039375515,
+      "mean_predicted_cost": 1.244604502949441,
+      "mean_target_cost": 1.2460413263893328,
+      "positive_count": 264999,
+      "positive_ratio": 0.9950173847089657,
+      "row_count": 266326,
+      "split": "train"
+    },
+    {
+      "epoch": 2,
+      "estimated_exact_work_reduction": 0.5235095103192758,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.014084507042253521,
+      "loss": 7.640766143798828,
+      "mean_predicted_cost": 1.1285489204903723,
+      "mean_target_cost": 1.1857609523853785,
+      "positive_count": 134,
+      "positive_ratio": 0.37746478873239436,
+      "row_count": 355,
+      "split": "validation"
+    },
+    {
+      "epoch": 3,
+      "estimated_exact_work_reduction": 0.4887251589765903,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.995160066985574,
+      "loss": 0.15482217025009512,
+      "mean_predicted_cost": 1.2695449531133394,
+      "mean_target_cost": 1.2460413263893328,
+      "positive_count": 264999,
+      "positive_ratio": 0.9950173847089657,
+      "row_count": 266326,
+      "split": "train"
+    },
+    {
+      "epoch": 3,
+      "estimated_exact_work_reduction": 0.5120456575759237,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.011267605633802818,
+      "loss": 4.233338356018066,
+      "mean_predicted_cost": 1.1525129848802593,
+      "mean_target_cost": 1.1857609523853785,
+      "positive_count": 134,
+      "positive_ratio": 0.37746478873239436,
+      "row_count": 355,
+      "split": "validation"
+    },
+    {
+      "epoch": 4,
+      "estimated_exact_work_reduction": 0.47008591356391105,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.995160066985574,
+      "loss": 0.06744067888403193,
+      "mean_predicted_cost": 1.3007529254798489,
+      "mean_target_cost": 1.2460413263893328,
+      "positive_count": 264999,
+      "positive_ratio": 0.9950173847089657,
+      "row_count": 266326,
+      "split": "train"
+    },
+    {
+      "epoch": 4,
+      "estimated_exact_work_reduction": 0.4834931049039056,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.011267605633802818,
+      "loss": 4.035800933837891,
+      "mean_predicted_cost": 1.1996634874545353,
+      "mean_target_cost": 1.1857609523853785,
+      "positive_count": 134,
+      "positive_ratio": 0.37746478873239436,
+      "row_count": 355,
+      "split": "validation"
+    },
+    {
+      "epoch": 5,
+      "estimated_exact_work_reduction": 0.4889136781743283,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.995160066985574,
+      "loss": 0.05019984716683812,
+      "mean_predicted_cost": 1.2561542213582593,
+      "mean_target_cost": 1.2460413263893328,
+      "positive_count": 264999,
+      "positive_ratio": 0.9950173847089657,
+      "row_count": 266326,
+      "split": "train"
+    },
+    {
+      "epoch": 5,
+      "estimated_exact_work_reduction": 0.4955727898399156,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.011267605633802818,
+      "loss": 4.546207904815674,
+      "mean_predicted_cost": 1.175289757822601,
+      "mean_target_cost": 1.1857609523853785,
+      "positive_count": 134,
+      "positive_ratio": 0.37746478873239436,
+      "row_count": 355,
+      "split": "validation"
+    },
+    {
+      "epoch": 6,
+      "estimated_exact_work_reduction": 0.48302261248711487,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.995160066985574,
+      "loss": 0.04181644457433232,
+      "mean_predicted_cost": 1.2670498285710177,
+      "mean_target_cost": 1.2460413263893328,
+      "positive_count": 264999,
+      "positive_ratio": 0.9950173847089657,
+      "row_count": 266326,
+      "split": "train"
+    },
+    {
+      "epoch": 6,
+      "estimated_exact_work_reduction": 0.4906268841443001,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.011267605633802818,
+      "loss": 4.786855697631836,
+      "mean_predicted_cost": 1.1839539942607074,
+      "mean_target_cost": 1.1857609523853785,
+      "positive_count": 134,
+      "positive_ratio": 0.37746478873239436,
+      "row_count": 355,
+      "split": "validation"
+    },
+    {
+      "epoch": 7,
+      "estimated_exact_work_reduction": 0.5041441374294156,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.995160066985574,
+      "loss": 0.03845615343260815,
+      "mean_predicted_cost": 1.2116519647133988,
+      "mean_target_cost": 1.2460413263893328,
+      "positive_count": 264999,
+      "positive_ratio": 0.9950173847089657,
+      "row_count": 266326,
+      "split": "train"
+    },
+    {
+      "epoch": 7,
+      "estimated_exact_work_reduction": 0.5070310602560167,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.011267605633802818,
+      "loss": 4.702714443206787,
+      "mean_predicted_cost": 1.142920527491771,
+      "mean_target_cost": 1.1857609523853785,
+      "positive_count": 134,
+      "positive_ratio": 0.37746478873239436,
+      "row_count": 355,
+      "split": "validation"
+    },
+    {
+      "epoch": 8,
+      "estimated_exact_work_reduction": 0.48537825248558975,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.995160066985574,
+      "loss": 0.035780249084212096,
+      "mean_predicted_cost": 1.2613307198206642,
+      "mean_target_cost": 1.2460413263893328,
+      "positive_count": 264999,
+      "positive_ratio": 0.9950173847089657,
+      "row_count": 266326,
+      "split": "train"
+    },
+    {
+      "epoch": 8,
+      "estimated_exact_work_reduction": 0.4904466909704993,
+      "family_top2_recall": 1.0,
+      "interval_top1_recall": 0.011267605633802818,
+      "loss": 4.998983860015869,
+      "mean_predicted_cost": 1.18516551743091,
+      "mean_target_cost": 1.1857609523853785,
+      "positive_count": 134,
+      "positive_ratio": 0.37746478873239436,
+      "row_count": 355,
+      "split": "validation"
+    }
+  ],
+  "history_csv": "src/outputs/stpf_training/scalable_ccd_scene_supplementary_training_run_id/history.csv",
+  "history_jsonl": "src/outputs/stpf_training/scalable_ccd_scene_supplementary_training_run_id/history.jsonl",
+  "loss": "multitask + cost-aware",
+  "model_preset": "medium_mlp",
+  "model_state_path": "src/outputs/stpf_training/scalable_ccd_scene_supplementary_training_run_id/model_state.pt",
+  "onnx_error": null,
+  "onnx_path": "src\\outputs\\stpf_training\\scalable_ccd_scene_supplementary_training_run_id\\model.onnx",
+  "optimizer": "AdamW",
+  "report_name": "scalable_ccd_scene_supplementary_training_run_id_training",
+  "run_name": "scalable_ccd_scene_supplementary_training_run_id",
+  "shards_dir": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_scene_supplementary_training_run_id",
+  "train_eval_max_rows": null,
+  "train_row_count": 266326,
+  "train_shards": [
+    "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_scene_supplementary_training_run_id/train.npz"
+  ],
+  "train_split": "train",
+  "validation_eval_max_rows": null,
+  "validation_row_count": 355,
+  "validation_shards": [
+    "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_scene_supplementary_training_run_id/validation.npz"
+  ],
+  "validation_split": "validation"
+}

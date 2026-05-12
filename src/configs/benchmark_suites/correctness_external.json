@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "suite_name": "correctness_external_smoke",
+  "suite_type": "correctness",
+  "seed": 19,
+  "output_root": "src/outputs/benchmark_suites",
+  "notes": "External correctness suite for first-layer reference stacks. Tight Inclusion is checked as a reference implementation; Scalable CCD sample and Rigid-IPC provide imported query batches when local data is available.",
+  "cases": [
+    {
+      "name": "tight_inclusion_reference_available",
+      "method": "ReferenceAvailability",
+      "dataset": {
+        "kind": "tight_inclusion_reference"
+      }
+    },
+    {
+      "name": "scalable_ccd_sample_rt_exact_vf",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "family": "vf",
+        "limit": 64
+      },
+      "config": {
+        "backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "rigid_ipc_body_pairs_rt_exact",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "rigid_ipc",
+        "family": "vf",
+        "dimension": "3D",
+        "limit": 64,
+        "include_fixed_fixed_pairs": false
+      },
+      "config": {
+        "backend_name": "cpu_reference_rt"
+      }
+    }
+  ]
+}

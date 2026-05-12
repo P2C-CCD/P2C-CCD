@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "suite_name": "correctness_smoke",
+  "suite_type": "correctness",
+  "seed": 13,
+  "output_root": "src/outputs/benchmark_suites",
+  "notes": "Small correctness suite for candidate_recall and final false-negative regression.",
+  "cases": [
+    {
+      "name": "pure_exact_cpu_internal",
+      "method": "PureExactCPU",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 2,
+        "robot_link_count": 1,
+        "include_robot_links": true
+      },
+      "config": {
+        "eps_time": 1e-5,
+        "eps_space": 1e-8,
+        "max_subdivision_depth": 32
+      }
+    },
+    {
+      "name": "bvh_exact_internal",
+      "method": "BVHExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 2,
+        "robot_link_count": 1,
+        "include_robot_links": true
+      },
+      "config": {
+        "backend_name": "cpu_aabb_sort_sweep"
+      }
+    },
+    {
+      "name": "rt_exact_internal",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 2,
+        "robot_link_count": 1,
+        "include_robot_links": true
+      },
+      "config": {
+        "backend_name": "cpu_reference_rt"
+      }
+    }
+  ]
+}

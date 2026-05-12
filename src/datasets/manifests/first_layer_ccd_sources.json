@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "layer": "2.1 correctness_ccd",
+  "baseline_root": "src/baseline",
+  "sources": [
+    {
+      "name": "Tight Inclusion",
+      "directory_name": "Tight-Inclusion",
+      "priority": "P0",
+      "role": "Conservative CCD reference implementation and correctness comparison source.",
+      "adapter": "p2cccd.datasets.ccd.TightInclusionAdapter",
+      "status": "implemented_source_adapter"
+    },
+    {
+      "name": "CCD-Wrapper",
+      "directory_name": "CCD-Wrapper",
+      "priority": "P0",
+      "role": "External CCD benchmark harness and method organization reference.",
+      "adapter": "p2cccd.datasets.ccd.CCDWrapperAdapter",
+      "status": "implemented_harness_reference_adapter"
+    },
+    {
+      "name": "Scalable CCD",
+      "directory_name": "Scalable-CCD",
+      "priority": "P0",
+      "role": "Scalable broad/narrow phase CCD algorithm and benchmark reference.",
+      "adapter": "p2cccd.datasets.ccd.discover_first_layer_sources",
+      "status": "implemented_source_registry"
+    },
+    {
+      "name": "Sample Scalable CCD Data",
+      "directory_name": "Sample-Scalable-CCD-Data",
+      "priority": "P0",
+      "role": "Ground-truth sample CCD query data used as first runnable external correctness input.",
+      "adapter": "p2cccd.datasets.ccd.ScalableCCDSampleAdapter",
+      "status": "implemented_query_adapter"
+    },
+    {
+      "name": "Exact Root Parity CCD",
+      "directory_name": "Exact-Root-Parity-CCD",
+      "priority": "P1",
+      "role": "Exact narrow-phase reference for deeper exact CCD cross-checks.",
+      "adapter": "p2cccd.datasets.ccd.RootParityAdapter",
+      "status": "implemented_source_adapter"
+    },
+    {
+      "name": "Rigid IPC scenes",
+      "directory_name": "rigid-ipc",
+      "priority": "P1",
+      "role": "Complex rigid-body scene correctness extension once scenes are downloaded.",
+      "adapter": "not_implemented",
+      "status": "local_source_available_adapter_pending"
+    }
+  ]
+}

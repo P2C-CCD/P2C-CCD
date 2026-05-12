@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "epsilon": {
+    "eps_time": 1e-4,
+    "eps_space": 1e-6,
+    "eps_proxy": 1e-5,
+    "eps_cert": 1e-6
+  },
+  "runtime": {
+    "max_interval_bins": 8,
+    "max_family_scores": 8,
+    "enable_audit_log": true
+  },
+  "benchmark": {
+    "write_csv": true,
+    "write_jsonl": true
+  }
+}

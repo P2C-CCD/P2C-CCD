@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "suite_name": "curobo_downstream_smoke",
+  "suite_type": "performance",
+  "seed": 73,
+  "output_root": "src/outputs/benchmark_suites",
+  "notes": "cuRobo-style downstream robot link-pair motion validation comparison. This discrete checker is not certified continuous CCD and may expose false negatives for sparse trajectories.",
+  "cases": [
+    {
+      "name": "curobo_endpoint_trajectory",
+      "method": "CuRoboDownstream",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 0,
+        "robot_link_count": 6,
+        "include_robot_links": true,
+        "splits": ["robot_link_validation"]
+      },
+      "config": {
+        "trajectory_step_count": 2,
+        "link_sphere_radius_scale": 1.0,
+        "collision_activation_distance": 0.0,
+        "robot_link_only": true
+      }
+    },
+    {
+      "name": "curobo_dense_trajectory",
+      "method": "CuRoboDownstream",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 0,
+        "robot_link_count": 6,
+        "include_robot_links": true,
+        "splits": ["robot_link_validation"]
+      },
+      "config": {
+        "trajectory_step_count": 16,
+        "link_sphere_radius_scale": 1.0,
+        "collision_activation_distance": 0.0,
+        "robot_link_only": true
+      }
+    },
+    {
+      "name": "curobo_dense_with_activation",
+      "method": "CuRoboDownstream",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 0,
+        "robot_link_count": 6,
+        "include_robot_links": true,
+        "splits": ["robot_link_validation"]
+      },
+      "config": {
+        "trajectory_step_count": 16,
+        "link_sphere_radius_scale": 1.0,
+        "collision_activation_distance": 0.03,
+        "robot_link_only": true
+      }
+    }
+  ]
+}

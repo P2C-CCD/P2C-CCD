@@ -1,0 +1,26 @@
+# CPU smoke / CI environment for reproducibility checks.
+# GPU/OptiX/TensorRT experiments require local vendor SDK installs; see
+# src/docs/gpu_optix_environment.md.
+name: cudadev
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.12
+  - cmake>=3.24
+  - ninja
+  - numpy
+  - scipy
+  - pandas
+  - matplotlib
+  - pytest
+  - pyyaml
+  - tqdm
+  - pip
+  - pip:
+      - onnx
+      - onnxruntime
+      - trimesh
+      - networkx

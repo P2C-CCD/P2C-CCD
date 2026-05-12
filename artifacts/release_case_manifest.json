@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "description": "Release-local manifest for paper-level figures, case evidence, and rerun entry points bundled with the public GitHub repository.",
+  "cases": [
+    {
+      "id": "teaser_and_method_overview",
+      "title": "Teaser and method overview",
+      "paper_scope": "Opening visual summary and P2C-CCD pipeline schematic.",
+      "release_paths": {
+        "figures": [
+          "assets/figures/main/First_fig.jpg",
+          "assets/figures/main/STPF.jpg"
+        ],
+        "evidence": [
+          "src/docs/architecture.md",
+          "src/docs/reproducibility_quickstart.md"
+        ],
+        "runners": []
+      }
+    },
+    {
+      "id": "primary_scope_results",
+      "title": "Primary scope benchmark results",
+      "paper_scope": "Primary cross-dataset result figure and strict five-path replay evidence.",
+      "release_paths": {
+        "figures": [
+          "assets/figures/results/result_primary_scope_combined.png",
+          "assets/figures/results/result_primary_scope_combined.pdf"
+        ],
+        "evidence": [
+          "src/benchmark/all_dataset_strict_five_path_full_replay_run_id/all_dataset_strict_five_path_full_replay_run_id.md",
+          "src/benchmark/all_dataset_strict_five_path_full_replay_run_id/all_dataset_strict_five_path_full_replay_run_id.json",
+          "src/benchmark/ti_full_query_every_candidate_walltime_run_id/ti_full_query_every_candidate_walltime_run_id.md",
+          "src/benchmark/native_ti_four_source_anyhit_dense_group_run_id/native_ti_four_source_anyhit_dense_group_run_id_three_method.json",
+          "src/benchmark/native_ti_four_source_mixed_dense_group_run_id/native_ti_four_source_mixed_dense_group_run_id_three_method.json"
+        ],
+        "runners": [
+          "src/tools/run_all_dataset_strict_five_path_replay.py",
+          "src/tools/tight_inclusion_full_query_benchmark.cpp",
+          "src/tools/native_ti_four_source_dense_group_benchmark.py"
+        ]
+      }
+    },
+    {
+      "id": "native_end_to_end_and_ablation",
+      "title": "Native end-to-end and ablation results",
+      "paper_scope": "End-to-end native benchmark and ablation figure.",
+      "release_paths": {
+        "figures": [
+          "assets/figures/results/result_native_e2e_ablation_combined_column.png",
+          "assets/figures/results/result_native_e2e_ablation_combined_column.pdf"
+        ],
+        "evidence": [
+          "src/benchmark/native_end_to_end_dense_run_id/native_end_to_end_dense_run_id.json",
+          "src/benchmark/p1_ablation_suite_run_id/p1_ablation_suite_run_id.json",
+          "src/benchmark/p2_ablation_suite_run_id/p2_ablation_suite_run_id.json"
+        ],
+        "runners": [
+          "src/tools/run_learned_vs_random_ablation.ps1",
+          "src/tools/build_rtstpf_dense_advantage_demo.py"
+        ]
+      }
+    },
+    {
+      "id": "heldout_native_ti",
+      "title": "Held-out native Tight-Inclusion stress test",
+      "paper_scope": "Held-out dense native TI benchmark figure and summary tables.",
+      "release_paths": {
+        "figures": [
+          "assets/figures/results/result_heldout_native_ti.png"
+        ],
+        "evidence": [
+          "src/benchmark/native_ti_heldout_dense_group_run_id",
+          "src/benchmark/native_ti_heldout_dense_group_hardmix_run_id/native_ti_heldout_dense_group_hardmix_run_id.json"
+        ],
+        "runners": [
+          "src/tools/native_ti_heldout_dense_group_benchmark.py",
+          "src/tools/summarize_heldout_native_ti_mixed_table.py"
+        ]
+      }
+    },
+    {
+      "id": "motion_trap_envelope",
+      "title": "Motion-trap scene-object envelope",
+      "paper_scope": "Motion-trap native envelope benchmark figure and scheduler evidence.",
+      "release_paths": {
+        "figures": [
+          "assets/figures/results/result_motion_trap_native_envelope.png"
+        ],
+        "evidence": [
+          "src/benchmark/scene_object_envelope_fair_frontier_native_run_id/scene_object_envelope_fair_frontier_native_run_id_main_scheduler_table.csv",
+          "src/benchmark/scene_object_envelope_motion_trap_native_small_run_id/scene_object_envelope_motion_trap_native_small_run_id_strong_native_summary.json",
+          "src/benchmark/scene_object_envelope_strong_native_run_id"
+        ],
+        "runners": [
+          "src/tools/generate_scene_object_envelope_motion_trap_dataset.py",
+          "src/tools/run_scene_object_envelope_native_ti_walltime.py",
+          "src/tools/summarize_motion_trap_native_scheduler_ablation.py"
+        ]
+      }
+    },
+    {
+      "id": "standard_graphics_and_towel",
+      "title": "Standard graphics models and twisting towel",
+      "paper_scope": "Standard mesh-drop gallery and cloth/towel CCD case.",
+      "release_paths": {
+        "figures": [
+          "assets/figures/cases/base_model_analysis.jpg",
+          "assets/figures/cases/05_twisting_towel.png"
+        ],
+        "evidence": [
+          "src/benchmark/standard_graphics_models_run_id/standard_graphics_model_suite_summary.md",
+          "src/benchmark/standard_graphics_models_run_id/standard_graphics_model_suite_summary.json",
+          "src/benchmark/standard_graphics_models_run_id/standard_graphics_model_benchmark.csv",
+          "src/benchmark/standard_graphics_models_run_id/twisting_towel_wringer_ccd_metrics.json",
+          "src/benchmark/standard_graphics_models_run_id/standard_graphics_models_run_id_stpf_training.md"
+        ],
+        "runners": [
+          "src/tools/standard_graphics_model_collision_suite.py",
+          "src/tools/twisting_towel_ccd_case.py",
+          "src/tools/generate_standard_model_displacement_curves.py"
+        ]
+      }
+    },
+    {
+      "id": "particle_bowl_and_car_wall",
+      "title": "Particle sphere bowl and car-wall impact",
+      "paper_scope": "Dense reduction trajectory figure and car-wall impact case.",
+      "release_paths": {
+        "figures": [
+          "assets/figures/cases/traj_and_reduction.jpg",
+          "assets/figures/cases/Car_wall.jpg"
+        ],
+        "evidence": [
+          "src/benchmark/particle_sphere_bowl_explosion_run_id.json",
+          "src/benchmark/car_wall_impact_dense_wall_patch_rtstpf_training_benchmark_run_id.json"
+        ],
+        "runners": [
+          "src/tools/particle_sphere_bowl_explosion_case.py",
+          "src/tools/generate_car_wall_analysis_curves.py",
+          "src/tools/generate_car_wall_brick_spatial_curves.py",
+          "src/tools/generate_car_wall_detection_scatter.py"
+        ]
+      }
+    },
+    {
+      "id": "scalable_ccd_scene_gallery",
+      "title": "Scalable-CCD scene gallery and ball-cloth case",
+      "paper_scope": "Scene-level broad/narrow phase gallery and full-scene replay evidence.",
+      "release_paths": {
+        "figures": [
+          "assets/figures/cases/ball-cloth.jpg",
+          "assets/figures/cases/scalable_ccd_six_case_gallery_tight.jpg"
+        ],
+        "evidence": [
+          "src/benchmark/scalable_ccd_sample_scene_candidate_groups_run_id/scalable_ccd_sample_scene_candidate_groups_run_id.md",
+          "src/benchmark/scalable_ccd_scene_supplementary_training_run_id/scalable_ccd_scene_supplementary_training_run_id.md",
+          "src/benchmark/scalable_ccd_scene_supplementary_training_run_id/summary.json",
+          "src/benchmark/native_full_scene_ccd_replay_walltime_run_id/native_full_scene_ccd_replay_walltime_run_id_summary.csv"
+        ],
+        "runners": [
+          "src/tools/convert_scalable_ccd_sample_to_p2c_groups.py",
+          "src/tools/run_scalable_ccd_scene_supplementary.py",
+          "src/tools/run_native_full_scene_ccd_replay_walltime.py"
+        ]
+      }
+    },
+    {
+      "id": "real_mesh_and_repeated_contacts",
+      "title": "ABC real mesh and repeated-contact cases",
+      "paper_scope": "Real mesh contact and repeated sphere-funnel case gallery.",
+      "release_paths": {
+        "figures": [
+          "assets/figures/cases/04_abc_real_mesh_contact.png",
+          "assets/figures/cases/15_repeated_sphere_funnel_drop.png"
+        ],
+        "evidence": [
+          "src/benchmark/object_object_dense_mesh_contact_run_id/object_object_dense_mesh_contact_run_id.json",
+          "src/benchmark/section3_full_rerun_run_id/section3_full_rerun_run_id_summary.json"
+        ],
+        "runners": [
+          "src/tools/object_object_dense_mesh_contact_case.py",
+          "src/tools/repeated_contact_case_suite_run_id.py",
+          "src/tools/render_repeated_cases_blender_material_run_id.py"
+        ]
+      }
+    }
+  ]
+}

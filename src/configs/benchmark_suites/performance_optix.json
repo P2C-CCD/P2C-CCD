@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "suite_name": "performance_optix_smoke",
+  "suite_type": "performance",
+  "seed": 29,
+  "output_root": "src/outputs/benchmark_suites",
+  "notes": "OptiX RT Core smoke performance suite. Requires p2cccd_cpp built with -DP2CCCD_ENABLE_OPTIX=ON and CUDA DLL discovery.",
+  "cases": [
+    {
+      "name": "rt_exact_optix",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 2,
+        "robot_link_count": 1,
+        "include_robot_links": true
+      },
+      "config": {
+        "backend_name": "optix_rt"
+      }
+    },
+    {
+      "name": "rt_stpf_exact_optix_dummy_policy",
+      "method": "RTSTPFExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 2,
+        "robot_link_count": 1,
+        "include_robot_links": true
+      },
+      "config": {
+        "rt_backend_name": "optix_rt",
+        "use_dummy_policy": true,
+        "proposal_batch_size": 1024
+      }
+    }
+  ]
+}

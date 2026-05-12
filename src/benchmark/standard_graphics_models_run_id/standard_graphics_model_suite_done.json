@@ -1,0 +1,20 @@
+{
+  "run_tag": "standard_graphics_models_run_id",
+  "case": "classic_models_cornell_room_drop",
+  "case_dir": "src\\MyDemo\\standard_graphics_models_run_id\\classic_models_cornell_room_drop",
+  "mp4": "src\\MyDemo\\standard_graphics_models_run_id\\classic_models_cornell_room_drop\\global.mp4",
+  "metrics_json": "src\\MyDemo\\standard_graphics_models_run_id\\classic_models_cornell_room_drop\\metrics.json",
+  "case_report": "src\\MyDemo\\standard_graphics_models_run_id\\classic_models_cornell_room_drop\\case_report.md",
+  "benchmark_metrics_json": "src\\benchmark\\standard_graphics_models_run_id\\classic_models_cornell_room_drop_metrics.json",
+  "covered_models": [
+    "Stanford Bunny",
+    "Stanford Dragon",
+    "Armadillo",
+    "Fandisk",
+    "Spot the Cow",
+    "Suzanne",
+    "Utah Teapot",
+    "Cornell Box"
+  ],
+  "render_style": "engine_grid_white_background"
+}

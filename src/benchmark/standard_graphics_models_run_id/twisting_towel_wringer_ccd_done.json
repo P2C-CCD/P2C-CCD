@@ -1,0 +1,10 @@
+{
+  "case": "twisting_towel_wringer_ccd",
+  "case_dir": "src\\MyDemo\\standard_graphics_models_run_id\\twisting_towel_wringer_ccd",
+  "global_mp4": "src\\MyDemo\\standard_graphics_models_run_id\\twisting_towel_wringer_ccd\\global.mp4",
+  "metrics_json": "src\\MyDemo\\standard_graphics_models_run_id\\twisting_towel_wringer_ccd\\metrics.json",
+  "case_report": "src\\MyDemo\\standard_graphics_models_run_id\\twisting_towel_wringer_ccd\\case_report.md",
+  "first_toi_seconds": 1.2185391450264085,
+  "exact_call_reduction": 762.9019485496033,
+  "fn": 0
+}

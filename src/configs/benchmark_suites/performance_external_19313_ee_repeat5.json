@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "suite_name": "performance_external_19313_ee_repeat5",
+  "suite_type": "performance",
+  "seed": 41,
+  "output_root": "src/outputs/benchmark_suites",
+  "notes": "Extreme external-only repeated benchmark for the paper pipeline using the full 19313 edge-edge Scalable CCD query batch from armadillo-rollers step 326. Each method is repeated 5 times.",
+  "cases": [
+    {
+      "name": "external_scalable_19313_ee_pure_exact_cpu",
+      "method": "PureExactCPU",
+      "repeat": 5,
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "ee",
+        "step": 326,
+        "limit": 19313
+      }
+    },
+    {
+      "name": "external_scalable_19313_ee_bvh_exact",
+      "method": "BVHExact",
+      "repeat": 5,
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "ee",
+        "step": 326,
+        "limit": 19313
+      },
+      "config": {
+        "backend_name": "cpu_aabb_sort_sweep"
+      }
+    },
+    {
+      "name": "external_scalable_19313_ee_sort_broad_phase_exact",
+      "method": "SortBroadPhaseExact",
+      "repeat": 5,
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "ee",
+        "step": 326,
+        "limit": 19313
+      },
+      "config": {
+        "backend_name": "cpu_sort_sweep",
+        "axis": 0
+      }
+    },
+    {
+      "name": "external_scalable_19313_ee_rt_exact_cpu_reference",
+      "method": "RTExact",
+      "repeat": 5,
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "ee",
+        "step": 326,
+        "limit": 19313
+      },
+      "config": {
+        "backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "external_scalable_19313_ee_no_proposal_cpu_reference",
+      "method": "NoProposal",
+      "repeat": 5,
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "ee",
+        "step": 326,
+        "limit": 19313
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "external_scalable_19313_ee_rt_stpf_exact_cpu_reference",
+      "method": "RTSTPFExact",
+      "repeat": 5,
+      "dataset": {
+        "kind": "scalable_ccd_sample",
+        "scene_name": "armadillo-rollers",
+        "family": "ee",
+        "step": 326,
+        "limit": 19313
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt",
+        "use_dummy_policy": true,
+        "proposal_batch_size": 4096
+      }
+    }
+  ]
+}

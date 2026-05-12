@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "suite_name": "ood_stress_smoke",
+  "suite_type": "ood_stress",
+  "seed": 47,
+  "output_root": "src/outputs/benchmark_suites",
+  "notes": "OOD and hard-contact smoke suite for monotonic safety and fallback behavior.",
+  "cases": [
+    {
+      "name": "rt_stpf_ood_only",
+      "method": "RTSTPFExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 4,
+        "robot_link_count": 0,
+        "include_robot_links": false,
+        "splits": ["ood_meshes"]
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt",
+        "use_dummy_policy": true,
+        "uncertainty_fallback_threshold": 0.95
+      }
+    },
+    {
+      "name": "no_proposal_ood_only",
+      "method": "NoProposal",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 4,
+        "robot_link_count": 0,
+        "include_robot_links": false,
+        "splits": ["ood_meshes"]
+      }
+    },
+    {
+      "name": "rt_exact_hard_contacts",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 3,
+        "robot_link_count": 2,
+        "include_robot_links": true,
+        "splits": ["grazing_contacts", "multiple_contact_intervals", "robot_link_validation"]
+      },
+      "config": {
+        "backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "thingi10k_dirty_mesh_proxy_inflation",
+      "method": "RTSTPFExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 4,
+        "robot_link_count": 0,
+        "include_robot_links": false,
+        "splits": ["ood_meshes", "near_contact_hard_negatives"]
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt",
+        "use_dummy_policy": true,
+        "uncertainty_fallback_threshold": 0.90
+      }
+    },
+    {
+      "name": "google_scanned_objects_robot_validation",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 2,
+        "robot_link_count": 2,
+        "include_robot_links": true,
+        "splits": ["robot_link_validation", "ood_meshes"]
+      },
+      "config": {
+        "backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "partnet_mobility_articulated_proxy",
+      "method": "RTSTPFExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 3,
+        "robot_link_count": 1,
+        "include_robot_links": true,
+        "splits": ["multiple_contact_intervals", "robot_link_validation"]
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt",
+        "use_dummy_policy": true,
+        "proposal_batch_size": 512
+      }
+    }
+  ]
+}

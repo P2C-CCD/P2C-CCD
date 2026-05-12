@@ -1,0 +1,791 @@
+{
+  "run_tag": "standard_graphics_models_run_id",
+  "generated_at": "run_idT17:02:20.035230+00:00",
+  "model_sources": [
+    {
+      "name": "Stanford Bunny",
+      "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/stanford-bunny.obj",
+      "description": "Canonical sanity-check scan with curved local surface detail.",
+      "family": "stanford_bunny_sanity"
+    },
+    {
+      "name": "Stanford Dragon",
+      "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/xyzrgb_dragon.obj",
+      "description": "High-frequency scanned model with many local triangle features.",
+      "family": "stanford_dragon_highfreq"
+    },
+    {
+      "name": "Armadillo",
+      "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/armadillo.obj",
+      "description": "Articulated silhouette and concave body regions for contact scheduling.",
+      "family": "armadillo_articulated_scan"
+    },
+    {
+      "name": "Fandisk",
+      "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/fandisk.obj",
+      "description": "Sharp CAD features and non-smooth geometry.",
+      "family": "fandisk_sharp_cad"
+    },
+    {
+      "name": "Spot the Cow",
+      "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/spot.obj",
+      "description": "Clean manifold model with simple topology for topology-correctness checks.",
+      "family": "spot_clean_manifold"
+    },
+    {
+      "name": "Suzanne",
+      "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/suzanne.obj",
+      "description": "Low-polygon visual test with mixed sharp and smooth regions.",
+      "family": "suzanne_lowpoly_visual"
+    },
+    {
+      "name": "Utah Teapot",
+      "path": "Code/datasets/standard_graphics_models/common_3d_test_models/common-3d-test-models/data/teapot.obj",
+      "description": "Classic curved-surface graphics model used here as a curved rigid collider.",
+      "family": "utah_teapot_curved_classic"
+    },
+    {
+      "name": "Cornell Box",
+      "path": "Code/datasets/standard_graphics_models/mcguire_archive/CornellBox/CornellBox-Original.obj",
+      "description": "Classic rendering/GI scene used here as a static scene reference.",
+      "family": "cornell_box_scene_container"
+    }
+  ],
+  "render_case": {
+    "case_dir": "src/MyDemo/standard_graphics_models_run_id/classic_models_cornell_room_drop",
+    "global_mp4": "src\\MyDemo\\standard_graphics_models_run_id\\classic_models_cornell_room_drop\\global.mp4",
+    "metrics_json": "src/MyDemo/standard_graphics_models_run_id/classic_models_cornell_room_drop/metrics.json",
+    "contact_sheet": "src/MyDemo/standard_graphics_models_run_id/classic_models_cornell_room_drop/contact_sheet.png"
+  },
+  "training_summary": {
+    "run_name": "standard_graphics_models_run_id",
+    "report_name": "standard_graphics_models_run_id_stpf_training",
+    "shards_dir": "src/datasets/training/standard_graphics_models_run_id/shards",
+    "train_shards": [
+      "src/datasets/training/standard_graphics_models_run_id/shards/train.npz"
+    ],
+    "validation_shards": [
+      "src/datasets/training/standard_graphics_models_run_id/shards/validation.npz"
+    ],
+    "train_split": "train",
+    "validation_split": "validation",
+    "train_row_count": 16384,
+    "validation_row_count": 8192,
+    "train_eval_max_rows": null,
+    "validation_eval_max_rows": null,
+    "model_preset": "medium_mlp",
+    "device": "cuda",
+    "epochs": 6,
+    "batch_size": 8192,
+    "optimizer": "AdamW",
+    "loss": "multitask + cost-aware",
+    "final_train": {
+      "epoch": 6,
+      "split": "train",
+      "row_count": 16384,
+      "positive_count": 2038,
+      "positive_ratio": 0.1243896484375,
+      "loss": 19.520395278930664,
+      "interval_top1_recall": 0.8756103515625,
+      "family_top2_recall": 0.25,
+      "estimated_exact_work_reduction": 0.6205157702590542,
+      "mean_predicted_cost": 2.725966013080324,
+      "mean_target_cost": 6.264468813082203
+    },
+    "final_validation": {
+      "epoch": 6,
+      "split": "validation",
+      "row_count": 8192,
+      "positive_count": 553,
+      "positive_ratio": 0.0675048828125,
+      "loss": 19.574432373046875,
+      "interval_top1_recall": 0.9324951171875,
+      "family_top2_recall": 0.25,
+      "estimated_exact_work_reduction": 0.6223769105419645,
+      "mean_predicted_cost": 2.7150141713791527,
+      "mean_target_cost": 6.270006290316815
+    },
+    "history": [
+      {
+        "epoch": 1,
+        "split": "train",
+        "row_count": 16384,
+        "positive_count": 2038,
+        "positive_ratio": 0.1243896484375,
+        "loss": 38.89348030090332,
+        "interval_top1_recall": 0.0,
+        "family_top2_recall": 0.25,
+        "estimated_exact_work_reduction": 0.8995942700359675,
+        "mean_predicted_cost": 0.7379767534039274,
+        "mean_target_cost": 6.264468813082203
+      },
+      {
+        "epoch": 1,
+        "split": "validation",
+        "row_count": 8192,
+        "positive_count": 553,
+        "positive_ratio": 0.0675048828125,
+        "loss": 38.98529815673828,
+        "interval_top1_recall": 0.0,
+        "family_top2_recall": 0.25,
+        "estimated_exact_work_reduction": 0.899682793195895,
+        "mean_predicted_cost": 0.737978456869314,
+        "mean_target_cost": 6.270006290316815
+      },
+      {
+        "epoch": 2,
+        "split": "train",
+        "row_count": 16384,
+        "positive_count": 2038,
+        "positive_ratio": 0.1243896484375,
+        "loss": 38.128767013549805,
+        "interval_top1_recall": 0.0,
+        "family_top2_recall": 0.2967529296875,
+        "estimated_exact_work_reduction": 0.8906699512101346,
+        "mean_predicted_cost": 0.8031063245034602,
+        "mean_target_cost": 6.264468813082203
+      },
+      {
+        "epoch": 2,
+        "split": "validation",
+        "row_count": 8192,
+        "positive_count": 553,
+        "positive_ratio": 0.0675048828125,
+        "loss": 38.21919631958008,
+        "interval_top1_recall": 0.0,
+        "family_top2_recall": 0.2982177734375,
+        "estimated_exact_work_reduction": 0.8907791515525396,
+        "mean_predicted_cost": 0.8030111570406007,
+        "mean_target_cost": 6.270006290316815
+      },
+      {
+        "epoch": 3,
+        "split": "train",
+        "row_count": 16384,
+        "positive_count": 2038,
+        "positive_ratio": 0.1243896484375,
+        "loss": 36.688011169433594,
+        "interval_top1_recall": 0.8756103515625,
+        "family_top2_recall": 0.25,
+        "estimated_exact_work_reduction": 0.8734696510980915,
+        "mean_predicted_cost": 0.9282800370710902,
+        "mean_target_cost": 6.264468813082203
+      },
+      {
+        "epoch": 3,
+        "split": "validation",
+        "row_count": 8192,
+        "positive_count": 553,
+        "positive_ratio": 0.0675048828125,
+        "loss": 36.77706527709961,
+        "interval_top1_recall": 0.9324951171875,
+        "family_top2_recall": 0.25,
+        "estimated_exact_work_reduction": 0.8736426717641325,
+        "mean_predicted_cost": 0.9278248500195332,
+        "mean_target_cost": 6.270006290316815
+      },
+      {
+        "epoch": 4,
+        "split": "train",
+        "row_count": 16384,
+        "positive_count": 2038,
+        "positive_ratio": 0.1243896484375,
+        "loss": 33.85428047180176,
+        "interval_top1_recall": 0.8756103515625,
+        "family_top2_recall": 0.25,
+        "estimated_exact_work_reduction": 0.8382477072442751,
+        "mean_predicted_cost": 1.182796198881988,
+        "mean_target_cost": 6.264468813082203
+      },
+      {
+        "epoch": 4,
+        "split": "validation",
+        "row_count": 8192,
+        "positive_count": 553,
+        "positive_ratio": 0.0675048828125,
+        "loss": 33.941646575927734,
+        "interval_top1_recall": 0.9324951171875,
+        "family_top2_recall": 0.25,
+        "estimated_exact_work_reduction": 0.8386006324211518,
+        "mean_predicted_cost": 1.1812530630704714,
+        "mean_target_cost": 6.270006290316815
+      },
+      {
+        "epoch": 5,
+        "split": "train",
+        "row_count": 16384,
+        "positive_count": 2038,
+        "positive_ratio": 0.1243896484375,
+        "loss": 28.460237503051758,
+        "interval_top1_recall": 0.8756103515625,
+        "family_top2_recall": 0.25,
+        "estimated_exact_work_reduction": 0.7653777951825085,
+        "mean_predicted_cost": 1.7041680805050419,
+        "mean_target_cost": 6.264468813082203
+      },
+      {
+        "epoch": 5,
+        "split": "validation",
+        "row_count": 8192,
+        "positive_count": 553,
+        "positive_ratio": 0.0675048828125,
+        "loss": 28.542743682861328,
+        "interval_top1_recall": 0.9324951171875,
+        "family_top2_recall": 0.25,
+        "estimated_exact_work_reduction": 0.7661976787090975,
+        "mean_predicted_cost": 1.6997158856829628,
+        "mean_target_cost": 6.270006290316815
+      },
+      {
+        "epoch": 6,
+        "split": "train",
+        "row_count": 16384,
+        "positive_count": 2038,
+        "positive_ratio": 0.1243896484375,
+        "loss": 19.520395278930664,
+        "interval_top1_recall": 0.8756103515625,
+        "family_top2_recall": 0.25,
+        "estimated_exact_work_reduction": 0.6205157702590542,
+        "mean_predicted_cost": 2.725966013080324,
+        "mean_target_cost": 6.264468813082203
+      },
+      {
+        "epoch": 6,
+        "split": "validation",
+        "row_count": 8192,
+        "positive_count": 553,
+        "positive_ratio": 0.0675048828125,
+        "loss": 19.574432373046875,
+        "interval_top1_recall": 0.9324951171875,
+        "family_top2_recall": 0.25,
+        "estimated_exact_work_reduction": 0.6223769105419645,
+        "mean_predicted_cost": 2.7150141713791527,
+        "mean_target_cost": 6.270006290316815
+      }
+    ],
+    "calibration": {
+      "min_positive_score": 0.4731125012040138,
+      "threshold_curve": [
+        {
+          "threshold": 0.0,
+          "tp": 553.0,
+          "tn": 7639.0,
+          "fp": 0.0,
+          "fn": 0.0,
+          "exact_calls": 8192.0,
+          "selected_cost": 51363.891530275345,
+          "baseline_cost": 51363.891530275345,
+          "recall": 1.0,
+          "precision": 1.0,
+          "exact_call_reduction": 0.0,
+          "exact_work_reduction": 0.0
+        },
+        {
+          "threshold": 0.25,
+          "tp": 553.0,
+          "tn": 7639.0,
+          "fp": 0.0,
+          "fn": 0.0,
+          "exact_calls": 8192.0,
+          "selected_cost": 51363.891530275345,
+          "baseline_cost": 51363.891530275345,
+          "recall": 1.0,
+          "precision": 1.0,
+          "exact_call_reduction": 0.0,
+          "exact_work_reduction": 0.0
+        },
+        {
+          "threshold": 0.4731125012040138,
+          "tp": 553.0,
+          "tn": 7639.0,
+          "fp": 0.0,
+          "fn": 0.0,
+          "exact_calls": 8071.0,
+          "selected_cost": 50499.47903370857,
+          "baseline_cost": 51363.891530275345,
+          "recall": 1.0,
+          "precision": 1.0,
+          "exact_call_reduction": 0.0147705078125,
+          "exact_work_reduction": 0.016829186239856075
+        },
+        {
+          "threshold": 0.5,
+          "tp": 0.0,
+          "tn": 7639.0,
+          "fp": 0.0,
+          "fn": 553.0,
+          "exact_calls": 0.0,
+          "selected_cost": 0.0,
+          "baseline_cost": 51363.891530275345,
+          "recall": 0.0,
+          "precision": 0.0,
+          "exact_call_reduction": 1.0,
+          "exact_work_reduction": 1.0
+        },
+        {
+          "threshold": 0.75,
+          "tp": 0.0,
+          "tn": 7639.0,
+          "fp": 0.0,
+          "fn": 553.0,
+          "exact_calls": 0.0,
+          "selected_cost": 0.0,
+          "baseline_cost": 51363.891530275345,
+          "recall": 0.0,
+          "precision": 0.0,
+          "exact_call_reduction": 1.0,
+          "exact_work_reduction": 1.0
+        },
+        {
+          "threshold": 0.9,
+          "tp": 0.0,
+          "tn": 7639.0,
+          "fp": 0.0,
+          "fn": 553.0,
+          "exact_calls": 0.0,
+          "selected_cost": 0.0,
+          "baseline_cost": 51363.891530275345,
+          "recall": 0.0,
+          "precision": 0.0,
+          "exact_call_reduction": 1.0,
+          "exact_work_reduction": 1.0
+        }
+      ],
+      "per_case": {
+        "bunny_frictional_floor_drop": {
+          "rows": 1024,
+          "positive_count": 64,
+          "tp": 64,
+          "fn": 0,
+          "exact_calls": 1024,
+          "recall": 1.0,
+          "exact_call_rate": 1.0
+        },
+        "dragon_frictional_floor_drop": {
+          "rows": 1024,
+          "positive_count": 64,
+          "tp": 64,
+          "fn": 0,
+          "exact_calls": 903,
+          "recall": 1.0,
+          "exact_call_rate": 0.8818359375
+        },
+        "armadillo_frictional_floor_drop": {
+          "rows": 1024,
+          "positive_count": 64,
+          "tp": 64,
+          "fn": 0,
+          "exact_calls": 1024,
+          "recall": 1.0,
+          "exact_call_rate": 1.0
+        },
+        "fandisk_frictional_floor_drop": {
+          "rows": 1024,
+          "positive_count": 64,
+          "tp": 64,
+          "fn": 0,
+          "exact_calls": 1024,
+          "recall": 1.0,
+          "exact_call_rate": 1.0
+        },
+        "spot_frictional_floor_drop": {
+          "rows": 1024,
+          "positive_count": 64,
+          "tp": 64,
+          "fn": 0,
+          "exact_calls": 1024,
+          "recall": 1.0,
+          "exact_call_rate": 1.0
+        },
+        "suzanne_frictional_floor_drop": {
+          "rows": 1024,
+          "positive_count": 39,
+          "tp": 39,
+          "fn": 0,
+          "exact_calls": 1024,
+          "recall": 1.0,
+          "exact_call_rate": 1.0
+        },
+        "teapot_frictional_floor_drop": {
+          "rows": 1024,
+          "positive_count": 64,
+          "tp": 64,
+          "fn": 0,
+          "exact_calls": 1024,
+          "recall": 1.0,
+          "exact_call_rate": 1.0
+        },
+        "cornell_box_multimodel_scene_drop": {
+          "rows": 1024,
+          "positive_count": 130,
+          "tp": 130,
+          "fn": 0,
+          "exact_calls": 1024,
+          "recall": 1.0,
+          "exact_call_rate": 1.0
+        }
+      },
+      "per_kind": {
+        "object-ground": {
+          "rows": 7168,
+          "positive_count": 423,
+          "tp": 423,
+          "fn": 0,
+          "exact_calls": 7047,
+          "recall": 1.0,
+          "exact_call_rate": 0.9831194196428571
+        },
+        "scene-container": {
+          "rows": 1024,
+          "positive_count": 130,
+          "tp": 130,
+          "fn": 0,
+          "exact_calls": 1024,
+          "recall": 1.0,
+          "exact_call_rate": 1.0
+        }
+      },
+      "fn_risk_top_k": [
+        {
+          "score": 0.4731125012040138,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.4731292948126793,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.47323621809482574,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.47335805743932724,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.473381944000721,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.4733966588973999,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.4734080135822296,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.47345370054244995,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.47346191108226776,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.4735364094376564,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.47356001287698746,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.473581962287426,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.4736037030816078,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.47363457828760147,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.4736439436674118,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.47364672273397446,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.47364939749240875,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.4736786112189293,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.47368670254945755,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        },
+        {
+          "score": 0.4737110435962677,
+          "case": "dragon_frictional_floor_drop",
+          "kind": "object-ground",
+          "csv_path": "validation/dragon_frictional_floor_drop.csv",
+          "query_index": fixed_seed
+        }
+      ],
+      "calibrated_threshold": 0.4731125012040138,
+      "calibration_probe": {
+        "epoch": 6,
+        "split": "calibration",
+        "row_count": 8192,
+        "positive_count": 553,
+        "positive_ratio": 0.0675048828125,
+        "loss": 19.574432373046875,
+        "interval_top1_recall": 0.9324951171875,
+        "family_top2_recall": 0.25,
+        "estimated_exact_work_reduction": 0.6223769105419645,
+        "mean_predicted_cost": 2.7150141713791527,
+        "mean_target_cost": 6.270006290316815
+      }
+    },
+    "history_csv": "src/outputs/stpf_training/standard_graphics_models_run_id/standard_graphics_models_run_id/history.csv",
+    "history_jsonl": "src/outputs/stpf_training/standard_graphics_models_run_id/standard_graphics_models_run_id/history.jsonl",
+    "model_state_path": "src/outputs/stpf_training/standard_graphics_models_run_id/standard_graphics_models_run_id/model_state.pt",
+    "onnx_path": "src\\outputs\\stpf_training\\standard_graphics_models_run_id\\standard_graphics_models_run_id\\model.onnx",
+    "onnx_error": null,
+    "summary_json": "src/benchmark/standard_graphics_models_run_id/standard_graphics_models_run_id_stpf_training.json",
+    "report_path": "src/benchmark/standard_graphics_models_run_id/standard_graphics_models_run_id_stpf_training.md"
+  },
+  "benchmark_rows": [
+    {
+      "case": "bunny_frictional_floor_drop",
+      "dataset_model": "Stanford Bunny",
+      "description": "Canonical sanity-check scan with curved local surface detail.",
+      "motion_type": "semi_implicit_euler_rigid_drop+unilateral_ground_contact+coulomb_friction",
+      "density_no_proposal_exact_calls": 589824000,
+      "positive_contact_windows": 4096,
+      "rtstpf_exact_calls": 1024,
+      "random_proposal_exact_calls_mean": 7520256.0,
+      "pure_exact_cpu_exact_calls": 589824000,
+      "bvh_exact_reference_exact_calls": 626688,
+      "rtstpf_reduction_vs_dense": 576000.0,
+      "rtstpf_reduction_vs_random": 7344.0,
+      "fn": 0,
+      "validation_rows": 1024,
+      "validation_positive_count": 64,
+      "validation_recall": 1.0,
+      "validation_exact_call_rate": 1.0,
+      "source_mesh_faces": 69451,
+      "render_preview_faces": 24000,
+      "tags": "clean_manifold"
+    },
+    {
+      "case": "dragon_frictional_floor_drop",
+      "dataset_model": "Stanford Dragon",
+      "description": "High-frequency scanned model with many local triangle features.",
+      "motion_type": "semi_implicit_euler_rigid_drop+unilateral_ground_contact+coulomb_friction",
+      "density_no_proposal_exact_calls": 589824000,
+      "positive_contact_windows": 4096,
+      "rtstpf_exact_calls": 903,
+      "random_proposal_exact_calls_mean": 9835306.0,
+      "pure_exact_cpu_exact_calls": 589824000,
+      "bvh_exact_reference_exact_calls": 641433,
+      "rtstpf_reduction_vs_dense": 653182.7242524917,
+      "rtstpf_reduction_vs_random": 10891.811738648948,
+      "fn": 0,
+      "validation_rows": 1024,
+      "validation_positive_count": 64,
+      "validation_recall": 1.0,
+      "validation_exact_call_rate": 0.8818359375,
+      "source_mesh_faces": 249882,
+      "render_preview_faces": 24000,
+      "tags": "high_frequency_scan;clean_manifold"
+    },
+    {
+      "case": "armadillo_frictional_floor_drop",
+      "dataset_model": "Armadillo",
+      "description": "Articulated silhouette and concave body regions for contact scheduling.",
+      "motion_type": "semi_implicit_euler_rigid_drop+unilateral_ground_contact+coulomb_friction",
+      "density_no_proposal_exact_calls": 589824000,
+      "positive_contact_windows": 4096,
+      "rtstpf_exact_calls": 1024,
+      "random_proposal_exact_calls_mean": 12523896.0,
+      "pure_exact_cpu_exact_calls": 589824000,
+      "bvh_exact_reference_exact_calls": 670923,
+      "rtstpf_reduction_vs_dense": 576000.0,
+      "rtstpf_reduction_vs_random": 12230.3671875,
+      "fn": 0,
+      "validation_rows": 1024,
+      "validation_positive_count": 64,
+      "validation_recall": 1.0,
+      "validation_exact_call_rate": 1.0,
+      "source_mesh_faces": 99976,
+      "render_preview_faces": 24000,
+      "tags": "high_frequency_scan"
+    },
+    {
+      "case": "fandisk_frictional_floor_drop",
+      "dataset_model": "Fandisk",
+      "description": "Sharp CAD features and non-smooth geometry.",
+      "motion_type": "semi_implicit_euler_rigid_drop+unilateral_ground_contact+coulomb_friction",
+      "density_no_proposal_exact_calls": 318160896,
+      "positive_contact_windows": 4096,
+      "rtstpf_exact_calls": 1024,
+      "random_proposal_exact_calls_mean": 16220160.0,
+      "pure_exact_cpu_exact_calls": 318160896,
+      "bvh_exact_reference_exact_calls": 737280,
+      "rtstpf_reduction_vs_dense": 310704.0,
+      "rtstpf_reduction_vs_random": 15840.0,
+      "fn": 0,
+      "validation_rows": 1024,
+      "validation_positive_count": 64,
+      "validation_recall": 1.0,
+      "validation_exact_call_rate": 1.0,
+      "source_mesh_faces": 12946,
+      "render_preview_faces": 12946,
+      "tags": "sharp_features;clean_manifold"
+    },
+    {
+      "case": "spot_frictional_floor_drop",
+      "dataset_model": "Spot the Cow",
+      "description": "Clean manifold model with simple topology for topology-correctness checks.",
+      "motion_type": "semi_implicit_euler_rigid_drop+unilateral_ground_contact+coulomb_friction",
+      "density_no_proposal_exact_calls": 143917056,
+      "positive_contact_windows": 4096,
+      "rtstpf_exact_calls": 1024,
+      "random_proposal_exact_calls_mean": 16249636.0,
+      "pure_exact_cpu_exact_calls": 143917056,
+      "bvh_exact_reference_exact_calls": 641433,
+      "rtstpf_reduction_vs_dense": 140544.0,
+      "rtstpf_reduction_vs_random": 15868.78515625,
+      "fn": 0,
+      "validation_rows": 1024,
+      "validation_positive_count": 64,
+      "validation_recall": 1.0,
+      "validation_exact_call_rate": 1.0,
+      "source_mesh_faces": 5856,
+      "render_preview_faces": 5856,
+      "tags": "clean_manifold"
+    },
+    {
+      "case": "suzanne_frictional_floor_drop",
+      "dataset_model": "Suzanne",
+      "description": "Low-polygon visual test with mixed sharp and smooth regions.",
+      "motion_type": "semi_implicit_euler_rigid_drop+unilateral_ground_contact+coulomb_friction",
+      "density_no_proposal_exact_calls": 23789568,
+      "positive_contact_windows": 1524,
+      "rtstpf_exact_calls": 1024,
+      "random_proposal_exact_calls_mean": 7470648.0,
+      "pure_exact_cpu_exact_calls": 23789568,
+      "bvh_exact_reference_exact_calls": 260604,
+      "rtstpf_reduction_vs_dense": 23232.0,
+      "rtstpf_reduction_vs_random": 7295.5546875,
+      "fn": 0,
+      "validation_rows": 1024,
+      "validation_positive_count": 39,
+      "validation_recall": 1.0,
+      "validation_exact_call_rate": 1.0,
+      "source_mesh_faces": 968,
+      "render_preview_faces": 968,
+      "tags": "sharp_features;clean_manifold"
+    },
+    {
+      "case": "teapot_frictional_floor_drop",
+      "dataset_model": "Utah Teapot",
+      "description": "Classic curved-surface graphics model used here as a curved rigid collider.",
+      "motion_type": "semi_implicit_euler_rigid_drop+unilateral_ground_contact+coulomb_friction",
+      "density_no_proposal_exact_calls": 155320320,
+      "positive_contact_windows": 4096,
+      "rtstpf_exact_calls": 1024,
+      "random_proposal_exact_calls_mean": 20997696.0,
+      "pure_exact_cpu_exact_calls": 155320320,
+      "bvh_exact_reference_exact_calls": 656178,
+      "rtstpf_reduction_vs_dense": 151680.0,
+      "rtstpf_reduction_vs_random": 20505.5625,
+      "fn": 0,
+      "validation_rows": 1024,
+      "validation_positive_count": 64,
+      "validation_recall": 1.0,
+      "validation_exact_call_rate": 1.0,
+      "source_mesh_faces": 6320,
+      "render_preview_faces": 6320,
+      "tags": "clean_manifold"
+    },
+    {
+      "case": "cornell_box_multimodel_scene_drop",
+      "dataset_model": "Cornell Box + seven dynamic standard graphics models",
+      "description": "Scene-level case that places the canonical models in one graphics room reference and stresses support-surface proposal scheduling.",
+      "motion_type": "multi_object_rigid_drop+shared_dense_floor+static_cornell_scene_reference",
+      "density_no_proposal_exact_calls": 2411544576,
+      "positive_contact_windows": 16965,
+      "rtstpf_exact_calls": 1024,
+      "random_proposal_exact_calls_mean": 4343040.0,
+      "pure_exact_cpu_exact_calls": 2411544576,
+      "bvh_exact_reference_exact_calls": 3257280,
+      "rtstpf_reduction_vs_dense": 2355024.0,
+      "rtstpf_reduction_vs_random": 4241.25,
+      "fn": 0,
+      "validation_rows": 1024,
+      "validation_positive_count": 130,
+      "validation_recall": 1.0,
+      "validation_exact_call_rate": 1.0,
+      "source_mesh_faces": 445435,
+      "render_preview_faces": 98126,
+      "tags": "scene_container;multi_object;dense_support_surface"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "run_name": "section3_full_rerun_run_id",
+  "generated_local": "run_idT02:42:20+08:00",
+  "python": "python",
+  "result_root": "src/benchmark/section3_full_rerun_run_id",
+  "all_steps_exit_zero": true,
+  "total_elapsed_sec": 6135.31,
+  "step_table": "src/benchmark/section3_full_rerun_run_id/section3_full_rerun_run_id_steps.csv",
+  "key_results": {
+    "standard_graphics_models": {
+      "cases": 8,
+      "train_rows": 16384,
+      "validation_rows": 8192,
+      "dense_budget": 4822204416,
+      "rtstpf_exact_budget": 8071,
+      "fn": 0,
+      "min_validation_recall": 1.0
+    },
+    "twisting_towel_wringer_ccd": {
+      "cloth_vertices": 1825,
+      "cloth_faces": 3456,
+      "frame_segments": 71,
+      "dense_no_proposal_primitive_budget": 6337034355,
+      "candidate_triangle_pairs": 1291963,
+      "exact_fallback_primitives": 8306486,
+      "exact_call_reduction_vs_dense": 762.9019485496033,
+      "fn": 0
+    },
+    "object_object_dense_mesh_contact": {
+      "groups": 1024,
+      "candidates": 131072,
+      "train_rows": 208000,
+      "validation_rows": 52000,
+      "candidate_pool_rows": 260000,
+      "no_proposal_exact_calls": 131072,
+      "rtstpf_exact_calls": 19061,
+      "call_reduction_pct": 85.4576,
+      "no_proposal_wall_ms": 336.75,
+      "rtstpf_wall_ms": 92.541,
+      "fn": 0
+    },
+    "hard_negative_near_miss_dense": {
+      "groups": 1024,
+      "eval_rows": 131072,
+      "train_rows": 144000,
+      "validation_rows": 36000,
+      "rtstpf_exact_calls": 131072,
+      "fp": 0,
+      "fn": 0,
+      "overhead_vs_no_proposal_ms": 40.895
+    },
+    "particle_sphere_bowl_explosion": {
+      "particles": 2400,
+      "frames": 216,
+      "bowl_faces": 15360,
+      "particle_bowl_contact_samples": 485656,
+      "particle_pair_contact_samples": 7433910,
+      "no_proposal_exact_calls": 518400,
+      "rtstpf_exact_calls": 38600,
+      "call_reduction_pct": 92.554,
+      "work_reduction_pct": 99.0151,
+      "fn": 0
+    },
+    "scalable_ccd_scene_supplementary": {
+      "groups": 12,
+      "candidates": 271852,
+      "positives": 270077,
+      "train_rows": 266326,
+      "validation_rows": 355,
+      "heldout_rows": 5171,
+      "no_proposal_exact_calls": 271852,
+      "trained_stpf_exact_calls": 12,
+      "call_reduction_pct": 99.9956,
+      "fn": 0,
+      "mp4_count": 6
+    },
+    "native_full_scene_ccd_replay_walltime": {
+      "groups": 12,
+      "candidates": 271852,
+      "positives": 270077,
+      "no_proposal_detection_wall_ms": 41605.128,
+      "trained_stpf_detection_wall_ms": 16.046,
+      "no_proposal_total_wall_ms": 46504.237,
+      "trained_stpf_total_wall_ms": 4875.929,
+      "no_proposal_exact_calls": 271852,
+      "trained_stpf_exact_calls": 12,
+      "fn": 0
+    },
+    "comprehensive_report": {
+      "benchmark_file_count": 522,
+      "method_row_count": 2341469,
+      "visual_case_count": 12,
+      "mp4_count": 64,
+      "verified_mp4_count": 64
+    }
+  },
+  "claim_boundary": "Full-scene rows are CCD replay/detection wall-time, not native full-scene simulation wall-time."
+}

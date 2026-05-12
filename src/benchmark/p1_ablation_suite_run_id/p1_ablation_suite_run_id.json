@@ -1,0 +1,34 @@
+{
+  "batch_size": 65536,
+  "device": "cuda",
+  "elapsed_ms": 394812.1384999831,
+  "p1_1": {
+    "learned_vs_random": {
+      "case_count": 4,
+      "csv": "src\\benchmark\\p1_ablation_suite_run_id\\p1_component_learned_vs_random_run_id.csv",
+      "json": "src\\benchmark\\p1_ablation_suite_run_id\\p1_component_learned_vs_random_run_id.json",
+      "md": "src\\benchmark\\p1_ablation_suite_run_id\\p1_component_learned_vs_random_run_id.md",
+      "run_name": "p1_component_learned_vs_random_run_id"
+    },
+    "native_walltime": {
+      "case_count": 4,
+      "json": "src\\benchmark\\p1_ablation_suite_run_id\\p1_component_native_dense_walltime_run_id.json",
+      "md": "src\\benchmark\\p1_ablation_suite_run_id\\p1_component_native_dense_walltime_run_id.md",
+      "run_name": "p1_component_native_dense_walltime_run_id"
+    }
+  },
+  "p1_2": {
+    "csv": "src\\benchmark\\p1_ablation_suite_run_id\\p1_fallback_threshold_sweep_run_id.csv",
+    "json": "src\\benchmark\\p1_ablation_suite_run_id\\p1_fallback_threshold_sweep_run_id.json",
+    "md": "src\\benchmark\\p1_ablation_suite_run_id\\p1_fallback_threshold_sweep_run_id.md",
+    "row_count": 48
+  },
+  "p1_3": {
+    "csv": "src\\benchmark\\p1_ablation_suite_run_id\\p1_native_density_walltime_run_id.csv",
+    "json": "src\\benchmark\\p1_ablation_suite_run_id\\p1_native_density_walltime_run_id.json",
+    "md": "src\\benchmark\\p1_ablation_suite_run_id\\p1_native_density_walltime_run_id.md",
+    "row_count": 8
+  },
+  "random_seed_count": 30,
+  "run_name": "p1_ablation_suite_run_id"
+}

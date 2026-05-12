@@ -1,0 +1,469 @@
+{
+  "metadata": {
+    "run_name": "scalable_ccd_scene_supplementary_training_run_id",
+    "converted_shard_dir": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id",
+    "split_shard_dir": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_scene_supplementary_training_run_id",
+    "training_report": "src/benchmark/scalable_ccd_scene_supplementary_training_run_id/scalable_ccd_scene_supplementary_training_run_id_training.md",
+    "model_state_path": "src/outputs/stpf_training/scalable_ccd_scene_supplementary_training_run_id/model_state.pt",
+    "manifest": {
+      "schema_version": 1,
+      "run_name": "scalable_ccd_scene_supplementary_training_run_id",
+      "source_conversion": "scalable_ccd_sample_scene_candidate_groups_run_id",
+      "converted_dir": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id",
+      "split_policy": {
+        "train_scenes": [
+          "armadillo-rollers",
+          "cloth-ball",
+          "n-body-simulation",
+          "puffer-ball"
+        ],
+        "validation_scenes": [
+          "cloth-funnel"
+        ],
+        "heldout_scenes": [
+          "rod-twist"
+        ]
+      },
+      "chunks": [
+        {
+          "split": "train",
+          "path": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_scene_supplementary_training_run_id/train.npz",
+          "row_count": 266326,
+          "positive_count": 264999
+        },
+        {
+          "split": "validation",
+          "path": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_scene_supplementary_training_run_id/validation.npz",
+          "row_count": 355,
+          "positive_count": 134
+        },
+        {
+          "split": "heldout_test",
+          "path": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_scene_supplementary_training_run_id/heldout_test.npz",
+          "row_count": 5171,
+          "positive_count": 4944
+        },
+        {
+          "split": "all_scene",
+          "path": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_scene_supplementary_training_run_id/all_scene.npz",
+          "row_count": 271852,
+          "positive_count": 270077
+        }
+      ],
+      "groups": [
+        {
+          "scene": "armadillo-rollers",
+          "kind": "ee",
+          "timestep": 326,
+          "row_count": 19313,
+          "positive_count": 19308,
+          "split": "train",
+          "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/000_armadillo-rollers_326ee.npz"
+        },
+        {
+          "scene": "armadillo-rollers",
+          "kind": "vf",
+          "timestep": 326,
+          "row_count": 4652,
+          "positive_count": 4650,
+          "split": "train",
+          "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/001_armadillo-rollers_326vf.npz"
+        },
+        {
+          "scene": "cloth-ball",
+          "kind": "ee",
+          "timestep": 92,
+          "row_count": 94825,
+          "positive_count": 94822,
+          "split": "train",
+          "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/002_cloth-ball_92ee.npz"
+        },
+        {
+          "scene": "cloth-ball",
+          "kind": "vf",
+          "timestep": 92,
+          "row_count": 19034,
+          "positive_count": 19032,
+          "split": "train",
+          "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/003_cloth-ball_92vf.npz"
+        },
+        {
+          "scene": "cloth-funnel",
+          "kind": "ee",
+          "timestep": 227,
+          "row_count": 263,
+          "positive_count": 107,
+          "split": "validation",
+          "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/004_cloth-funnel_227ee.npz"
+        },
+        {
+          "scene": "cloth-funnel",
+          "kind": "vf",
+          "timestep": 227,
+          "row_count": 92,
+          "positive_count": 27,
+          "split": "validation",
+          "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/005_cloth-funnel_227vf.npz"
+        },
+        {
+          "scene": "n-body-simulation",
+          "kind": "ee",
+          "timestep": 18,
+          "row_count": 41036,
+          "positive_count": 41031,
+          "split": "train",
+          "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/006_n-body-simulation_18ee.npz"
+        },
+        {
+          "scene": "n-body-simulation",
+          "kind": "vf",
+          "timestep": 18,
+          "row_count": 9460,
+          "positive_count": 9459,
+          "split": "train",
+          "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/007_n-body-simulation_18vf.npz"
+        },
+        {
+          "scene": "puffer-ball",
+          "kind": "ee",
+          "timestep": 20,
+          "row_count": 61844,
+          "positive_count": 60894,
+          "split": "train",
+          "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/008_puffer-ball_20ee.npz"
+        },
+        {
+          "scene": "puffer-ball",
+          "kind": "vf",
+          "timestep": 20,
+          "row_count": 16162,
+          "positive_count": 15803,
+          "split": "train",
+          "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/009_puffer-ball_20vf.npz"
+        },
+        {
+          "scene": "rod-twist",
+          "kind": "ee",
+          "timestep": 3036,
+          "row_count": 4370,
+          "positive_count": 4179,
+          "split": "heldout_test",
+          "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/010_rod-twist_3036ee.npz"
+        },
+        {
+          "scene": "rod-twist",
+          "kind": "vf",
+          "timestep": 3036,
+          "row_count": 801,
+          "positive_count": 765,
+          "split": "heldout_test",
+          "source_npz": "src/datasets/training/scalable_ccd_scene_groups/shards/scalable_ccd_sample_scene_candidate_groups_run_id/groups/011_rod-twist_3036vf.npz"
+        }
+      ]
+    },
+    "visualization_dir": "src/MyDemo/scalable_ccd_scene_supplementary_training_run_id",
+    "elapsed_seconds": 3847.788468300001
+  },
+  "rows": [
+    {
+      "split": "train",
+      "method": "NoProposalAllExact",
+      "groups": 8,
+      "candidates": 266326,
+      "positive_groups": 8,
+      "positives": 264999,
+      "exact_calls": 266326.0,
+      "exact_work": 331853.20236017567,
+      "call_reduction": 0.0,
+      "work_reduction": 0.0,
+      "first_positive_rank_mean": 0.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_all_exact"
+    },
+    {
+      "split": "train",
+      "method": "TrainedSTPFGroupEarlyStop",
+      "groups": 8,
+      "candidates": 266326,
+      "positive_groups": 8,
+      "positives": 264999,
+      "exact_calls": 8.0,
+      "exact_work": 9.551633456332587,
+      "call_reduction": 0.9999699616259772,
+      "work_reduction": 0.9999712172931031,
+      "first_positive_rank_mean": 1.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    },
+    {
+      "split": "train",
+      "method": "HeuristicProximityGroupEarlyStop",
+      "groups": 8,
+      "candidates": 266326,
+      "positive_groups": 8,
+      "positives": 264999,
+      "exact_calls": 10.0,
+      "exact_work": 11.454370928822685,
+      "call_reduction": 0.9999624520324715,
+      "work_reduction": 0.9999654836209283,
+      "first_positive_rank_mean": 1.25,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    },
+    {
+      "split": "train",
+      "method": "RandomUniformExpectedOneSeed",
+      "groups": 8,
+      "candidates": 266326,
+      "positive_groups": 8,
+      "positives": 264999,
+      "exact_calls": 8.0,
+      "exact_work": 9.140602353396302,
+      "call_reduction": 0.9999699616259772,
+      "work_reduction": 0.9999724558862522,
+      "first_positive_rank_mean": 1.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    },
+    {
+      "split": "train",
+      "method": "OraclePositiveFirst",
+      "groups": 8,
+      "candidates": 266326,
+      "positive_groups": 8,
+      "positives": 264999,
+      "exact_calls": 8.0,
+      "exact_work": 9.034677404444821,
+      "call_reduction": 0.9999699616259772,
+      "work_reduction": 0.9999727750784377,
+      "first_positive_rank_mean": 1.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    },
+    {
+      "split": "validation",
+      "method": "NoProposalAllExact",
+      "groups": 2,
+      "candidates": 355,
+      "positive_groups": 2,
+      "positives": 134,
+      "exact_calls": 355.0,
+      "exact_work": 420.94513702477764,
+      "call_reduction": 0.0,
+      "work_reduction": 0.0,
+      "first_positive_rank_mean": 0.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_all_exact"
+    },
+    {
+      "split": "validation",
+      "method": "TrainedSTPFGroupEarlyStop",
+      "groups": 2,
+      "candidates": 355,
+      "positive_groups": 2,
+      "positives": 134,
+      "exact_calls": 2.0,
+      "exact_work": 2.2510474477559796,
+      "call_reduction": 0.9943661971830986,
+      "work_reduction": 0.9946523970708718,
+      "first_positive_rank_mean": 1.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    },
+    {
+      "split": "validation",
+      "method": "HeuristicProximityGroupEarlyStop",
+      "groups": 2,
+      "candidates": 355,
+      "positive_groups": 2,
+      "positives": 134,
+      "exact_calls": 2.0,
+      "exact_work": 2.251039157305069,
+      "call_reduction": 0.9943661971830986,
+      "work_reduction": 0.9946524167657208,
+      "first_positive_rank_mean": 1.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    },
+    {
+      "split": "validation",
+      "method": "RandomUniformExpectedOneSeed",
+      "groups": 2,
+      "candidates": 355,
+      "positive_groups": 2,
+      "positives": 134,
+      "exact_calls": 7.0,
+      "exact_work": 8.253827762933053,
+      "call_reduction": 0.9802816901408451,
+      "work_reduction": 0.9803921531882498,
+      "first_positive_rank_mean": 3.5,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    },
+    {
+      "split": "validation",
+      "method": "OraclePositiveFirst",
+      "groups": 2,
+      "candidates": 355,
+      "positive_groups": 2,
+      "positives": 134,
+      "exact_calls": 2.0,
+      "exact_work": 2.251033570775073,
+      "call_reduction": 0.9943661971830986,
+      "work_reduction": 0.9946524300371177,
+      "first_positive_rank_mean": 1.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    },
+    {
+      "split": "heldout_test",
+      "method": "NoProposalAllExact",
+      "groups": 2,
+      "candidates": 5171,
+      "positive_groups": 2,
+      "positives": 4944,
+      "exact_calls": 5171.0,
+      "exact_work": 6267.598509876319,
+      "call_reduction": 0.0,
+      "work_reduction": 0.0,
+      "first_positive_rank_mean": 0.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_all_exact"
+    },
+    {
+      "split": "heldout_test",
+      "method": "TrainedSTPFGroupEarlyStop",
+      "groups": 2,
+      "candidates": 5171,
+      "positive_groups": 2,
+      "positives": 4944,
+      "exact_calls": 2.0,
+      "exact_work": 2.2517473140922983,
+      "call_reduction": 0.9996132276155483,
+      "work_reduction": 0.9996407320426565,
+      "first_positive_rank_mean": 1.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    },
+    {
+      "split": "heldout_test",
+      "method": "HeuristicProximityGroupEarlyStop",
+      "groups": 2,
+      "candidates": 5171,
+      "positive_groups": 2,
+      "positives": 4944,
+      "exact_calls": 2.0,
+      "exact_work": 2.250673714354072,
+      "call_reduction": 0.9996132276155483,
+      "work_reduction": 0.9996409033362926,
+      "first_positive_rank_mean": 1.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    },
+    {
+      "split": "heldout_test",
+      "method": "RandomUniformExpectedOneSeed",
+      "groups": 2,
+      "candidates": 5171,
+      "positive_groups": 2,
+      "positives": 4944,
+      "exact_calls": 2.0,
+      "exact_work": 2.2533339367648892,
+      "call_reduction": 0.9996132276155483,
+      "work_reduction": 0.99964047889583,
+      "first_positive_rank_mean": 1.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    },
+    {
+      "split": "heldout_test",
+      "method": "OraclePositiveFirst",
+      "groups": 2,
+      "candidates": 5171,
+      "positive_groups": 2,
+      "positives": 4944,
+      "exact_calls": 2.0,
+      "exact_work": 2.2501407232137693,
+      "call_reduction": 0.9996132276155483,
+      "work_reduction": 0.9996409883754251,
+      "first_positive_rank_mean": 1.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    },
+    {
+      "split": "all_scene",
+      "method": "NoProposalAllExact",
+      "groups": 12,
+      "candidates": 271852,
+      "positive_groups": 12,
+      "positives": 270077,
+      "exact_calls": 271852.0,
+      "exact_work": 338541.74600707676,
+      "call_reduction": 0.0,
+      "work_reduction": 0.0,
+      "first_positive_rank_mean": 0.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_all_exact"
+    },
+    {
+      "split": "all_scene",
+      "method": "TrainedSTPFGroupEarlyStop",
+      "groups": 12,
+      "candidates": 271852,
+      "positive_groups": 12,
+      "positives": 270077,
+      "exact_calls": 12.0,
+      "exact_work": 14.054428218180865,
+      "call_reduction": 0.9999558583346821,
+      "work_reduction": 0.9999584853909925,
+      "first_positive_rank_mean": 1.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    },
+    {
+      "split": "all_scene",
+      "method": "HeuristicProximityGroupEarlyStop",
+      "groups": 12,
+      "candidates": 271852,
+      "positive_groups": 12,
+      "positives": 270077,
+      "exact_calls": 14.0,
+      "exact_work": 15.956083800481826,
+      "call_reduction": 0.9999485013904624,
+      "work_reduction": 0.9999528681942813,
+      "first_positive_rank_mean": 1.1666666666666667,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    },
+    {
+      "split": "all_scene",
+      "method": "RandomUniformExpectedOneSeed",
+      "groups": 12,
+      "candidates": 271852,
+      "positive_groups": 12,
+      "positives": 270077,
+      "exact_calls": 15.0,
+      "exact_work": 16.919060384811353,
+      "call_reduction": 0.9999448229183526,
+      "work_reduction": 0.9999500237102681,
+      "first_positive_rank_mean": 1.25,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    },
+    {
+      "split": "all_scene",
+      "method": "OraclePositiveFirst",
+      "groups": 12,
+      "candidates": 271852,
+      "positive_groups": 12,
+      "positives": 270077,
+      "exact_calls": 12.0,
+      "exact_work": 13.535851698433664,
+      "call_reduction": 0.9999558583346821,
+      "work_reduction": 0.9999600171858919,
+      "first_positive_rank_mean": 1.0,
+      "fn": 0,
+      "timing_scope": "converted_candidate_row_group_early_stop"
+    }
+  ]
+}

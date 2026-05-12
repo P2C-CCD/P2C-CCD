@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "status": "public_release_local_manifest",
+  "primary_manifest": "artifacts/release_case_manifest.json",
+  "primary_documentation": "src/docs/paper_case_reproduction.md",
+  "verification_command": "conda activate cudadev; python scripts\\verify_release_cases.py",
+  "note": "This manifest is limited to release-local paper evidence and runnable entry points."
+}

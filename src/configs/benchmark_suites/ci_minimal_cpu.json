@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "suite_name": "ci_minimal_cpu",
+  "suite_type": "correctness",
+  "seed": 31,
+  "output_root": "src/outputs/benchmark_suites",
+  "notes": "CPU-only CI subset for correctness gates; does not require OptiX or CUDA runtime paths.",
+  "cases": [
+    {
+      "name": "pure_exact_cpu_minimal",
+      "method": "PureExactCPU",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 1,
+        "robot_link_count": 0,
+        "include_robot_links": false
+      },
+      "config": {
+        "eps_time": 1e-5,
+        "eps_space": 1e-8,
+        "max_subdivision_depth": 32
+      }
+    },
+    {
+      "name": "bvh_exact_cpu_minimal",
+      "method": "BVHExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 1,
+        "robot_link_count": 0,
+        "include_robot_links": false
+      },
+      "config": {
+        "backend_name": "cpu_aabb_sort_sweep"
+      }
+    },
+    {
+      "name": "rt_exact_cpu_reference_minimal",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 1,
+        "robot_link_count": 0,
+        "include_robot_links": false
+      },
+      "config": {
+        "backend_name": "cpu_reference_rt"
+      }
+    }
+  ]
+}

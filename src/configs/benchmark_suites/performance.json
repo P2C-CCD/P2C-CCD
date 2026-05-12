@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "suite_name": "performance_smoke",
+  "suite_type": "performance",
+  "seed": 23,
+  "output_root": "src/outputs/benchmark_suites",
+  "notes": "CPU smoke performance suite for CI-friendly baseline timing; use performance_optix.json for real RT Core candidate emission.",
+  "cases": [
+    {
+      "name": "sort_broad_phase_exact",
+      "method": "SortBroadPhaseExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 4,
+        "robot_link_count": 2,
+        "include_robot_links": true
+      },
+      "config": {
+        "backend_name": "cpu_sort_sweep",
+        "axis": 0
+      }
+    },
+    {
+      "name": "rt_exact_cpu_reference",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 4,
+        "robot_link_count": 2,
+        "include_robot_links": true
+      },
+      "config": {
+        "backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "rt_stpf_exact_dummy_policy",
+      "method": "RTSTPFExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 4,
+        "robot_link_count": 2,
+        "include_robot_links": true
+      },
+      "config": {
+        "rt_backend_name": "cpu_reference_rt",
+        "use_dummy_policy": true,
+        "proposal_batch_size": 1024
+      }
+    },
+    {
+      "name": "abc_derived_mesh_pair_proxy",
+      "method": "SortBroadPhaseExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 3,
+        "robot_link_count": 0,
+        "include_robot_links": false,
+        "splits": ["near_contact_hard_negatives", "grazing_contacts"]
+      },
+      "config": {
+        "backend_name": "cpu_sort_sweep",
+        "axis": 0
+      }
+    },
+    {
+      "name": "fusion360_assembly_motion_proxy",
+      "method": "RTExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 3,
+        "robot_link_count": 0,
+        "include_robot_links": false,
+        "splits": ["multiple_contact_intervals", "near_contact_hard_negatives"]
+      },
+      "config": {
+        "backend_name": "cpu_reference_rt"
+      }
+    },
+    {
+      "name": "moveit_planning_scene_proxy",
+      "method": "BVHExact",
+      "dataset": {
+        "kind": "internal_generated",
+        "mesh_count_per_split": 2,
+        "robot_link_count": 2,
+        "include_robot_links": true,
+        "splits": ["robot_link_validation"]
+      },
+      "config": {
+        "backend_name": "cpu_aabb_sort_sweep"
+      }
+    },
+    {
+      "name": "no_queue_decouple_microbenchmark",
+      "method": "NoQueueDecouple",
+      "config": {
+        "candidate_count": 2048,
+        "repeat_count": 3,
+        "warmup_count": 1,
+        "batch_size": 512,
+        "seed": 23
+      }
+    }
+  ]
+}

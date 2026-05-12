@@ -1,0 +1,13 @@
+{
+  "run_tag": "standard_graphics_models_2026-05-04",
+  "mydemo_root": "src\\MyDemo\\standard_graphics_models_2026-05-04",
+  "benchmark_root": "src\\benchmark\\standard_graphics_models_2026-05-04",
+  "shards_dir": "src\\datasets\\training\\standard_graphics_models_2026-05-04\\shards",
+  "reports": {
+    "csv": "src\\benchmark\\standard_graphics_models_2026-05-04\\standard_graphics_model_benchmark.csv",
+    "json": "src\\benchmark\\standard_graphics_models_2026-05-04\\standard_graphics_model_suite_summary.json",
+    "md": "src\\benchmark\\standard_graphics_models_2026-05-04\\standard_graphics_model_suite_summary.md"
+  },
+  "mp4": "src\\MyDemo\\standard_graphics_models_2026-05-04\\classic_models_cornell_room_drop\\global.mp4",
+  "training_report": "src/benchmark/standard_graphics_models_2026-05-04/standard_graphics_models_2026-05-04_stpf_training.md"
+}
